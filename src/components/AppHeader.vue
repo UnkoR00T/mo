@@ -1,6 +1,10 @@
 <template>
-    <div class="app-header">
-        <div class="icon-btn">
+    <div class="app-header" v-if="display">
+        <div
+            class="icon-btn"
+            v-if="route.meta.displayesBackButton"
+            @click="back"
+        >
             <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -12,8 +16,10 @@
                 <path d="M15 18l-6-6 6-6" />
             </svg>
         </div>
-        <div class="app-title">mDowód</div>
-        <div class="icon-btn">
+        <div class="app-title" v-if="route.meta.displayesName">
+            {{ route.name }}
+        </div>
+        <div class="icon-btn" v-if="route.meta.displayesInfo">
             <svg viewBox="0 0 24 24" fill="currentColor">
                 <circle cx="5" cy="12" r="2" />
                 <circle cx="12" cy="12" r="2" />
@@ -22,7 +28,22 @@
         </div>
     </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
+let display = computed(
+    () =>
+        route.meta.displayesBackButton ||
+        route.meta.displayesName ||
+        route.meta.displayesInfo,
+);
+let route = useRoute();
+let router = useRouter();
+const back = () => {
+    let query = route.query;
+    router.push(query["back"]?.toString() ?? "/");
+};
+</script>
 <style scoped>
 .app-header {
     padding: 6px 22px 12px;

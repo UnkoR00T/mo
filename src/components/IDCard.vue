@@ -1,9 +1,59 @@
+<script setup lang="ts">
+import { dataFormat, loadData } from "@/util";
+import { useRouter } from "vue-router";
+import { ref, onMounted, computed, onUnmounted } from "vue";
+import { Store } from "@tauri-apps/plugin-store";
+import { BaseDirectory, readFile } from "@tauri-apps/plugin-fs";
+
+const router = useRouter();
+
+const data: dataFormat | null = await loadData();
+if (!data) {
+    router.push("/register");
+}
+
+const photoUrl = ref<string>("");
+
+onMounted(async () => {
+    try {
+        const store = await Store.load("settings.json");
+        const photoPath = await store.get<string>("user_photo_path");
+
+        if (photoPath) {
+            const bytes = await readFile(photoPath, {
+                baseDir: BaseDirectory.AppData,
+            });
+            const blob = new Blob([bytes]);
+            photoUrl.value = URL.createObjectURL(blob);
+        }
+    } catch (error) {
+        console.error("Błąd ładowania zdjęcia:", error);
+    }
+});
+
+onUnmounted(() => {
+    if (photoUrl.value) URL.revokeObjectURL(photoUrl.value);
+});
+
+const photoStyle = computed(() => {
+    if (photoUrl.value) {
+        return {
+            backgroundImage: `url(${photoUrl.value})`,
+        };
+    }
+    return {};
+});
+</script>
 <template>
     <div class="card">
         <div class="card-top">
             <div class="top-row">
                 <div class="photo-col">
-                    <div class="photo"></div>
+                    <div
+                        class="photo"
+                        :style="photoStyle"
+                        :class="{ 'has-photo': photoUrl }"
+                    ></div>
 
                     <div class="flag">
                         <div class="stripe white"></div>
@@ -23,11 +73,13 @@
 
                 <div class="fields">
                     <div class="field">
-                        <div class="value">ANNA</div>
+                        <div class="value">{{ data?.imie.toUpperCase() }}</div>
                         <div class="label">Imię (imiona)</div>
                     </div>
                     <div class="field">
-                        <div class="value">KOWALSKA</div>
+                        <div class="value">
+                            {{ data?.nazwisko.toUpperCase() }}
+                        </div>
                         <div class="label">Nazwisko</div>
                     </div>
                     <div class="field">
@@ -35,11 +87,11 @@
                         <div class="label">Obywatelstwo</div>
                     </div>
                     <div class="field">
-                        <div class="value">15.06.2008</div>
+                        <div class="value">{{ data?.birth }}</div>
                         <div class="label">Data urodzenia</div>
                     </div>
                     <div class="field">
-                        <div class="value">08261547392</div>
+                        <div class="value">{{ data?.pesel }}</div>
                         <div class="label">Numer PESEL</div>
                     </div>
                 </div>
@@ -157,7 +209,6 @@
     width: 130px;
     border-radius: 8px;
     background: #dfe6ec;
-    background-image: url("@/assets/laska.png");
     background-size: contain;
     filter: grayscale(100%);
     display: flex;
