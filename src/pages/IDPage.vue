@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import IDCard from "@/components/IDCard.vue";
-import { clearDataAndExit } from "@/util";
-import { computed, onMounted, onUnmounted, ref } from "vue";
+import { clearDataAndExit, dataFormat, loadData } from "@/util";
+import { computed, onMounted, onUnmounted, Ref, ref } from "vue";
 
 let curTime = ref(new Date());
 let intervalId: any;
+let data: Ref<dataFormat | null> = ref(null);
 
-onMounted(() => {
+onMounted(async () => {
     intervalId = setInterval(() => {
         curTime.value = new Date();
     }, 1000);
+    data.value = await loadData();
 });
 
 onUnmounted(() => {
@@ -33,99 +35,135 @@ let displayTime = computed(() => {
     <Suspense>
         <IDCard />
     </Suspense>
-    <div class="actions">
-        <button class="btn btn-secondary">
-            <div class="btn-content">
-                <div class="btn-icon">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#5687b6"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-check-icon lucide-check"
-                    >
-                        <path d="M20 6 9 17l-5-5" />
-                    </svg>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#5687b6"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-scan-icon lucide-scan"
-                    >
-                        <path d="M3 7V5a2 2 0 0 1 2-2h2" />
-                        <path d="M17 3h2a2 2 0 0 1 2 2v2" />
-                        <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
-                        <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
-                    </svg>
-                </div>
-                <div class="btn-text-wrap">
-                    <span>Potwierdź swoje dane</span>
-                </div>
+    <div class="quick-actions">
+        <button class="action-item">
+            <div class="action-circle action-circle--scan">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#3478c7"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+                    <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+                    <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+                    <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+                    <path d="m9 11 2 2 4-4" />
+                </svg>
             </div>
-            <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#86878d"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            >
-                <path d="M9 18l6-6-6-6" />
-            </svg>
+            <span class="action-label">Potwierdź<br />swoje dane</span>
         </button>
 
-        <button class="btn btn-secondary">
-            <div class="btn-content">
-                <div class="btn-icon">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#5687b6"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-id-card-icon lucide-id-card"
-                    >
-                        <path d="M16 10h2" />
-                        <path d="M16 14h2" />
-                        <path d="M6.17 15a3 3 0 0 1 5.66 0" />
-                        <circle cx="9" cy="11" r="2" />
-                        <rect x="2" y="5" width="20" height="14" rx="2" />
-                    </svg>
-                </div>
-                <div class="btn-text-wrap">
-                    <span>Dane dokumentu</span>
-                </div>
+        <button class="action-item">
+            <div class="action-circle action-circle--card">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c14d6e"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M16 10h2" />
+                    <path d="M16 14h2" />
+                    <path d="M6.17 15a3 3 0 0 1 5.66 0" />
+                    <circle cx="9" cy="11" r="2" />
+                    <rect x="2" y="5" width="20" height="14" rx="2" />
+                </svg>
             </div>
-            <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#86878d"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            >
-                <path d="M9 18l6-6-6-6" />
-            </svg>
+            <span class="action-label">Dane dowodu<br />osobistego</span>
         </button>
+
+        <button class="action-item">
+            <div class="action-circle action-circle--shield">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2f6fb0"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path
+                        d="M12 2 4 5v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5l-8-3Z"
+                    />
+                    <rect x="9.5" y="11" width="5" height="4" rx="0.5" />
+                    <path d="M12 11v-1.5a1.5 1.5 0 1 1 3 0" />
+                </svg>
+            </div>
+            <span class="action-label">Zastrzeż<br />PESEL</span>
+        </button>
+
+        <button class="action-item" @click="() => clearDataAndExit()">
+            <div class="action-circle action-circle--more">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#86878d"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <circle cx="5" cy="12" r="1.5" fill="#86878d" />
+                    <circle cx="12" cy="12" r="1.5" fill="#86878d" />
+                    <circle cx="19" cy="12" r="1.5" fill="#86878d" />
+                </svg>
+            </div>
+            <span class="action-label">Pozostałe<br />skróty</span>
+        </button>
+    </div>
+    <div class="actions">
+        <div class="doc-card">
+            <div class="field-row field-row--with-action">
+                <div class="field-text">
+                    <span class="field-label">Seria i numer mDowodu</span>
+                    <span class="field-value2">{{ data?.serialNumber }}</span>
+                </div>
+                <button class="copy-btn">Kopiuj</button>
+            </div>
+            <p class="field-note">
+                Dane mDowodu i dowodu osobistego są inne – to dwa różne
+                dokumenty.
+            </p>
+
+            <div class="divider" />
+
+            <div class="field-row">
+                <span class="field-label">Termin ważności mDowodu</span>
+                <span class="field-value2">{{ data?.expDate }}</span>
+            </div>
+
+            <div class="divider" />
+
+            <div class="field-row">
+                <span class="field-label">Data wydania mDowodu</span>
+                <span class="field-value2">{{ data?.assDate }}</span>
+            </div>
+
+            <div class="divider" />
+
+            <div class="field-row">
+                <span class="field-label">Imię ojca</span>
+                <span class="field-value2">{{ data?.fatherName }}</span>
+            </div>
+
+            <div class="divider" />
+
+            <div class="field-row">
+                <span class="field-label">Imię matki</span>
+                <span class="field-value2">{{ data?.motherName }}</span>
+            </div>
+        </div>
         <button class="btn btn-secondary">
             <div class="btn-content">
                 <div class="btn-text-wrap">
@@ -149,41 +187,135 @@ let displayTime = computed(() => {
         <div class="btn btn-secondary">
             <div class="update-content">
                 <span class="subtle">Ostatnia aktualizacja</span>
-                <span>15.06.2026</span>
+                <span>{{ data?.birth }}</span>
             </div>
             <button class="btn-update">Aktualizuj</button>
         </div>
-        <button class="btn btn-secondary" @click="() => clearDataAndExit()">
-            <div class="btn-content btn-delete">
-                <div class="btn-icon">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-trash2-icon lucide-trash-2"
-                    >
-                        <path d="M10 11v6" />
-                        <path d="M14 11v6" />
-                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
-                        <path d="M3 6h18" />
-                        <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                    </svg>
-                </div>
-                <div class="btn-text-wrap">
-                    <span>Usuń dokument</span>
-                </div>
-            </div>
-        </button>
     </div>
 </template>
 
 <style scoped>
+.doc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px 16px 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.field-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 0;
+}
+
+.field-row--with-action {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 4px;
+}
+
+.field-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.field-label {
+    font-size: 13px;
+    color: #8a8b90;
+}
+
+.field-value2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1c1c1e;
+}
+
+.field-note {
+    font-size: 12.5px;
+    color: #9a9ba0;
+    line-height: 1.4;
+    margin: 2px 0 10px;
+}
+
+.copy-btn {
+    background: #e4eef9;
+    color: #3478c7;
+    border: none;
+    border-radius: 18px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.divider {
+    height: 1px;
+    background: #eef0f2;
+    margin: 5px 0px;
+}
+
+.divider--full {
+    margin: 4px -16px 0;
+}
+
+.expand-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 14px 0;
+    cursor: pointer;
+}
+
+.expand-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1c1c1e;
+}
+.quick-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0px;
+    gap: 4px;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    flex: 1;
+    padding: 0;
+    cursor: pointer;
+}
+
+.action-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: #ffffff;
+}
+
+.action-label {
+    font-size: 12px;
+    line-height: 1.3;
+    color: #5d5e63;
+    text-align: center;
+    font-weight: 500;
+}
 .time {
     text-align: center;
     font-size: 14px;
@@ -472,6 +604,7 @@ let displayTime = computed(() => {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-top: 18px;
     margin-bottom: 16px;
 }
 

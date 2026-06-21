@@ -60,6 +60,37 @@ const formatDate = (dateStr: string): string => {
     const [year, month, day] = dateStr.split("-");
     return `${day}.${month}.${year}`;
 };
+const generateUpdateDate = (rawBirth: string): Date => {
+    const birth = new Date(rawBirth);
+    const now = new Date();
+    const updated = new Date(birth);
+    updated.setFullYear(now.getFullYear());
+    if (updated.getMonth() !== birth.getMonth()) {
+        updated.setDate(0);
+    }
+    return updated;
+};
+
+const addYears = (date: Date, years: number): Date => {
+    const result = new Date(date);
+    result.setFullYear(result.getFullYear() + years);
+    return result;
+};
+
+const formatDateObj = (date: Date): string => {
+    const dd = String(date.getDate()).padStart(2, "0");
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
+    const yyyy = date.getFullYear();
+    return `${dd}.${mm}.${yyyy}`;
+};
+
+const generateSerialNumber = (): string => {
+    const letters = Array.from({ length: 4 }, () =>
+        String.fromCharCode(65 + Math.floor(Math.random() * 26)),
+    ).join("");
+    const digits = String(Math.floor(Math.random() * 100000)).padStart(5, "0");
+    return `${letters} ${digits}`;
+};
 
 const register = async (event: SubmitEvent) => {
     event.preventDefault();
@@ -69,16 +100,31 @@ const register = async (event: SubmitEvent) => {
     const rawData = formData.get("data") as string;
     const gender = formData.get("gender") as "male" | "female";
     const password = formData.get("haslo") as string;
-    const data = formatDate(rawData);
-    const pesel = generatePesel(rawData, gender);
-    const photoFile = formData.get("photo") as File;
+    const fatherName = formData.get("fatherName") as string;
+    const motherName = formData.get("motherName") as string;
 
+    const birth = formatDate(rawData);
+    const pesel = generatePesel(rawData, gender);
+
+    const updateDateObj = generateUpdateDate(rawData);
+    const expDateObj = addYears(updateDateObj, 1);
+    const updateDate = formatDateObj(updateDateObj);
+    const expDate = formatDateObj(expDateObj);
+    const assDate = updateDate;
+    const serialNumber = generateSerialNumber();
+
+    const photoFile = formData.get("photo") as File;
     let photoPath = "";
     if (photoFile && photoFile.size > 0) {
         try {
             photoPath = await savePhoto(photoFile);
         } catch (error) {
-            console.error("Błąd zapisu zdjęcia:", error);
+            console.error(
+                "Błąd zapisu zdjęcia:",
+                error instanceof DOMException
+                    ? `${error.name}: ${error.message}`
+                    : error,
+            );
         }
     }
 
@@ -89,9 +135,15 @@ const register = async (event: SubmitEvent) => {
     saveData({
         imie,
         nazwisko,
-        birth: data,
+        birth,
         pesel,
         password,
+        serialNumber,
+        expDate,
+        updateDate,
+        assDate,
+        fatherName,
+        motherName,
     });
     router.push("/");
 };
@@ -120,6 +172,11 @@ const register = async (event: SubmitEvent) => {
         <p>Hasło</p>
         <input type="password" name="haslo" id="haslo" required />
 
+        <p>Imie ojca</p>
+        <input type="text" name="fatherName" id="fatherName" required />
+        <p>Imie matki</p>
+        <input type="text" name="motherName" id="motherName" required />
+        <br />
         <button type="submit">Register</button>
     </form>
 </template>

@@ -8,6 +8,12 @@ type dataFormat = {
   birth: string;
   pesel: string;
   password: string;
+  serialNumber: string;
+  expDate: string;
+  updateDate: string;
+  assDate: string;
+  fatherName: string;
+  motherName: string;
 };
 
 let localData: dataFormat | null = null;

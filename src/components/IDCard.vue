@@ -55,10 +55,7 @@ const photoStyle = computed(() => {
                         :class="{ 'has-photo': photoUrl }"
                     ></div>
 
-                    <div class="flag">
-                        <div class="stripe white"></div>
-                        <div class="stripe red"></div>
-                    </div>
+                    <div class="flag"></div>
 
                     <div class="custom-emblem">
                         <div class="emblem-stack">
@@ -219,20 +216,14 @@ const photoStyle = computed(() => {
 }
 
 .flag {
+    background-image: url("@/assets/flag.gif");
+    image-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    background-size: contain;
     aspect-ratio: 96/56;
     width: 70px;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-}
-.flag .stripe {
-    height: 50%;
-}
-.flag .stripe.white {
-    background: #ffffff;
-}
-.flag .stripe.red {
-    background: #dc143c;
 }
 
 /* Custom Emblem with Layered, Grayscale, and Holographic Eagles */
