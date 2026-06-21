@@ -14,6 +14,52 @@ if (!data) {
 
 const photoUrl = ref<string>("");
 
+const tiltX = ref(50);
+const tiltY = ref(50);
+const debugInfo = ref("init");
+
+function handleOrientation(e: DeviceOrientationEvent) {
+    const gamma = e.gamma ?? 0;
+    const beta = e.beta ?? 0;
+
+    debugInfo.value = `gamma:${gamma.toFixed(1)} beta:${beta.toFixed(1)}`;
+
+    const clampedGamma = Math.max(-45, Math.min(45, gamma));
+    const clampedBeta = Math.max(-45, Math.min(45, beta - 45));
+
+    tiltX.value = 50 + (clampedGamma / 45) * 50;
+    tiltY.value = 50 + (clampedBeta / 45) * 50;
+}
+
+async function initTilt() {
+    debugInfo.value = "initTilt called";
+
+    if (
+        typeof window === "undefined" ||
+        !("DeviceOrientationEvent" in window)
+    ) {
+        debugInfo.value = "NO DeviceOrientationEvent on window";
+        return;
+    }
+
+    const DOE = DeviceOrientationEvent as any;
+    if (typeof DOE.requestPermission === "function") {
+        try {
+            const result = await DOE.requestPermission();
+            debugInfo.value = `iOS permission result: ${result}`;
+            if (result === "granted") {
+                window.addEventListener("deviceorientation", handleOrientation);
+            }
+        } catch (error) {
+            debugInfo.value = `permission error: ${error}`;
+        }
+    } else {
+        debugInfo.value =
+            "no requestPermission fn, attaching listener directly";
+        window.addEventListener("deviceorientation", handleOrientation);
+    }
+}
+
 onMounted(async () => {
     try {
         const store = await Store.load("settings.json");
@@ -29,10 +75,13 @@ onMounted(async () => {
     } catch (error) {
         console.error("Błąd ładowania zdjęcia:", error);
     }
+
+    initTilt();
 });
 
 onUnmounted(() => {
     if (photoUrl.value) URL.revokeObjectURL(photoUrl.value);
+    window.removeEventListener("deviceorientation", handleOrientation);
 });
 
 const photoStyle = computed(() => {
@@ -43,6 +92,11 @@ const photoStyle = computed(() => {
     }
     return {};
 });
+
+const emblemHoloStyle = computed(() => ({
+    "--tilt-x": `${tiltX.value}%`,
+    "--tilt-y": `${tiltY.value}%`,
+}));
 </script>
 <template>
     <div class="card">
@@ -59,8 +113,14 @@ const photoStyle = computed(() => {
 
                     <div class="custom-emblem">
                         <div class="emblem-stack">
-                            <div class="eagle-silhouette"></div>
-                            <div class="eagle-detailed"></div>
+                            <div class="emblem-grayscale">
+                                <div class="eagle-silhouette"></div>
+                                <div class="eagle-detailed"></div>
+                            </div>
+                            <div
+                                class="emblem-holo"
+                                :style="emblemHoloStyle"
+                            ></div>
                         </div>
                         <div class="emblem-text">
                             Rzeczpospolita<br />Polska
@@ -113,6 +173,19 @@ const photoStyle = computed(() => {
     </div>
 </template>
 <style lang="css" scoped>
+.debug-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: red;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    font-family: monospace;
+}
+
 .card {
     border-radius: 20px;
     overflow: hidden;
@@ -127,27 +200,25 @@ const photoStyle = computed(() => {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    z-index: 10; /* Above all content */
+    z-index: 10;
     border-radius: 20px;
 }
 
-/* Main rainbow holographic gradient */
 .card::before {
     background-image: linear-gradient(
         110deg,
         rgba(255, 255, 255, 0.05),
         rgba(173, 216, 230, 0.1),
-        /* blueish */ rgba(144, 238, 144, 0.1),
-        /* greenish */ rgba(255, 255, 224, 0.1),
-        /* yellowish */ rgba(255, 182, 193, 0.1),
-        /* pinkish */ rgba(255, 255, 255, 0.05)
+        rgba(144, 238, 144, 0.1),
+        rgba(255, 255, 224, 0.1),
+        rgba(255, 182, 193, 0.1),
+        rgba(255, 255, 255, 0.05)
     );
     opacity: 0.8;
     mix-blend-mode: color-dodge;
     animation: holoGradient 12s linear infinite;
 }
 
-/* Subtle pattern within the holographic effect (guilloche) */
 .card::after {
     background-image: repeating-linear-gradient(
         -45deg,
@@ -190,7 +261,6 @@ const photoStyle = computed(() => {
     display: flex;
     gap: 18px;
     position: relative;
-    z-index: 1; /* Content above holo layers if needed, or keep same. Let's make it 1 and put holo at 10. Adjusting to Z-index: 15 to be over everything. */
     z-index: 15;
 }
 
@@ -226,7 +296,6 @@ const photoStyle = computed(() => {
     overflow: hidden;
 }
 
-/* Custom Emblem with Layered, Grayscale, and Holographic Eagles */
 .custom-emblem {
     display: flex;
     flex-direction: row;
@@ -239,13 +308,18 @@ const photoStyle = computed(() => {
     aspect-ratio: 742/878;
     position: relative;
     width: 30px;
-    filter: grayscale(100%); /* Grayscale on the entire stack */
+}
+
+.emblem-grayscale {
+    position: absolute;
+    inset: 0;
+    filter: grayscale(100%);
 }
 
 .eagle-detailed {
     position: absolute;
     inset: 0;
-    background-image: url("@/assets/orzel.png"); /* Placeholder filename */
+    background-image: url("@/assets/orzel.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -255,15 +329,42 @@ const photoStyle = computed(() => {
 .eagle-silhouette {
     position: absolute;
     inset: 0;
-    background-image: url("@/assets/background.png"); /* Placeholder filename */
+    background-image: url("@/assets/background.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.6; /* Subtle silhouette effect */
+    opacity: 0.6;
     z-index: 0;
 }
 
-/* Text for the Rzeczpospolita Polska */
+.emblem-holo {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.9) 0%,
+        rgba(160, 160, 160, 0.9) 25%,
+        rgba(255, 220, 0, 0.9) 50%,
+        rgba(0, 100, 255, 0.9) 75%,
+        rgba(255, 0, 0, 0.9) 100%
+    );
+    background-size: 350% 250%;
+    background-position: var(--tilt-x, 50%) var(--tilt-y, 50%);
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    transition: background-position 0.05s linear;
+    -webkit-mask-image: url("@/assets/orzel.png");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url("@/assets/orzel.png");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
 .emblem-text {
     font-size: 9px;
     line-height: 1.1;
