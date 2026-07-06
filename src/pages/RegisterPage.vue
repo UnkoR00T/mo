@@ -2,9 +2,32 @@
 import { Store } from "@tauri-apps/plugin-store";
 import { writeFile, mkdir, BaseDirectory } from "@tauri-apps/plugin-fs";
 import { useRouter } from "vue-router";
+import { computed, nextTick, ref } from "vue";
 import { saveData } from "@/util";
 
 const router = useRouter();
+const PHOTO_ASPECT_RATIO = 430 / 561;
+const PHOTO_OUTPUT_WIDTH = 430;
+const PHOTO_OUTPUT_HEIGHT = 561;
+
+const photoInput = ref<HTMLInputElement | null>(null);
+const cropImage = ref<HTMLImageElement | null>(null);
+const selectedPhotoUrl = ref("");
+const selectedPhotoName = ref("user_photo.jpg");
+const croppedPhotoFile = ref<File | null>(null);
+const isCropperOpen = ref(false);
+const cropZoom = ref(1);
+const cropOffsetX = ref(0);
+const cropOffsetY = ref(0);
+const isDraggingCrop = ref(false);
+const dragStartX = ref(0);
+const dragStartY = ref(0);
+const dragOriginX = ref(0);
+const dragOriginY = ref(0);
+
+const cropImageStyle = computed(() => ({
+    transform: `translate(-50%, -50%) translate(${cropOffsetX.value}px, ${cropOffsetY.value}px) scale(${cropZoom.value})`,
+}));
 
 const savePhoto = async (file: File): Promise<string> => {
     const buffer = new Uint8Array(await file.arrayBuffer());
@@ -17,6 +40,120 @@ const savePhoto = async (file: File): Promise<string> => {
     await writeFile(fileName, buffer, { baseDir: BaseDirectory.AppData });
 
     return fileName;
+};
+
+const resetCropState = () => {
+    cropZoom.value = 1;
+    cropOffsetX.value = 0;
+    cropOffsetY.value = 0;
+    isDraggingCrop.value = false;
+};
+
+const revokeSelectedPhotoUrl = () => {
+    if (selectedPhotoUrl.value) {
+        URL.revokeObjectURL(selectedPhotoUrl.value);
+        selectedPhotoUrl.value = "";
+    }
+};
+
+const handlePhotoUpload = async (event: Event) => {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    croppedPhotoFile.value = null;
+
+    if (!file) {
+        revokeSelectedPhotoUrl();
+        return;
+    }
+
+    revokeSelectedPhotoUrl();
+    selectedPhotoName.value = file.name || "user_photo.jpg";
+    selectedPhotoUrl.value = URL.createObjectURL(file);
+    resetCropState();
+    isCropperOpen.value = true;
+    await nextTick();
+};
+
+const startCropDrag = (event: PointerEvent) => {
+    isDraggingCrop.value = true;
+    dragStartX.value = event.clientX;
+    dragStartY.value = event.clientY;
+    dragOriginX.value = cropOffsetX.value;
+    dragOriginY.value = cropOffsetY.value;
+    (event.currentTarget as HTMLElement).setPointerCapture(event.pointerId);
+};
+
+const moveCropDrag = (event: PointerEvent) => {
+    if (!isDraggingCrop.value) return;
+    cropOffsetX.value = dragOriginX.value + event.clientX - dragStartX.value;
+    cropOffsetY.value = dragOriginY.value + event.clientY - dragStartY.value;
+};
+
+const endCropDrag = (event: PointerEvent) => {
+    if (!isDraggingCrop.value) return;
+    isDraggingCrop.value = false;
+    (event.currentTarget as HTMLElement).releasePointerCapture(event.pointerId);
+};
+
+const dataUrlToFile = async (dataUrl: string, fileName: string) => {
+    const response = await fetch(dataUrl);
+    const blob = await response.blob();
+    return new File([blob], fileName.replace(/\.[^.]+$/, ".jpg"), {
+        type: "image/jpeg",
+    });
+};
+
+const applyPhotoCrop = async () => {
+    const image = cropImage.value;
+    if (!image) return;
+
+    const frameWidth = 320;
+    const frameHeight = frameWidth / PHOTO_ASPECT_RATIO;
+    const baseScale = Math.max(
+        frameWidth / image.naturalWidth,
+        frameHeight / image.naturalHeight,
+    );
+    const renderedWidth = image.naturalWidth * baseScale * cropZoom.value;
+    const renderedHeight = image.naturalHeight * baseScale * cropZoom.value;
+    const sourceX =
+        ((renderedWidth - frameWidth) / 2 - cropOffsetX.value) /
+        (baseScale * cropZoom.value);
+    const sourceY =
+        ((renderedHeight - frameHeight) / 2 - cropOffsetY.value) /
+        (baseScale * cropZoom.value);
+    const sourceWidth = frameWidth / (baseScale * cropZoom.value);
+    const sourceHeight = frameHeight / (baseScale * cropZoom.value);
+
+    const canvas = document.createElement("canvas");
+    canvas.width = PHOTO_OUTPUT_WIDTH;
+    canvas.height = PHOTO_OUTPUT_HEIGHT;
+    const context = canvas.getContext("2d");
+    if (!context) return;
+
+    context.drawImage(
+        image,
+        sourceX,
+        sourceY,
+        sourceWidth,
+        sourceHeight,
+        0,
+        0,
+        PHOTO_OUTPUT_WIDTH,
+        PHOTO_OUTPUT_HEIGHT,
+    );
+
+    croppedPhotoFile.value = await dataUrlToFile(
+        canvas.toDataURL("image/jpeg", 0.92),
+        selectedPhotoName.value,
+    );
+    isCropperOpen.value = false;
+};
+
+const cancelPhotoCrop = () => {
+    croppedPhotoFile.value = null;
+    revokeSelectedPhotoUrl();
+    isCropperOpen.value = false;
+    if (photoInput.value) photoInput.value.value = "";
 };
 
 const generatePesel = (dateStr: string, gender: "male" | "female"): string => {
@@ -113,7 +250,7 @@ const register = async (event: SubmitEvent) => {
     const assDate = updateDate;
     const serialNumber = generateSerialNumber();
 
-    const photoFile = formData.get("photo") as File;
+    const photoFile = croppedPhotoFile.value;
     let photoPath = "";
     if (photoFile && photoFile.size > 0) {
         try {
@@ -161,7 +298,66 @@ const register = async (event: SubmitEvent) => {
         <input type="date" name="data" id="data" required />
 
         <p>Photo</p>
-        <input type="file" name="photo" id="photo" accept="image/*" />
+        <input
+            ref="photoInput"
+            class="file-input"
+            type="file"
+            id="photo"
+            accept="image/*"
+            @change="handlePhotoUpload"
+        />
+        <p v-if="croppedPhotoFile" class="photo-ready">
+            Photo cropped and ready
+        </p>
+
+        <div
+            v-if="isCropperOpen"
+            class="modal modal-open"
+            role="dialog"
+            aria-modal="true"
+        >
+            <div class="modal-box crop-modal">
+                <h3>Crop photo</h3>
+                <div
+                    class="crop-frame"
+                    @pointerdown="startCropDrag"
+                    @pointermove="moveCropDrag"
+                    @pointerup="endCropDrag"
+                    @pointercancel="endCropDrag"
+                >
+                    <img
+                        v-if="selectedPhotoUrl"
+                        ref="cropImage"
+                        :src="selectedPhotoUrl"
+                        :style="cropImageStyle"
+                        alt=""
+                        draggable="false"
+                    />
+                </div>
+                <label class="zoom-control" for="photoZoom">Zoom</label>
+                <input
+                    id="photoZoom"
+                    v-model.number="cropZoom"
+                    class="range"
+                    type="range"
+                    min="1"
+                    max="3"
+                    step="0.01"
+                />
+                <div class="modal-action">
+                    <button class="btn" type="button" @click="cancelPhotoCrop">
+                        Cancel
+                    </button>
+                    <button
+                        class="btn btn-primary"
+                        type="button"
+                        @click="applyPhotoCrop"
+                    >
+                        Use photo
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <p>Płeć</p>
         <select name="gender" id="gender">
@@ -182,5 +378,53 @@ const register = async (event: SubmitEvent) => {
 </template>
 
 <style lang="css" scoped>
-/* Twoje style */
+.photo-ready {
+    color: var(--accent-green);
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.crop-modal {
+    max-width: 380px;
+}
+
+.crop-modal h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.crop-frame {
+    aspect-ratio: 430/561;
+    width: min(320px, 100%);
+    margin: 0 auto 18px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--line);
+    touch-action: none;
+    cursor: grab;
+}
+
+.crop-frame:active {
+    cursor: grabbing;
+}
+
+.crop-frame img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+}
+
+.zoom-control {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
 </style>
