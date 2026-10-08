@@ -1,0 +1,120 @@
+package b74;
+
+import oq.i0;
+import p071kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes10.dex */
+@Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0014\u0018\u00002\u00020\u0001BO\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012¢\u0006\u0004\b\u0014\u0010\u0015J$\u0010\u001b\u001a\u000e\u0012\u0004\u0012\u00020\u0019\u0012\u0004\u0012\u00020\u001a0\u00182\u0006\u0010\u0017\u001a\u00020\u0016H\u0096B¢\u0006\u0004\b\u001b\u0010\u001cR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001b\u0010\u001dR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001e\u0010\u001fR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b \u0010!R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\"\u0010#R\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b$\u0010%R\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)R\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b*\u0010+R\u0014\u0010\u0013\u001a\u00020\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-¨\u0006."}, d2 = {"Lb74/t;", "Lv64/q;", "Lac4/a;", "callActionWithLoaderUseCase", "Lv64/o;", "isUserLoggedInUseCase", "Lv64/f;", "clearSessionDataUC", "Lgx/d;", "globalEventManager", "Lu64/b;", "userRepositoryLegacy", "La74/a;", "userRepository", "Lv64/r;", "serveLoggingOutUseCase", "La14/t;", "monitorActivityVisibilityUseCase", "Lz64/b;", "userCommonInteractor", "<init>", "(Lac4/a;Lv64/o;Lv64/f;Lgx/d;Lu64/b;La74/a;Lv64/r;La14/t;Lz64/b;)V", "Lgz/b$a$a;", "params", "Ldx/i;", "Ldx/b;", "Loq/i0;", "a", "(Lgz/b$a$a;Ltq/e;)Ljava/lang/Object;", "Lac4/a;", "b", "Lv64/o;", "c", "Lv64/f;", "d", "Lgx/d;", "e", "Lu64/b;", "f", "La74/a;", "g", "Lv64/r;", "h", "La14/t;", "i", "Lz64/b;", "user_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class t implements v64.q {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    private final ac4.a callActionWithLoaderUseCase;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name and from kotlin metadata */
+    private final v64.o isUserLoggedInUseCase;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
+    private final v64.f clearSessionDataUC;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
+    private final gx.d globalEventManager;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
+    private final u64.b userRepositoryLegacy;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
+    private final a74.a userRepository;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
+    private final v64.r serveLoggingOutUseCase;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
+    private final a14.t monitorActivityVisibilityUseCase;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
+    private final z64.b userCommonInteractor;
+
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u000e\u0012\u0004\u0012\u00020\u0001\u0012\u0004\u0012\u00020\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Ldx/i;", "Ldx/b$e;", "Loq/i0;", "<anonymous>", "()Ldx/i;"}, k = 3, mv = {2, 2, 0})
+    static final class a extends vq.k implements er.l<tq.e<? super dx.i<? extends dx.b.Generic, ? extends i0>>, Object> {
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        boolean f17269e;
+
+        /* JADX INFO: renamed from: f, reason: collision with root package name */
+        int f17270f;
+
+        /* JADX INFO: renamed from: b74.t$a$a, reason: collision with other inner class name */
+        @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+        public static final /* synthetic */ class C0422a {
+
+            /* JADX INFO: renamed from: a, reason: collision with root package name */
+            public static final /* synthetic */ int[] f17272a;
+
+            static {
+                int[] iArr = new int[nx.c.values().length];
+                try {
+                    iArr[nx.c.FOREGROUND.ordinal()] = 1;
+                } catch (NoSuchFieldError unused) {
+                }
+                try {
+                    iArr[nx.c.BACKGROUND.ordinal()] = 2;
+                } catch (NoSuchFieldError unused2) {
+                }
+                f17272a = iArr;
+            }
+        }
+
+        a(tq.e<? super a> eVar) {
+            super(1, eVar);
+        }
+
+        /* JADX WARN: Code duplicated, block: B:29:0x00b5 A[DONT_INVERT] */
+        /* JADX WARN: Code duplicated, block: B:30:0x00b7  */
+        /* JADX WARN: Code duplicated, block: B:33:0x00ca  */
+        /* JADX WARN: Code duplicated, block: B:35:0x00d0  */
+        /* JADX WARN: Code restructure failed: missing block: B:31:0x00c7, code lost:
+        
+            if (r7.c(r3, r6) == r0) goto L32;
+         */
+        @Override // vq.a
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+            To view partially-correct add '--show-bad-code' argument
+        */
+        public final java.lang.Object J(java.lang.Object r7) throws java.lang.Throwable {
+            /*
+                Method dump skipped, instruction units count: 239
+                To view this dump add '--comments-level debug' option
+            */
+            throw new UnsupportedOperationException("Method not decompiled: b74.t.a.J(java.lang.Object):java.lang.Object");
+        }
+
+        public final tq.e<i0> M(tq.e<?> eVar) {
+            return t.this.new a(eVar);
+        }
+
+        @Override // er.l
+        /* JADX INFO: renamed from: N, reason: merged with bridge method [inline-methods] */
+        public final Object b(tq.e<? super dx.i<dx.b.Generic, i0>> eVar) {
+            return ((a) M(eVar)).J(i0.f148189a);
+        }
+    }
+
+    public t(ac4.a aVar, v64.o oVar, v64.f fVar, gx.d dVar, u64.b bVar, a74.a aVar2, v64.r rVar, a14.t tVar, z64.b bVar2) {
+        this.callActionWithLoaderUseCase = aVar;
+        this.isUserLoggedInUseCase = oVar;
+        this.clearSessionDataUC = fVar;
+        this.globalEventManager = dVar;
+        this.userRepositoryLegacy = bVar;
+        this.userRepository = aVar2;
+        this.serveLoggingOutUseCase = rVar;
+        this.monitorActivityVisibilityUseCase = tVar;
+        this.userCommonInteractor = bVar2;
+    }
+
+    @Override // gz.b
+    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+    public Object c(gz.b.a.C1792a c1792a, tq.e<? super dx.i<? extends dx.b, i0>> eVar) {
+        return ac4.a.a(this.callActionWithLoaderUseCase, null, new a(null), eVar, 1, null);
+    }
+}

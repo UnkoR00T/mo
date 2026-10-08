@@ -1,0 +1,1 @@
+173_model.md | SKIPPED (biblioteka: androidx.activity - ActivityResultRegistry/ActivityResultCaller)

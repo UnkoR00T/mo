@@ -1,0 +1,1 @@
+174_model.md | SKIPPED (biblioteka: androidx.activity - ActivityResultRegistry cz.2)

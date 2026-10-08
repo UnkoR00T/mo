@@ -1,0 +1,36 @@
+package nc1;
+
+import p071kotlin.Metadata;
+
+/* JADX INFO: renamed from: nc1.f, reason: from toString */
+/* JADX INFO: loaded from: classes7.dex */
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0010\u0010\u0006\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bHÖ\u0001¢\u0006\u0004\b\t\u0010\nJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\r\u0010\u000eR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u000f\u0010\u0007¨\u0006\u0011"}, d2 = {"Lnc1/f;", "", "", "postOffice", "<init>", "(Ljava/lang/String;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "company_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final /* data */ class OnPostOfficeCodeChanged {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
+    private final String postOffice;
+
+    public OnPostOfficeCodeChanged(String str) {
+        this.postOffice = str;
+    }
+
+    /* JADX INFO: renamed from: a, reason: from getter */
+    public final String getPostOffice() {
+        return this.postOffice;
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        return (other instanceof OnPostOfficeCodeChanged) && fr.t.c(this.postOffice, ((OnPostOfficeCodeChanged) other).postOffice);
+    }
+
+    public int hashCode() {
+        return this.postOffice.hashCode();
+    }
+
+    public String toString() {
+        return "OnPostOfficeCodeChanged(postOffice=" + this.postOffice + ')';
+    }
+}

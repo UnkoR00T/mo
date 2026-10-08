@@ -1,0 +1,286 @@
+package r04;
+
+import dx.i;
+import dx.j;
+import iy.g;
+import iy.h;
+import java.util.concurrent.CancellationException;
+import javax.crypto.SecretKey;
+import o04.FileToDownload;
+import oq.p;
+import oq.u;
+import org.bouncycastle.asn1.cmp.PKIFailureInfo;
+import p071kotlin.Metadata;
+import px.f;
+import tq.e;
+import wx.FileContent;
+
+/* JADX INFO: loaded from: classes10.dex */
+@Metadata(d1 = {"\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0012\u0018\u00002\u00020\u0001BG\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u0010¢\u0006\u0004\b\u0012\u0010\u0013J4\u0010\u001c\u001a\u000e\u0012\u0004\u0012\u00020\u001b\u0012\u0004\u0012\u00020\u00180\u001a2\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0019\u001a\u00020\u0018H\u0082@¢\u0006\u0004\b\u001c\u0010\u001dJ$\u0010 \u001a\u000e\u0012\u0004\u0012\u00020\u001b\u0012\u0004\u0012\u00020\u00180\u001a2\u0006\u0010\u001f\u001a\u00020\u001eH\u0096B¢\u0006\u0004\b \u0010!R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\"\u0010#R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b$\u0010%R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)R\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001c\u0010*R\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b \u0010+R\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-R\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b.\u0010/¨\u00060"}, d2 = {"Lr04/b;", "Lp04/a;", "Ln04/a;", "cloudStorageInteractor", "Lr04/c;", "getFileEncryptionAlgorithmUC", "Lr04/a;", "createFragmentedUrlUC", "Liy/g;", "cipherAes", "Lpy/a;", "aesKeyDecoder", "Liy/a;", "base64Coder", "Lyo0/a;", "downloadFileUC", "Lpx/d;", "remoteLogger", "<init>", "(Ln04/a;Lr04/c;Lr04/a;Liy/g;Lpy/a;Liy/a;Lyo0/a;Lpx/d;)V", "Lo04/b;", "configuration", "Lo04/d;", "fileToDownload", "Lwx/c;", "encryptedFileContent", "Ldx/i;", "Ldx/b;", "e", "(Lo04/b;Lo04/d;Lwx/c;Ltq/e;)Ljava/lang/Object;", "Lp04/a$a;", "params", "f", "(Lp04/a$a;Ltq/e;)Ljava/lang/Object;", "a", "Ln04/a;", "b", "Lr04/c;", "c", "Lr04/a;", "d", "Liy/g;", "Lpy/a;", "Liy/a;", "g", "Lyo0/a;", "h", "Lpx/d;", "cloudstorage_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class b implements p04.a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    private final n04.a cloudStorageInteractor;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name and from kotlin metadata */
+    private final c getFileEncryptionAlgorithmUC;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
+    private final r04.a createFragmentedUrlUC;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
+    private final g cipherAes;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
+    private final py.a aesKeyDecoder;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
+    private final iy.a base64Coder;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
+    private final yo0.a downloadFileUC;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
+    private final px.d remoteLogger;
+
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    static final class a extends vq.d {
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        Object f170296d;
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        Object f170297e;
+
+        /* JADX INFO: renamed from: f, reason: collision with root package name */
+        Object f170298f;
+
+        /* JADX INFO: renamed from: g, reason: collision with root package name */
+        Object f170299g;
+
+        /* JADX INFO: renamed from: h, reason: collision with root package name */
+        Object f170300h;
+
+        /* JADX INFO: renamed from: j, reason: collision with root package name */
+        Object f170301j;
+
+        /* JADX INFO: renamed from: k, reason: collision with root package name */
+        Object f170302k;
+
+        /* JADX INFO: renamed from: l, reason: collision with root package name */
+        int f170303l;
+
+        /* JADX INFO: renamed from: m, reason: collision with root package name */
+        int f170304m;
+
+        /* JADX INFO: renamed from: n, reason: collision with root package name */
+        int f170305n;
+
+        /* JADX INFO: renamed from: p, reason: collision with root package name */
+        int f170306p;
+
+        /* JADX INFO: renamed from: q, reason: collision with root package name */
+        int f170307q;
+
+        /* JADX INFO: renamed from: r, reason: collision with root package name */
+        /* synthetic */ Object f170308r;
+
+        /* JADX INFO: renamed from: t, reason: collision with root package name */
+        int f170310t;
+
+        a(e<? super a> eVar) {
+            super(eVar);
+        }
+
+        @Override // vq.a
+        public final Object J(Object obj) {
+            this.f170308r = obj;
+            this.f170310t |= PKIFailureInfo.systemUnavail;
+            return b.this.e(null, null, null, this);
+        }
+    }
+
+    /* JADX INFO: renamed from: r04.b$b, reason: collision with other inner class name */
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    static final class C4311b extends vq.d {
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        Object f170311d;
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        Object f170312e;
+
+        /* JADX INFO: renamed from: f, reason: collision with root package name */
+        Object f170313f;
+
+        /* JADX INFO: renamed from: g, reason: collision with root package name */
+        Object f170314g;
+
+        /* JADX INFO: renamed from: h, reason: collision with root package name */
+        int f170315h;
+
+        /* JADX INFO: renamed from: j, reason: collision with root package name */
+        int f170316j;
+
+        /* JADX INFO: renamed from: k, reason: collision with root package name */
+        /* synthetic */ Object f170317k;
+
+        /* JADX INFO: renamed from: m, reason: collision with root package name */
+        int f170319m;
+
+        C4311b(e<? super C4311b> eVar) {
+            super(eVar);
+        }
+
+        @Override // vq.a
+        public final Object J(Object obj) {
+            this.f170317k = obj;
+            this.f170319m |= PKIFailureInfo.systemUnavail;
+            return b.this.c(null, this);
+        }
+    }
+
+    public b(n04.a aVar, c cVar, r04.a aVar2, g gVar, py.a aVar3, iy.a aVar4, yo0.a aVar5, px.d dVar) {
+        this.cloudStorageInteractor = aVar;
+        this.getFileEncryptionAlgorithmUC = cVar;
+        this.createFragmentedUrlUC = aVar2;
+        this.cipherAes = gVar;
+        this.aesKeyDecoder = aVar3;
+        this.base64Coder = aVar4;
+        this.downloadFileUC = aVar5;
+        this.remoteLogger = dVar;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX WARN: Code duplicated, block: B:7:0x0015  */
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r2v1, types: [dx.j, java.lang.Object] */
+    /* JADX WARN: Type inference failed for: r2v15 */
+    /* JADX WARN: Type inference failed for: r2v2 */
+    public final Object e(o04.b bVar, FileToDownload fileToDownload, FileContent fileContent, e<? super i<? extends dx.b, FileContent>> eVar) throws Throwable {
+        a aVar;
+        Exception exc;
+        ?? r15;
+        Object objB;
+        ex.c cVar;
+        ex.b bVar2;
+        if (eVar instanceof a) {
+            aVar = (a) eVar;
+            int i15 = aVar.f170310t;
+            if ((i15 & PKIFailureInfo.systemUnavail) != 0) {
+                aVar.f170310t = i15 - PKIFailureInfo.systemUnavail;
+            } else {
+                aVar = new a(eVar);
+            }
+        } else {
+            aVar = new a(eVar);
+        }
+        Object obj = aVar.f170308r;
+        Object objE = uq.b.e();
+        int i16 = aVar.f170310t;
+        try {
+            try {
+                if (i16 == 0) {
+                    u.b(obj);
+                    j<dx.b> jVarA = xw.c.f221622a.a();
+                    try {
+                        ex.a aVar2 = new ex.a();
+                        g gVar = this.cipherAes;
+                        byte[] bytes = fileContent.getBytes();
+                        SecretKey secretKey = (SecretKey) aVar2.a(this.aesKeyDecoder.a((byte[]) aVar2.a(iy.a.f(this.base64Coder, bVar.getFileEncryptionKey(), null, 2, null))));
+                        h.a aVarB = this.getFileEncryptionAlgorithmUC.b(new c.a((byte[]) aVar2.a(iy.a.f(this.base64Coder, fileToDownload.getFileEncryptionIV(), null, 2, null))));
+                        aVar.f170296d = vq.j.a(bVar);
+                        aVar.f170297e = vq.j.a(fileToDownload);
+                        aVar.f170298f = vq.j.a(fileContent);
+                        aVar.f170299g = jVarA;
+                        aVar.f170300h = vq.j.a(aVar2);
+                        aVar.f170301j = vq.j.a(aVar2);
+                        aVar.f170302k = aVar2;
+                        aVar.f170303l = 0;
+                        aVar.f170304m = 0;
+                        aVar.f170305n = 0;
+                        aVar.f170306p = 0;
+                        aVar.f170307q = 0;
+                        aVar.f170310t = 1;
+                        Object objD = gVar.d(bytes, secretKey, aVarB, aVar);
+                        if (objD == objE) {
+                            return objE;
+                        }
+                        obj = objD;
+                        bVar2 = aVar2;
+                    } catch (ex.c e15) {
+                        cVar = e15;
+                        return new i.Left((dx.b) ex.d.a(cVar));
+                    } catch (CancellationException e16) {
+                        throw e16;
+                    } catch (Exception e17) {
+                        exc = e17;
+                        r15 = jVarA;
+                        f fVar = f.f163100a;
+                        String message = exc.getMessage();
+                        if (message == null) {
+                            message = "";
+                        }
+                        fVar.d(message, exc, px.c.a(r15));
+                        i iVarA = r15.a(exc);
+                        if (iVarA instanceof i.Left) {
+                            objB = new dx.b.Generic((Exception) ((i.Left) iVarA).b());
+                        } else {
+                            if (!(iVarA instanceof i.Right)) {
+                                throw new p();
+                            }
+                            objB = ((i.Right) iVarA).b();
+                        }
+                        return new i.Left(objB);
+                    }
+                } else {
+                    if (i16 != 1) {
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                    }
+                    bVar2 = (ex.b) aVar.f170302k;
+                    try {
+                        u.b(obj);
+                    } catch (ex.c e18) {
+                        cVar = e18;
+                        return new i.Left((dx.b) ex.d.a(cVar));
+                    } catch (CancellationException e19) {
+                        throw e19;
+                    }
+                }
+                return new i.Right(new FileContent((byte[]) bVar2.a((i) obj)));
+            } catch (CancellationException e25) {
+                throw e25;
+            }
+        } catch (Exception e26) {
+            exc = e26;
+            r15 = objE;
+        }
+    }
+
+    /* JADX WARN: Code duplicated, block: B:28:0x00c7  */
+    /* JADX WARN: Code duplicated, block: B:30:0x00cb  */
+    /* JADX WARN: Code duplicated, block: B:36:0x0111  */
+    /* JADX WARN: Code duplicated, block: B:38:0x0121  */
+    /* JADX WARN: Code duplicated, block: B:39:0x0124  */
+    /* JADX WARN: Code duplicated, block: B:41:0x0127  */
+    /* JADX WARN: Code duplicated, block: B:44:0x0135  */
+    /* JADX WARN: Code duplicated, block: B:7:0x0013  */
+    /* JADX WARN: Code restructure failed: missing block: B:31:0x0108, code lost:
+    
+        if (r11 == r1) goto L32;
+     */
+    /* JADX WARN: Instruction removed from duplicated block: B:36:0x0111, please report this as an issue */
+    @Override // gz.b
+    /* JADX INFO: renamed from: f, reason: merged with bridge method [inline-methods] */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public java.lang.Object c(p04.a.Params r10, tq.e<? super dx.i<? extends dx.b, wx.FileContent>> r11) throws java.lang.Throwable {
+        /*
+            Method dump skipped, instruction units count: 315
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: r04.b.c(p04.a$a, tq.e):java.lang.Object");
+    }
+}

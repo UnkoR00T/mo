@@ -1,0 +1,1 @@
+042_net.md | SKIPPED (biblioteka: okhttp3 internals - RealConnection/TLS/HTTP2)

@@ -1,0 +1,1 @@
+164_model.md | SKIPPED (biblioteka: mg = warstwa poświadczeń SafeParcelable, mh/r0 = Google Maps, mi/a = Google Places)

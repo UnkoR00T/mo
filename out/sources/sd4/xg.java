@@ -1,0 +1,162 @@
+package sd4;
+
+import android.os.Bundle;
+import p071kotlin.Metadata;
+import p127vq2.Function0;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0007\u0018\u0000 \u001f2\u00020\u0001:\u0001 B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0019\u0010\u0007\u001a\u00020\u00062\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u000f\u0010\t\u001a\u00020\u0006H\u0017¢\u0006\u0004\b\t\u0010\nR\"\u0010\u0012\u001a\u00020\u000b8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\f\u0010\r\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\"\u0010\u001a\u001a\u00020\u00138\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017\"\u0004\b\u0018\u0010\u0019R\u0018\u0010\u001e\u001a\u0004\u0018\u00010\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u001c\u0010\u001d¨\u0006!"}, d2 = {"Lsd4/xg;", "Lj00/b;", "<init>", "()V", "Landroid/os/Bundle;", "savedInstanceState", "Loq/i0;", "x0", "(Landroid/os/Bundle;)V", "S1", "(Lm2/r;I)V", "Lrh2/a;", "L0", "Lrh2/a;", "g2", "()Lrh2/a;", "setFragmentNavigator", "(Lrh2/a;)V", "fragmentNavigator", "Lgx/d;", "M0", "Lgx/d;", "h2", "()Lgx/d;", "setGlobalEventManager", "(Lgx/d;)V", "globalEventManager", "Liy/b0;", "N0", "Liy/b0;", "passportNumber", "O0", "a", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class xg extends ba {
+
+    /* JADX INFO: renamed from: O0, reason: from kotlin metadata */
+    public static final Companion INSTANCE = new Companion(null);
+    public static final int P0 = 8;
+
+    /* JADX INFO: renamed from: L0, reason: from kotlin metadata */
+    public rh2.a fragmentNavigator;
+
+    /* JADX INFO: renamed from: M0, reason: from kotlin metadata */
+    public gx.d globalEventManager;
+
+    /* JADX INFO: renamed from: N0, reason: from kotlin metadata */
+    private iy.b0 passportNumber;
+
+    /* JADX INFO: renamed from: sd4.xg$a, reason: from kotlin metadata */
+    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\u0007\u0010\bR\u0014\u0010\n\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\b\n\u0010\u000bR\u0014\u0010\f\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\b\f\u0010\u000b¨\u0006\r"}, d2 = {"Lsd4/xg$a;", "", "<init>", "()V", "Liy/b0;", "passportNumber", "Lsd4/xg;", "a", "(Liy/b0;)Lsd4/xg;", "", "TAG", "Ljava/lang/String;", "PASSPORT_NUMBER", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class Companion {
+        public /* synthetic */ Companion(fr.k kVar) {
+            this();
+        }
+
+        public final xg a(iy.b0 passportNumber) {
+            xg xgVar = new xg();
+            Bundle bundle = new Bundle();
+            bundle.putString("PASSPORT_NUMBER", passportNumber != null ? iy.c0.e(passportNumber) : null);
+            xgVar.F1(bundle);
+            return xgVar;
+        }
+
+        private Companion() {
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 c2(final xg xgVar, p076m2.r rVar, int i15) {
+        if (rVar.r((i15 & 3) != 2, i15 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(1407635634, i15, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.PassportInvalidationFeatureFragment.GetContent.<anonymous> (PassportInvalidationFeatureFragment.kt:35)");
+            }
+            boolean zG = rVar.G(xgVar);
+            Object objE = rVar.E();
+            if (zG || objE == p076m2.r.INSTANCE.a()) {
+                objE = new er.a() { // from class: sd4.vg
+                    @Override // er.a
+                    public final Object a() {
+                        return xg.d2(this.f180907a);
+                    }
+                };
+                rVar.v(objE);
+            }
+            er.a aVar = (er.a) objE;
+            boolean zG2 = rVar.G(xgVar);
+            Object objE2 = rVar.E();
+            if (zG2 || objE2 == p076m2.r.INSTANCE.a()) {
+                objE2 = new er.a() { // from class: sd4.wg
+                    @Override // er.a
+                    public final Object a() {
+                        return xg.e2(this.f180925a);
+                    }
+                };
+                rVar.v(objE2);
+            }
+            Function0.n(aVar, (er.a) objE2, xgVar.passportNumber, rVar, iy.b0.f97726c << 6);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVar.O();
+        }
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 d2(xg xgVar) {
+        xgVar.g2().c("TAG_PASSPORT_INVALIDATION");
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 e2(xg xgVar) {
+        xgVar.g2().c("TAG_PASSPORT_INVALIDATION");
+        if (xgVar.passportNumber != null) {
+            xgVar.h2().c(new nc3.a.ToUserData(true));
+        }
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 f2(xg xgVar, int i15, p076m2.r rVar, int i16) {
+        xgVar.S1(rVar, p076m2.g4.a(i15 | 1));
+        return oq.i0.f148189a;
+    }
+
+    @Override // j00.b
+    public void S1(p076m2.r rVar, final int i15) {
+        int i16;
+        p076m2.r rVarH = rVar.h(-1397665954);
+        if ((i15 & 6) == 0) {
+            i16 = (rVarH.G(this) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(-1397665954, i16, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.PassportInvalidationFeatureFragment.GetContent (PassportInvalidationFeatureFragment.kt:33)");
+            }
+            mc4.d.d(false, y2.m.d(1407635634, true, new er.p() { // from class: sd4.tg
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return xg.c2(this.f180873a, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            }, rVarH, 54), rVarH, 48, 1);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        p076m2.d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: sd4.ug
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return xg.f2(this.f180889a, i15, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    public final rh2.a g2() {
+        rh2.a aVar = this.fragmentNavigator;
+        if (aVar != null) {
+            return aVar;
+        }
+        return null;
+    }
+
+    public final gx.d h2() {
+        gx.d dVar = this.globalEventManager;
+        if (dVar != null) {
+            return dVar;
+        }
+        return null;
+    }
+
+    @Override // androidx.fragment.app.o
+    public void x0(Bundle savedInstanceState) {
+        String string;
+        super.x0(savedInstanceState);
+        Bundle bundleV = v();
+        this.passportNumber = (bundleV == null || (string = bundleV.getString("PASSPORT_NUMBER")) == null) ? null : iy.c0.g(string);
+    }
+}

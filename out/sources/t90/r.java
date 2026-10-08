@@ -1,0 +1,331 @@
+package t90;
+
+import androidx.p016lifecycle.y0;
+import f00.d0;
+import f00.f0;
+import f00.g0;
+import fr.q0;
+import iy.c0;
+import ju.p0;
+import oq.i0;
+import oq.u;
+import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
+import p071kotlin.Metadata;
+import p076m2.Function0;
+import p076m2.d5;
+import p076m2.g4;
+import p136y9.d1;
+import p136y9.w;
+import p7.CreationExtras;
+import v90.z;
+
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\u001a7\u0010\u0006\u001a\u00020\u00032\n\b\u0002\u0010\u0001\u001a\u0004\u0018\u00010\u00002\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u00022\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002H\u0007¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lt90/e;", "entryPoint", "Lkotlin/Function0;", "Loq/i0;", "onClose", "goToDashboard", "l", "(Lt90/e;Ler/a;Ler/a;Lm2/r;II)V", "activation_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class r {
+
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lju/p0;", "Loq/i0;", "<anonymous>", "(Lju/p0;)V"}, k = 3, mv = {2, 2, 0})
+    static final class a extends vq.k implements er.p<p0, tq.e<? super i0>, Object> {
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        int f188997e;
+
+        /* JADX INFO: renamed from: f, reason: collision with root package name */
+        final /* synthetic */ e f188998f;
+
+        /* JADX INFO: renamed from: g, reason: collision with root package name */
+        final /* synthetic */ f00.s f188999g;
+
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        a(e eVar, f00.s sVar, tq.e<? super a> eVar2) {
+            super(2, eVar2);
+            this.f188998f = eVar;
+            this.f188999g = sVar;
+        }
+
+        @Override // vq.a
+        public final Object J(Object obj) throws Throwable {
+            uq.b.e();
+            if (this.f188997e != 0) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            u.b(obj);
+            if (fr.t.c(this.f188998f, e.a.f188969a)) {
+                f00.s.l(this.f188999g, t90.a.f188961a, v90.o.a.f205361a, null, 4, null);
+            } else {
+                f00.s.m(this.f188999g, d.f188967a, null, 2, null);
+            }
+            return i0.f148189a;
+        }
+
+        @Override // er.p
+        /* JADX INFO: renamed from: M, reason: merged with bridge method [inline-methods] */
+        public final Object B(p0 p0Var, tq.e<? super i0> eVar) {
+            return ((a) v(p0Var, eVar)).J(i0.f148189a);
+        }
+
+        @Override // vq.a
+        public final tq.e<i0> v(Object obj, tq.e<?> eVar) {
+            return new a(this.f188998f, this.f188999g, eVar);
+        }
+    }
+
+    public static final void l(final e eVar, final er.a<i0> aVar, final er.a<i0> aVar2, p076m2.r rVar, final int i15, final int i16) {
+        int i17;
+        p076m2.r rVarH = rVar.h(1268232749);
+        int i18 = i16 & 1;
+        if (i18 != 0) {
+            i17 = i15 | 6;
+        } else if ((i15 & 6) == 0) {
+            i17 = ((i15 & 8) == 0 ? rVarH.W(eVar) : rVarH.G(eVar) ? 4 : 2) | i15;
+        } else {
+            i17 = i15;
+        }
+        if ((i15 & 48) == 0) {
+            i17 |= rVarH.G(aVar) ? 32 : 16;
+        }
+        if ((i15 & MLKEMEngine.KyberPolyBytes) == 0) {
+            i17 |= rVarH.G(aVar2) ? 256 : 128;
+        }
+        if (rVarH.r((i17 & 147) != 146, i17 & 1)) {
+            if (i18 != 0) {
+                eVar = e.b.f188970a;
+            }
+            if (p076m2.t.k()) {
+                p076m2.t.o(1268232749, i17, -1, "pl.gov.coi.mjunior.feature.activation.presentation.ActivationNavContent (ActivationNavContent.kt:27)");
+            }
+            final f00.s sVarJ = f00.r.J(null, rVarH, 0, 1);
+            c cVar = c.f188965a;
+            boolean zG = ((i17 & 14) == 4 || ((i17 & 8) != 0 && rVarH.G(eVar))) | rVarH.G(sVarJ) | ((i17 & 112) == 32) | ((i17 & 896) == 256);
+            Object objE = rVarH.E();
+            if (zG || objE == p076m2.r.INSTANCE.a()) {
+                objE = new er.l() { // from class: t90.g
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return r.m(eVar, sVarJ, aVar, aVar2, (d1) obj);
+                    }
+                };
+                rVarH.v(objE);
+            }
+            d0.j(sVarJ, cVar, (er.l) objE, rVarH, f00.s.f54562e | 48);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        final e eVar2 = eVar;
+        d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: t90.i
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return r.w(eVar2, aVar, aVar2, i15, i16, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 m(final e eVar, final f00.s sVar, final er.a aVar, final er.a aVar2, d1 d1Var) {
+        f00.r.u(d1Var, c.f188965a, null, y2.m.b(141927214, true, new er.r() { // from class: t90.j
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return r.n(eVar, sVar, (p114t0.f) obj, (w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, d.f188967a, null, y2.m.b(1916511703, true, new er.r() { // from class: t90.k
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return r.o(aVar, sVar, (p114t0.f) obj, (w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, t90.a.f188961a, null, y2.m.b(1028474166, true, new er.r() { // from class: t90.l
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return r.q(sVar, aVar2, (p114t0.f) obj, (w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.t(d1Var, b.f188963a, new g0.Dialog(null, 1, null), y2.m.b(140436629, true, new er.r() { // from class: t90.m
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return r.t(sVar, (p114t0.f) obj, (w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }));
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 n(e eVar, f00.s sVar, p114t0.f fVar, w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(141927214, i15, -1, "pl.gov.coi.mjunior.feature.activation.presentation.ActivationNavContent.<anonymous>.<anonymous>.<anonymous> (ActivationNavContent.kt:34)");
+        }
+        i0 i0Var = i0.f148189a;
+        boolean zG = rVar.G(eVar) | rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zG || objE == p076m2.r.INSTANCE.a()) {
+            objE = new a(eVar, sVar, null);
+            rVar.v(objE);
+        }
+        Function0.d(i0Var, (er.p) objE, rVar, 6);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0Var;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 o(final er.a aVar, final f00.s sVar, p114t0.f fVar, w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(1916511703, i15, -1, "pl.gov.coi.mjunior.feature.activation.presentation.ActivationNavContent.<anonymous>.<anonymous>.<anonymous> (ActivationNavContent.kt:49)");
+        }
+        y0 y0VarC = q7.b.f165175a.c(rVar, q7.b.f165177c);
+        if (y0VarC == null) {
+            throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+        }
+        x90.t tVar = (x90.t) q7.d.c(q0.c(x90.t.class), y0VarC, null, j7.a.a(y0VarC, rVar, 0), y0VarC instanceof androidx.p016lifecycle.h ? ((androidx.p016lifecycle.h) y0VarC).x() : CreationExtras.b.f153222c, rVar, 0, 0);
+        xw.b<x90.a.d> bVarY1 = tVar.Y1();
+        boolean zW = rVar.W(aVar) | rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zW || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.l() { // from class: t90.o
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.p(aVar, sVar, (x90.a.d) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (er.l) objE, rVar, xw.b.f221619c);
+        x90.m.o(tVar, false, rVar, 0, 2);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 p(er.a aVar, f00.s sVar, x90.a.d dVar) {
+        if (fr.t.c(dVar, x90.a.d.C5804a.f217441a)) {
+            aVar.a();
+        } else {
+            if (!(dVar instanceof x90.a.d.GoToNextStep)) {
+                throw new oq.p();
+            }
+            f00.s.l(sVar, t90.a.f188961a, new v90.o.QrCode(c0.e(((x90.a.d.GoToNextStep) dVar).getCode())), null, 4, null);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 q(final f00.s sVar, final er.a aVar, p114t0.f fVar, w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(1028474166, i15, -1, "pl.gov.coi.mjunior.feature.activation.presentation.ActivationNavContent.<anonymous>.<anonymous>.<anonymous> (ActivationNavContent.kt:65)");
+        }
+        f00.r.o(wVar, q0.c(z.class), sVar.g(t90.a.f188961a), y2.m.d(875336997, true, new er.q() { // from class: t90.p
+            @Override // er.q
+            public final Object w(Object obj, Object obj2, Object obj3) {
+                return r.r(aVar, sVar, (zx.d) obj, (p076m2.r) obj2, ((Integer) obj3).intValue());
+            }
+        }, rVar, 54), t.f189000a.b(), rVar, ((i15 >> 3) & 14) | 27648);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 r(final er.a aVar, final f00.s sVar, zx.d dVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(875336997, i15, -1, "pl.gov.coi.mjunior.feature.activation.presentation.ActivationNavContent.<anonymous>.<anonymous>.<anonymous>.<anonymous> (ActivationNavContent.kt:71)");
+        }
+        mu.g gVarY1 = dVar.Y1();
+        boolean zW = rVar.W(aVar) | rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zW || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.l() { // from class: t90.h
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.s(aVar, sVar, (v90.a.d) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(gVarY1, (er.l) objE, rVar, xw.b.f221619c);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 s(er.a aVar, f00.s sVar, v90.a.d dVar) {
+        if (fr.t.c(dVar, v90.a.d.C5352a.f205304a)) {
+            aVar.a();
+        } else if (dVar instanceof v90.a.d.ShowDialog) {
+            f00.s.l(sVar, b.f188963a, ((v90.a.d.ShowDialog) dVar).getData(), null, 4, null);
+        } else {
+            if (!fr.t.c(dVar, v90.a.d.b.f205305a)) {
+                throw new oq.p();
+            }
+            sVar.k(d.f188967a, t90.a.f188961a);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 t(final f00.s sVar, p114t0.f fVar, w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(140436629, i15, -1, "pl.gov.coi.mjunior.feature.activation.presentation.ActivationNavContent.<anonymous>.<anonymous>.<anonymous> (ActivationNavContent.kt:96)");
+        }
+        b bVar = b.f188963a;
+        f00.r.r(wVar, bVar, sVar.g(bVar), y2.m.d(-2080594774, true, new er.q() { // from class: t90.n
+            @Override // er.q
+            public final Object w(Object obj, Object obj2, Object obj3) {
+                return r.u(sVar, (cb4.f) obj, (p076m2.r) obj2, ((Integer) obj3).intValue());
+            }
+        }, rVar, 54), rVar, ((i15 >> 3) & 14) | 3120);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 u(final f00.s sVar, cb4.f fVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(-2080594774, i15, -1, "pl.gov.coi.mjunior.feature.activation.presentation.ActivationNavContent.<anonymous>.<anonymous>.<anonymous>.<anonymous> (ActivationNavContent.kt:100)");
+        }
+        xw.b<cb4.f.a> bVarY1 = fVar.Y1();
+        boolean zG = rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zG || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.l() { // from class: t90.q
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.v(sVar, (cb4.f.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (er.l) objE, rVar, xw.b.f221619c);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 v(f00.s sVar, cb4.f.a aVar) {
+        if (!fr.t.c(aVar, cb4.f.a.C0669a.f24980a)) {
+            throw new oq.p();
+        }
+        sVar.c();
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 w(e eVar, er.a aVar, er.a aVar2, int i15, int i16, p076m2.r rVar, int i17) {
+        l(eVar, aVar, aVar2, rVar, g4.a(i15 | 1), i16);
+        return i0.f148189a;
+    }
+}

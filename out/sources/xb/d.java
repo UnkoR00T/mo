@@ -1,0 +1,146 @@
+package xb;
+
+import android.app.job.JobInfo;
+import android.content.ComponentName;
+import android.content.Context;
+import android.net.NetworkRequest;
+import android.os.Build;
+import android.os.PersistableBundle;
+import androidx.work.impl.background.systemjob.SystemJobService;
+import cc.i0;
+import java.util.Iterator;
+import ub.w;
+import ub.x;
+
+/* JADX INFO: loaded from: classes3.dex */
+class d {
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    private static final String f217861d = w.i("SystemJobInfoConverter");
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private final ComponentName f217862a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private final ub.b f217863b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private final boolean f217864c;
+
+    static /* synthetic */ class a {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        static final /* synthetic */ int[] f217865a;
+
+        static {
+            int[] iArr = new int[x.values().length];
+            f217865a = iArr;
+            try {
+                iArr[x.NOT_REQUIRED.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                f217865a[x.CONNECTED.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                f217865a[x.UNMETERED.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            try {
+                f217865a[x.NOT_ROAMING.ordinal()] = 4;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                f217865a[x.METERED.ordinal()] = 5;
+            } catch (NoSuchFieldError unused5) {
+            }
+        }
+    }
+
+    d(Context context, ub.b bVar, boolean z15) {
+        this.f217863b = bVar;
+        this.f217862a = new ComponentName(context.getApplicationContext(), (Class<?>) SystemJobService.class);
+        this.f217864c = z15;
+    }
+
+    private static JobInfo.TriggerContentUri b(ub.d.c cVar) {
+        return new JobInfo.TriggerContentUri(cVar.getUri(), cVar.getIsTriggeredForDescendants() ? 1 : 0);
+    }
+
+    static int c(x xVar) {
+        int i15 = a.f217865a[xVar.ordinal()];
+        if (i15 == 1) {
+            return 0;
+        }
+        if (i15 == 2) {
+            return 1;
+        }
+        if (i15 == 3) {
+            return 2;
+        }
+        if (i15 == 4) {
+            return 3;
+        }
+        if (i15 == 5) {
+            return 4;
+        }
+        w.e().a(f217861d, "API version too low. Cannot convert network type value " + xVar);
+        return 1;
+    }
+
+    static void d(JobInfo.Builder builder, x xVar) {
+        if (Build.VERSION.SDK_INT < 30 || xVar != x.TEMPORARILY_UNMETERED) {
+            builder.setRequiredNetworkType(c(xVar));
+        } else {
+            builder.setRequiredNetwork(new NetworkRequest.Builder().addCapability(25).build());
+        }
+    }
+
+    JobInfo a(i0 i0Var, int i15) {
+        String traceTag;
+        ub.d dVar = i0Var.org.bouncycastle.crypto.CryptoServicesPermission.CONSTRAINTS java.lang.String;
+        PersistableBundle persistableBundle = new PersistableBundle();
+        persistableBundle.putString("EXTRA_WORK_SPEC_ID", i0Var.id);
+        persistableBundle.putInt("EXTRA_WORK_SPEC_GENERATION", i0Var.getGeneration());
+        persistableBundle.putBoolean("EXTRA_IS_PERIODIC", i0Var.o());
+        JobInfo.Builder extras = new JobInfo.Builder(i15, this.f217862a).setRequiresCharging(dVar.getRequiresCharging()).setRequiresDeviceIdle(dVar.getRequiresDeviceIdle()).setExtras(persistableBundle);
+        NetworkRequest networkRequestD = dVar.d();
+        int i16 = Build.VERSION.SDK_INT;
+        if (i16 < 28 || networkRequestD == null) {
+            d(extras, dVar.getRequiredNetworkType());
+        } else {
+            e.a(extras, networkRequestD);
+        }
+        if (!dVar.getRequiresDeviceIdle()) {
+            extras.setBackoffCriteria(i0Var.backoffDelayDuration, i0Var.backoffPolicy == ub.a.LINEAR ? 0 : 1);
+        }
+        long jMax = Math.max(i0Var.c() - this.f217863b.a(), 0L);
+        if (i16 <= 28 || jMax > 0) {
+            extras.setMinimumLatency(jMax);
+        } else if (!i0Var.expedited && this.f217864c) {
+            extras.setImportantWhileForeground(true);
+        }
+        if (dVar.g()) {
+            Iterator<ub.d.c> it = dVar.c().iterator();
+            while (it.hasNext()) {
+                extras.addTriggerContentUri(b(it.next()));
+            }
+            extras.setTriggerContentUpdateDelay(dVar.getContentTriggerUpdateDelayMillis());
+            extras.setTriggerContentMaxDelay(dVar.getContentTriggerMaxDelayMillis());
+        }
+        extras.setPersisted(false);
+        int i17 = Build.VERSION.SDK_INT;
+        extras.setRequiresBatteryNotLow(dVar.getRequiresBatteryNotLow());
+        extras.setRequiresStorageNotLow(dVar.getRequiresStorageNotLow());
+        boolean z15 = i0Var.runAttemptCount > 0;
+        boolean z16 = jMax > 0;
+        if (i17 >= 31 && i0Var.expedited && !z15 && !z16) {
+            extras.setExpedited(true);
+        }
+        if (i17 >= 35 && (traceTag = i0Var.getTraceTag()) != null) {
+            extras.setTraceTag(traceTag);
+        }
+        return extras.build();
+    }
+}

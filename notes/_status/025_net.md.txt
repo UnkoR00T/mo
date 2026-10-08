@@ -1,0 +1,1 @@
+025_net.md | SKIPPED (biblioteka: CameraX camera2-pipe)

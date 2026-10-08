@@ -1,0 +1,61 @@
+package pd4;
+
+import java.util.Iterator;
+import mz.l;
+import oq.i0;
+import p071kotlin.Metadata;
+import pl.gov.mc.fringers.mobywatel.a0;
+import pl.gov.mc.fringers.mobywatel.j;
+import pl.gov.mc.fringers.mobywatel.k;
+import pq.v;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0018\b\u0007\u0018\u00002\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001BQ\b\u0007\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014¢\u0006\u0004\b\u0016\u0010\u0017J\u0018\u0010\u0019\u001a\u00020\u00032\u0006\u0010\u0018\u001a\u00020\u0002H\u0096\u0002¢\u0006\u0004\b\u0019\u0010\u001aR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001b\u0010\u001cR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001dR\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001e\u0010\u001fR\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b \u0010!R\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\"\u0010#R\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b$\u0010%R\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\u0014\u0010\u0013\u001a\u00020\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)R\u0014\u0010\u0015\u001a\u00020\u00148\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b*\u0010+¨\u0006,"}, d2 = {"Lpd4/g;", "Lgz/a;", "Lgz/b$a$a;", "Loq/i0;", "Lmz/l;", "intentManager", "Lyn3/d;", "verificationIntentHandler", "Lpl/gov/mc/fringers/mobywatel/a0;", "pushNotificationIntentHandler", "Lpl/gov/mc/fringers/mobywatel/k;", "mJuniorPushNotificationIntentHandler", "Lno2/a;", "localNotificationIntentHandler", "Lpl/gov/mc/fringers/mobywatel/g;", "launchAppIntentHandler", "Lpl/gov/mc/fringers/mobywatel/j;", "mJuniorInterceptorIntentHandler", "Lzy2/a;", "qualifiedSignatureIntentHandler", "Lus2/a;", "peselRestrictionIntentHandler", "<init>", "(Lmz/l;Lyn3/d;Lpl/gov/mc/fringers/mobywatel/a0;Lpl/gov/mc/fringers/mobywatel/k;Lno2/a;Lpl/gov/mc/fringers/mobywatel/g;Lpl/gov/mc/fringers/mobywatel/j;Lzy2/a;Lus2/a;)V", "params", "b", "(Lgz/b$a$a;)V", "a", "Lmz/l;", "Lyn3/d;", "c", "Lpl/gov/mc/fringers/mobywatel/a0;", "d", "Lpl/gov/mc/fringers/mobywatel/k;", "e", "Lno2/a;", "f", "Lpl/gov/mc/fringers/mobywatel/g;", "g", "Lpl/gov/mc/fringers/mobywatel/j;", "h", "Lzy2/a;", "i", "Lus2/a;", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class g implements gz.a<gz.b.a.C1792a, i0> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    private final l intentManager;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name and from kotlin metadata */
+    private final yn3.d verificationIntentHandler;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
+    private final a0 pushNotificationIntentHandler;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
+    private final k mJuniorPushNotificationIntentHandler;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
+    private final no2.a localNotificationIntentHandler;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
+    private final pl.gov.mc.fringers.mobywatel.g launchAppIntentHandler;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
+    private final j mJuniorInterceptorIntentHandler;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
+    private final zy2.a qualifiedSignatureIntentHandler;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
+    private final us2.a peselRestrictionIntentHandler;
+
+    public g(l lVar, yn3.d dVar, a0 a0Var, k kVar, no2.a aVar, pl.gov.mc.fringers.mobywatel.g gVar, j jVar, zy2.a aVar2, us2.a aVar3) {
+        this.intentManager = lVar;
+        this.verificationIntentHandler = dVar;
+        this.pushNotificationIntentHandler = a0Var;
+        this.mJuniorPushNotificationIntentHandler = kVar;
+        this.localNotificationIntentHandler = aVar;
+        this.launchAppIntentHandler = gVar;
+        this.mJuniorInterceptorIntentHandler = jVar;
+        this.qualifiedSignatureIntentHandler = aVar2;
+        this.peselRestrictionIntentHandler = aVar3;
+    }
+
+    public void b(gz.b.a.C1792a params) {
+        Iterator it = v.q(this.pushNotificationIntentHandler, this.mJuniorPushNotificationIntentHandler, this.localNotificationIntentHandler, this.verificationIntentHandler, this.qualifiedSignatureIntentHandler, this.mJuniorInterceptorIntentHandler, this.peselRestrictionIntentHandler, this.launchAppIntentHandler).iterator();
+        while (it.hasNext()) {
+            this.intentManager.c((mz.k) it.next());
+        }
+    }
+}

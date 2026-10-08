@@ -1,0 +1,66 @@
+package ru;
+
+import fr.q;
+import fr.w0;
+import ju.z0;
+import oq.i0;
+import p071kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0002\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J%\u0010\n\u001a\u00020\t2\n\u0010\u0007\u001a\u0006\u0012\u0002\b\u00030\u00062\b\u0010\b\u001a\u0004\u0018\u00010\u0001H\u0002¢\u0006\u0004\b\n\u0010\u000bR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\f\u0010\rR\u0017\u0010\u0013\u001a\u00020\u000e8F¢\u0006\f\u0012\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u000f\u0010\u0010¨\u0006\u0014"}, d2 = {"Lru/b;", "", "", "timeMillis", "<init>", "(J)V", "Lru/k;", "select", "ignoredParam", "Loq/i0;", "d", "(Lru/k;Ljava/lang/Object;)V", "a", "J", "Lru/e;", "c", "()Lru/e;", "getSelectClause$annotations", "()V", "selectClause", "kotlinx-coroutines-core"}, k = 1, mv = {2, 1, 0}, xi = 48)
+final class b {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    private final long timeMillis;
+
+    @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
+    /* synthetic */ class a extends q implements er.q<b, k<?>, Object, i0> {
+
+        /* JADX INFO: renamed from: j, reason: collision with root package name */
+        public static final a f176127j = new a();
+
+        a() {
+            super(3, b.class, "register", "register(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V", 0);
+        }
+
+        public final void E(b bVar, k<?> kVar, Object obj) {
+            bVar.d(kVar, obj);
+        }
+
+        @Override // er.q
+        public /* bridge */ /* synthetic */ i0 w(b bVar, k<?> kVar, Object obj) {
+            E(bVar, kVar, obj);
+            return i0.f148189a;
+        }
+    }
+
+    public b(long j15) {
+        this.timeMillis = j15;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public final void d(final k<?> select, Object ignoredParam) {
+        if (this.timeMillis <= 0) {
+            select.f(i0.f148189a);
+            return;
+        }
+        Runnable runnable = new Runnable() { // from class: ru.a
+            @Override // java.lang.Runnable
+            public final void run() {
+                b.e(select, this);
+            }
+        };
+        j jVar = (j) select;
+        tq.i context = jVar.getContext();
+        jVar.b(z0.d(context).O0(this.timeMillis, runnable, context));
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void e(k kVar, b bVar) {
+        kVar.h(bVar, i0.f148189a);
+    }
+
+    public final e c() {
+        return new f(this, (er.q) w0.g(a.f176127j, 3), null, 4, null);
+    }
+}

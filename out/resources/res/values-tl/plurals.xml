@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">I-fast forward nang %d segundo</item>
+        <item quantity="other">I-fast forward nang %d na segundo</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">I-rewind nang %d segundo</item>
+        <item quantity="other">I-rewind nang %d na segundo</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d bagong notification</item>
+        <item quantity="other">%d na bagong notification</item>
+    </plurals>
+    <plurals name="place_details_photo_count">
+        <item quantity="one">%1$d larawan</item>
+        <item quantity="other">%1$d na larawan</item>
+    </plurals>
+    <plurals name="place_details_ratings_content_description">
+        <item quantity="one">%1$s star</item>
+        <item quantity="other">%1$s na star</item>
+    </plurals>
+    <plurals name="place_details_review_count_a11y_label">
+        <item quantity="one">%1$d review</item>
+        <item quantity="other">%1$d na review</item>
+    </plurals>
+</resources>

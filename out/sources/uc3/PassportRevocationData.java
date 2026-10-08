@@ -1,0 +1,56 @@
+package uc3;
+
+import fr.t;
+import p071kotlin.Metadata;
+
+/* JADX INFO: renamed from: uc3.d, reason: from toString */
+/* JADX INFO: loaded from: classes9.dex */
+@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\t\b\u0087\b\u0018\u00002\u00020\u0001B\u001b\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bHÖ\u0001¢\u0006\u0004\b\t\u0010\nJ\u0010\u0010\f\u001a\u00020\u000bHÖ\u0001¢\u0006\u0004\b\f\u0010\rJ\u001a\u0010\u0010\u001a\u00020\u000f2\b\u0010\u000e\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\u0010\u0010\u0011R\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0012\u0010\u0014R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0015\u0010\u0017¨\u0006\u0018"}, d2 = {"Luc3/d;", "", "Lfz/b$f;", "revocationDate", "Luc3/e;", "revocationReason", "<init>", "(Lfz/b$f;Luc3/e;)V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Lfz/b$f;", "()Lfz/b$f;", "b", "Luc3/e;", "()Luc3/e;", "userdata_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final /* data */ class PassportRevocationData {
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final int f197505c = fz.b.OffsetDateTime.f68865b;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
+    private final fz.b.OffsetDateTime revocationDate;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name and from kotlin metadata and from toString */
+    private final e revocationReason;
+
+    public PassportRevocationData(fz.b.OffsetDateTime offsetDateTime, e eVar) {
+        this.revocationDate = offsetDateTime;
+        this.revocationReason = eVar;
+    }
+
+    /* JADX INFO: renamed from: a, reason: from getter */
+    public final fz.b.OffsetDateTime getRevocationDate() {
+        return this.revocationDate;
+    }
+
+    /* JADX INFO: renamed from: b, reason: from getter */
+    public final e getRevocationReason() {
+        return this.revocationReason;
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof PassportRevocationData)) {
+            return false;
+        }
+        PassportRevocationData passportRevocationData = (PassportRevocationData) other;
+        return t.c(this.revocationDate, passportRevocationData.revocationDate) && this.revocationReason == passportRevocationData.revocationReason;
+    }
+
+    public int hashCode() {
+        fz.b.OffsetDateTime offsetDateTime = this.revocationDate;
+        int iHashCode = (offsetDateTime == null ? 0 : offsetDateTime.hashCode()) * 31;
+        e eVar = this.revocationReason;
+        return iHashCode + (eVar != null ? eVar.hashCode() : 0);
+    }
+
+    public String toString() {
+        return "PassportRevocationData(revocationDate=" + this.revocationDate + ", revocationReason=" + this.revocationReason + ')';
+    }
+}

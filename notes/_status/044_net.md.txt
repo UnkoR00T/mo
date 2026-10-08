@@ -1,0 +1,1 @@
+044_net.md | SKIPPED (biblioteka: okhttp3 internals - zdrowie/eligiblnosc polaczenia)

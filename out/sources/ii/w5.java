@@ -1,0 +1,24 @@
+package ii;
+
+import android.net.Uri;
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import java.time.ZoneId;
+
+/* JADX INFO: loaded from: classes4.dex */
+final class w5 implements Parcelable.Creator {
+    w5() {
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
+        return new x5(parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, (c) parcel.readParcelable(l0.class.getClassLoader()), parcel.readArrayList(l0.class.getClassLoader()), (l0.c) parcel.readParcelable(l0.class.getClassLoader()), (l) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (g0) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Integer.valueOf(parcel.readInt()) : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, (LatLng) parcel.readParcelable(l0.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, (g0) parcel.readParcelable(l0.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readArrayList(l0.class.getClassLoader()), parcel.readArrayList(l0.class.getClassLoader()), parcel.readArrayList(l0.class.getClassLoader()), (n0) parcel.readParcelable(l0.class.getClassLoader()), parcel.readInt() == 0 ? Integer.valueOf(parcel.readInt()) : null, (p0) parcel.readParcelable(l0.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Double.valueOf(parcel.readDouble()) : null, (l0.a) parcel.readParcelable(l0.class.getClassLoader()), parcel.readArrayList(l0.class.getClassLoader()), parcel.readArrayList(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), parcel.readInt() == 0 ? Integer.valueOf(parcel.readInt()) : null, parcel.readInt() == 0 ? Integer.valueOf(parcel.readInt()) : null, (LatLngBounds) parcel.readParcelable(l0.class.getClassLoader()), (Uri) parcel.readParcelable(l0.class.getClassLoader()), (Uri) parcel.readParcelable(l0.class.getClassLoader()), (a) parcel.readParcelable(l0.class.getClassLoader()), (h0) parcel.readParcelable(l0.class.getClassLoader()), (i0) parcel.readParcelable(l0.class.getClassLoader()), (q) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), parcel.readArrayList(l0.class.getClassLoader()), (u) parcel.readParcelable(l0.class.getClassLoader()), (l0.a) parcel.readParcelable(l0.class.getClassLoader()), (w) parcel.readParcelable(l0.class.getClassLoader()), (t) parcel.readParcelable(l0.class.getClassLoader()), (f0) parcel.readParcelable(l0.class.getClassLoader()), (s0) parcel.readParcelable(l0.class.getClassLoader()), (x) parcel.readParcelable(l0.class.getClassLoader()), parcel.readArrayList(l0.class.getClassLoader()), parcel.readInt() == 0 ? (ZoneId) parcel.readSerializable() : null, (d) parcel.readParcelable(l0.class.getClassLoader()), (o0) parcel.readParcelable(l0.class.getClassLoader()));
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final /* synthetic */ Object[] newArray(int i15) {
+        return new x5[i15];
+    }
+}

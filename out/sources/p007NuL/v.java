@@ -1,0 +1,480 @@
+package p007NuL;
+
+import pl.nask.mobywatel.R;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class v {
+    public static int A = 2;
+    public static int A0 = 1;
+    public static int A1 = 4;
+    public static int A2 = 12;
+    public static int B = 3;
+    public static int B0 = 86;
+    public static int B1 = 5;
+    public static int B2 = 13;
+    public static int C = 4;
+    public static int C0 = 116;
+    public static int C1 = 6;
+    public static int C2 = 14;
+    public static int D = 5;
+    public static int D0 = 117;
+    public static int D1 = 7;
+    public static int D2 = 15;
+    public static int E0 = 118;
+    public static int E1 = 8;
+    public static int F0 = 119;
+    public static int F1 = 9;
+    public static int F2 = 0;
+    public static int G = 0;
+    public static int G0 = 120;
+    public static int G1 = 10;
+    public static int G2 = 2;
+    public static int H = 1;
+    public static int H0 = 121;
+    public static int H1 = 11;
+    public static int H2 = 3;
+    public static int I = 2;
+    public static int I0 = 122;
+    public static int I1 = 12;
+    public static int I2 = 4;
+    public static int J = 3;
+    public static int J0 = 123;
+    public static int J1 = 13;
+    public static int J2 = 5;
+    public static int K = 4;
+    public static int K0 = 124;
+    public static int K1 = 14;
+    public static int K2 = 6;
+    public static int L = 5;
+    public static int L0 = 125;
+    public static int L1 = 15;
+    public static int L2 = 7;
+    public static int M = 6;
+    public static int M0 = 126;
+    public static int M1 = 16;
+    public static int M2 = 8;
+    public static int N = 7;
+    public static int N1 = 17;
+    public static int N2 = 9;
+    public static int O0 = 0;
+    public static int O1 = 18;
+    public static int O2 = 10;
+    public static int P1 = 19;
+    public static int P2 = 11;
+    public static int Q = 1;
+    public static int Q0 = 0;
+    public static int Q1 = 20;
+    public static int Q2 = 12;
+    public static int R = 2;
+    public static int R0 = 1;
+    public static int R1 = 21;
+    public static int R2 = 13;
+    public static int S = 3;
+    public static int S0 = 2;
+    public static int S1 = 22;
+    public static int S2 = 14;
+    public static int T0 = 3;
+    public static int T2 = 15;
+    public static int U = 0;
+    public static int U1 = 1;
+    public static int U2 = 16;
+    public static int V = 1;
+    public static int V0 = 0;
+    public static int V1 = 5;
+    public static int V2 = 17;
+    public static int W = 2;
+    public static int W0 = 1;
+    public static int W1 = 7;
+    public static int W2 = 18;
+    public static int X = 3;
+    public static int X0 = 2;
+    public static int X1 = 8;
+    public static int X2 = 19;
+    public static int Y0 = 3;
+    public static int Y2 = 20;
+    public static int Z = 0;
+    public static int Z1 = 0;
+    public static int Z2 = 21;
+
+    /* JADX INFO: renamed from: a0, reason: collision with root package name */
+    public static int f438a0 = 1;
+
+    /* JADX INFO: renamed from: a2, reason: collision with root package name */
+    public static int f440a2 = 2;
+
+    /* JADX INFO: renamed from: a3, reason: collision with root package name */
+    public static int f441a3 = 22;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    public static int f442b = 0;
+
+    /* JADX INFO: renamed from: b0, reason: collision with root package name */
+    public static int f443b0 = 2;
+
+    /* JADX INFO: renamed from: b1, reason: collision with root package name */
+    public static int f444b1 = 0;
+
+    /* JADX INFO: renamed from: b3, reason: collision with root package name */
+    public static int f446b3 = 23;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static int f447c = 1;
+
+    /* JADX INFO: renamed from: c0, reason: collision with root package name */
+    public static int f448c0 = 3;
+
+    /* JADX INFO: renamed from: c1, reason: collision with root package name */
+    public static int f449c1 = 1;
+
+    /* JADX INFO: renamed from: c3, reason: collision with root package name */
+    public static int f451c3 = 24;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static int f452d = 2;
+
+    /* JADX INFO: renamed from: d0, reason: collision with root package name */
+    public static int f453d0 = 4;
+
+    /* JADX INFO: renamed from: d1, reason: collision with root package name */
+    public static int f454d1 = 2;
+
+    /* JADX INFO: renamed from: d2, reason: collision with root package name */
+    public static int f455d2 = 0;
+
+    /* JADX INFO: renamed from: d3, reason: collision with root package name */
+    public static int f456d3 = 25;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static int f457e = 3;
+
+    /* JADX INFO: renamed from: e0, reason: collision with root package name */
+    public static int f458e0 = 5;
+
+    /* JADX INFO: renamed from: e1, reason: collision with root package name */
+    public static int f459e1 = 3;
+
+    /* JADX INFO: renamed from: e2, reason: collision with root package name */
+    public static int f460e2 = 1;
+
+    /* JADX INFO: renamed from: e3, reason: collision with root package name */
+    public static int f461e3 = 26;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public static int f462f = 7;
+
+    /* JADX INFO: renamed from: f0, reason: collision with root package name */
+    public static int f463f0 = 6;
+
+    /* JADX INFO: renamed from: f1, reason: collision with root package name */
+    public static int f464f1 = 4;
+
+    /* JADX INFO: renamed from: f3, reason: collision with root package name */
+    public static int f466f3 = 27;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public static int f467g = 9;
+
+    /* JADX INFO: renamed from: g1, reason: collision with root package name */
+    public static int f469g1 = 5;
+
+    /* JADX INFO: renamed from: g3, reason: collision with root package name */
+    public static int f471g3 = 28;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public static int f472h = 10;
+
+    /* JADX INFO: renamed from: h0, reason: collision with root package name */
+    public static int f473h0 = 1;
+
+    /* JADX INFO: renamed from: h1, reason: collision with root package name */
+    public static int f474h1 = 6;
+
+    /* JADX INFO: renamed from: h2, reason: collision with root package name */
+    public static int f475h2 = 0;
+
+    /* JADX INFO: renamed from: h3, reason: collision with root package name */
+    public static int f476h3 = 29;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    public static int f477i = 12;
+
+    /* JADX INFO: renamed from: i0, reason: collision with root package name */
+    public static int f478i0 = 2;
+
+    /* JADX INFO: renamed from: i1, reason: collision with root package name */
+    public static int f479i1 = 7;
+
+    /* JADX INFO: renamed from: i2, reason: collision with root package name */
+    public static int f480i2 = 1;
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    public static int f482j = 13;
+
+    /* JADX INFO: renamed from: j0, reason: collision with root package name */
+    public static int f483j0 = 3;
+
+    /* JADX INFO: renamed from: j1, reason: collision with root package name */
+    public static int f484j1 = 8;
+
+    /* JADX INFO: renamed from: j2, reason: collision with root package name */
+    public static int f485j2 = 2;
+
+    /* JADX INFO: renamed from: j3, reason: collision with root package name */
+    public static int f486j3 = 0;
+
+    /* JADX INFO: renamed from: k, reason: collision with root package name */
+    public static int f487k = 14;
+
+    /* JADX INFO: renamed from: k0, reason: collision with root package name */
+    public static int f488k0 = 4;
+
+    /* JADX INFO: renamed from: k2, reason: collision with root package name */
+    public static int f490k2 = 3;
+
+    /* JADX INFO: renamed from: k3, reason: collision with root package name */
+    public static int f491k3 = 4;
+
+    /* JADX INFO: renamed from: l, reason: collision with root package name */
+    public static int f492l = 15;
+
+    /* JADX INFO: renamed from: l0, reason: collision with root package name */
+    public static int f493l0 = 5;
+
+    /* JADX INFO: renamed from: l2, reason: collision with root package name */
+    public static int f495l2 = 4;
+
+    /* JADX INFO: renamed from: m, reason: collision with root package name */
+    public static int f497m = 17;
+
+    /* JADX INFO: renamed from: m0, reason: collision with root package name */
+    public static int f498m0 = 6;
+
+    /* JADX INFO: renamed from: m1, reason: collision with root package name */
+    public static int f499m1 = 0;
+
+    /* JADX INFO: renamed from: m3, reason: collision with root package name */
+    public static int f501m3 = 0;
+
+    /* JADX INFO: renamed from: n, reason: collision with root package name */
+    public static int f502n = 20;
+
+    /* JADX INFO: renamed from: n0, reason: collision with root package name */
+    public static int f503n0 = 7;
+
+    /* JADX INFO: renamed from: n1, reason: collision with root package name */
+    public static int f504n1 = 1;
+
+    /* JADX INFO: renamed from: n3, reason: collision with root package name */
+    public static int f506n3 = 1;
+
+    /* JADX INFO: renamed from: o, reason: collision with root package name */
+    public static int f507o = 22;
+
+    /* JADX INFO: renamed from: o0, reason: collision with root package name */
+    public static int f508o0 = 8;
+
+    /* JADX INFO: renamed from: o2, reason: collision with root package name */
+    public static int f510o2 = 0;
+
+    /* JADX INFO: renamed from: o3, reason: collision with root package name */
+    public static int f511o3 = 2;
+
+    /* JADX INFO: renamed from: p, reason: collision with root package name */
+    public static int f512p = 25;
+
+    /* JADX INFO: renamed from: p0, reason: collision with root package name */
+    public static int f513p0 = 9;
+
+    /* JADX INFO: renamed from: p1, reason: collision with root package name */
+    public static int f514p1 = 0;
+
+    /* JADX INFO: renamed from: p2, reason: collision with root package name */
+    public static int f515p2 = 1;
+
+    /* JADX INFO: renamed from: q, reason: collision with root package name */
+    public static int f517q = 26;
+
+    /* JADX INFO: renamed from: q0, reason: collision with root package name */
+    public static int f518q0 = 10;
+
+    /* JADX INFO: renamed from: q1, reason: collision with root package name */
+    public static int f519q1 = 1;
+
+    /* JADX INFO: renamed from: q2, reason: collision with root package name */
+    public static int f520q2 = 2;
+
+    /* JADX INFO: renamed from: q3, reason: collision with root package name */
+    public static int f521q3 = 0;
+
+    /* JADX INFO: renamed from: r, reason: collision with root package name */
+    public static int f522r = 27;
+
+    /* JADX INFO: renamed from: r0, reason: collision with root package name */
+    public static int f523r0 = 11;
+
+    /* JADX INFO: renamed from: r1, reason: collision with root package name */
+    public static int f524r1 = 2;
+
+    /* JADX INFO: renamed from: r2, reason: collision with root package name */
+    public static int f525r2 = 3;
+
+    /* JADX INFO: renamed from: r3, reason: collision with root package name */
+    public static int f526r3 = 1;
+
+    /* JADX INFO: renamed from: s, reason: collision with root package name */
+    public static int f527s = 28;
+
+    /* JADX INFO: renamed from: s0, reason: collision with root package name */
+    public static int f528s0 = 12;
+
+    /* JADX INFO: renamed from: s1, reason: collision with root package name */
+    public static int f529s1 = 3;
+
+    /* JADX INFO: renamed from: s2, reason: collision with root package name */
+    public static int f530s2 = 4;
+
+    /* JADX INFO: renamed from: s3, reason: collision with root package name */
+    public static int f531s3 = 2;
+
+    /* JADX INFO: renamed from: t0, reason: collision with root package name */
+    public static int f533t0 = 13;
+
+    /* JADX INFO: renamed from: t1, reason: collision with root package name */
+    public static int f534t1 = 4;
+
+    /* JADX INFO: renamed from: t2, reason: collision with root package name */
+    public static int f535t2 = 5;
+
+    /* JADX INFO: renamed from: u, reason: collision with root package name */
+    public static int f536u = 0;
+
+    /* JADX INFO: renamed from: u0, reason: collision with root package name */
+    public static int f537u0 = 14;
+
+    /* JADX INFO: renamed from: u1, reason: collision with root package name */
+    public static int f538u1 = 5;
+
+    /* JADX INFO: renamed from: u2, reason: collision with root package name */
+    public static int f539u2 = 6;
+
+    /* JADX INFO: renamed from: v0, reason: collision with root package name */
+    public static int f541v0 = 15;
+
+    /* JADX INFO: renamed from: v2, reason: collision with root package name */
+    public static int f543v2 = 7;
+
+    /* JADX INFO: renamed from: w, reason: collision with root package name */
+    public static int f544w = 0;
+
+    /* JADX INFO: renamed from: w0, reason: collision with root package name */
+    public static int f545w0 = 18;
+
+    /* JADX INFO: renamed from: w1, reason: collision with root package name */
+    public static int f546w1 = 0;
+
+    /* JADX INFO: renamed from: w2, reason: collision with root package name */
+    public static int f547w2 = 8;
+
+    /* JADX INFO: renamed from: x0, reason: collision with root package name */
+    public static int f549x0 = 19;
+
+    /* JADX INFO: renamed from: x1, reason: collision with root package name */
+    public static int f550x1 = 1;
+
+    /* JADX INFO: renamed from: x2, reason: collision with root package name */
+    public static int f551x2 = 9;
+
+    /* JADX INFO: renamed from: y1, reason: collision with root package name */
+    public static int f554y1 = 2;
+
+    /* JADX INFO: renamed from: y2, reason: collision with root package name */
+    public static int f555y2 = 10;
+
+    /* JADX INFO: renamed from: z, reason: collision with root package name */
+    public static int f556z = 0;
+
+    /* JADX INFO: renamed from: z0, reason: collision with root package name */
+    public static int f557z0 = 0;
+
+    /* JADX INFO: renamed from: z1, reason: collision with root package name */
+    public static int f558z1 = 3;
+
+    /* JADX INFO: renamed from: z2, reason: collision with root package name */
+    public static int f559z2 = 11;
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static int[] f437a = {R.attr.background, R.attr.backgroundSplit, R.attr.backgroundStacked, R.attr.contentInsetEnd, R.attr.contentInsetEndWithActions, R.attr.contentInsetLeft, R.attr.contentInsetRight, R.attr.contentInsetStart, R.attr.contentInsetStartWithNavigation, R.attr.customNavigationLayout, R.attr.displayOptions, R.attr.divider, R.attr.elevation, R.attr.height, R.attr.hideOnContentScroll, R.attr.homeAsUpIndicator, R.attr.homeLayout, R.attr.icon, R.attr.indeterminateProgressStyle, R.attr.itemPadding, R.attr.logo, R.attr.navigationMode, R.attr.popupTheme, R.attr.progressBarPadding, R.attr.progressBarStyle, R.attr.subtitle, R.attr.subtitleTextStyle, R.attr.title, R.attr.titleTextStyle};
+
+    /* JADX INFO: renamed from: t, reason: collision with root package name */
+    public static int[] f532t = {android.R.attr.layout_gravity};
+
+    /* JADX INFO: renamed from: v, reason: collision with root package name */
+    public static int[] f540v = {android.R.attr.minWidth};
+
+    /* JADX INFO: renamed from: x, reason: collision with root package name */
+    public static int[] f548x = new int[0];
+
+    /* JADX INFO: renamed from: y, reason: collision with root package name */
+    public static int[] f552y = {R.attr.background, R.attr.backgroundSplit, R.attr.closeItemLayout, R.attr.height, R.attr.subtitleTextStyle, R.attr.titleTextStyle};
+    public static int[] E = {R.attr.expandActivityOverflowButtonDrawable, R.attr.initialActivityCount};
+    public static int[] F = {android.R.attr.layout, R.attr.buttonIconDimen, R.attr.buttonPanelSideLayout, R.attr.listItemLayout, R.attr.listLayout, R.attr.multiChoiceItemLayout, R.attr.showTitle, R.attr.singleChoiceItemLayout};
+    public static int[] O = new int[0];
+    public static int[] P = {android.R.attr.src, R.attr.srcCompat, R.attr.tint, R.attr.tintMode};
+    public static int[] T = {android.R.attr.thumb, R.attr.tickMark, R.attr.tickMarkTint, R.attr.tickMarkTintMode};
+    public static int[] Y = {android.R.attr.textAppearance, android.R.attr.drawableTop, android.R.attr.drawableBottom, android.R.attr.drawableLeft, android.R.attr.drawableRight, android.R.attr.drawableStart, android.R.attr.drawableEnd};
+
+    /* JADX INFO: renamed from: g0, reason: collision with root package name */
+    public static int[] f468g0 = {android.R.attr.textAppearance, R.attr.autoSizeMaxTextSize, R.attr.autoSizeMinTextSize, R.attr.autoSizePresetSizes, R.attr.autoSizeStepGranularity, R.attr.autoSizeTextType, R.attr.drawableBottomCompat, R.attr.drawableEndCompat, R.attr.drawableLeftCompat, R.attr.drawableRightCompat, R.attr.drawableStartCompat, R.attr.drawableTint, R.attr.drawableTintMode, R.attr.drawableTopCompat, R.attr.emojiCompatEnabled, R.attr.firstBaselineToTopHeight, R.attr.fontFamily, R.attr.fontVariationSettings, R.attr.lastBaselineToBottomHeight, R.attr.lineHeight, R.attr.textAllCaps, R.attr.textLocale};
+
+    /* JADX INFO: renamed from: y0, reason: collision with root package name */
+    public static int[] f553y0 = {android.R.attr.windowIsFloating, android.R.attr.windowAnimationStyle, R.attr.actionBarDivider, R.attr.actionBarItemBackground, R.attr.actionBarPopupTheme, R.attr.actionBarSize, R.attr.actionBarSplitStyle, R.attr.actionBarStyle, R.attr.actionBarTabBarStyle, R.attr.actionBarTabStyle, R.attr.actionBarTabTextStyle, R.attr.actionBarTheme, R.attr.actionBarWidgetTheme, R.attr.actionButtonStyle, R.attr.actionDropDownStyle, R.attr.actionMenuTextAppearance, R.attr.actionMenuTextColor, R.attr.actionModeBackground, R.attr.actionModeCloseButtonStyle, R.attr.actionModeCloseContentDescription, R.attr.actionModeCloseDrawable, R.attr.actionModeCopyDrawable, R.attr.actionModeCutDrawable, R.attr.actionModeFindDrawable, R.attr.actionModePasteDrawable, R.attr.actionModePopupWindowStyle, R.attr.actionModeSelectAllDrawable, R.attr.actionModeShareDrawable, R.attr.actionModeSplitBackground, R.attr.actionModeStyle, R.attr.actionModeTheme, R.attr.actionModeWebSearchDrawable, R.attr.actionOverflowButtonStyle, R.attr.actionOverflowMenuStyle, R.attr.activityChooserViewStyle, R.attr.alertDialogButtonGroupStyle, R.attr.alertDialogCenterButtons, R.attr.alertDialogStyle, R.attr.alertDialogTheme, R.attr.autoCompleteTextViewStyle, R.attr.borderlessButtonStyle, R.attr.buttonBarButtonStyle, R.attr.buttonBarNegativeButtonStyle, R.attr.buttonBarNeutralButtonStyle, R.attr.buttonBarPositiveButtonStyle, R.attr.buttonBarStyle, R.attr.buttonStyle, R.attr.buttonStyleSmall, R.attr.checkboxStyle, R.attr.checkedTextViewStyle, R.attr.colorAccent, R.attr.colorBackgroundFloating, R.attr.colorButtonNormal, R.attr.colorControlActivated, R.attr.colorControlHighlight, R.attr.colorControlNormal, R.attr.colorError, R.attr.colorPrimary, R.attr.colorPrimaryDark, R.attr.colorSwitchThumbNormal, R.attr.controlBackground, R.attr.dialogCornerRadius, R.attr.dialogPreferredPadding, R.attr.dialogTheme, R.attr.dividerHorizontal, R.attr.dividerVertical, R.attr.dropDownListViewStyle, R.attr.dropdownListPreferredItemHeight, R.attr.editTextBackground, R.attr.editTextColor, R.attr.editTextStyle, R.attr.homeAsUpIndicator, R.attr.imageButtonStyle, R.attr.listChoiceBackgroundIndicator, R.attr.listChoiceIndicatorMultipleAnimated, R.attr.listChoiceIndicatorSingleAnimated, R.attr.listDividerAlertDialog, R.attr.listMenuViewStyle, R.attr.listPopupWindowStyle, R.attr.listPreferredItemHeight, R.attr.listPreferredItemHeightLarge, R.attr.listPreferredItemHeightSmall, R.attr.listPreferredItemPaddingEnd, R.attr.listPreferredItemPaddingLeft, R.attr.listPreferredItemPaddingRight, R.attr.listPreferredItemPaddingStart, R.attr.panelBackground, R.attr.panelMenuListTheme, R.attr.panelMenuListWidth, R.attr.popupMenuStyle, R.attr.popupWindowStyle, R.attr.radioButtonStyle, R.attr.ratingBarStyle, R.attr.ratingBarStyleIndicator, R.attr.ratingBarStyleSmall, R.attr.searchViewStyle, R.attr.seekBarStyle, R.attr.selectableItemBackground, R.attr.selectableItemBackgroundBorderless, R.attr.spinnerDropDownItemStyle, R.attr.spinnerStyle, R.attr.switchStyle, R.attr.textAppearanceLargePopupMenu, R.attr.textAppearanceListItem, R.attr.textAppearanceListItemSecondary, R.attr.textAppearanceListItemSmall, R.attr.textAppearancePopupMenuHeader, R.attr.textAppearanceSearchResultSubtitle, R.attr.textAppearanceSearchResultTitle, R.attr.textAppearanceSmallPopupMenu, R.attr.textColorAlertDialogListItem, R.attr.textColorSearchUrl, R.attr.toolbarNavigationButtonStyle, R.attr.toolbarStyle, R.attr.tooltipForegroundColor, R.attr.tooltipFrameBackground, R.attr.viewInflaterClass, R.attr.windowActionBar, R.attr.windowActionBarOverlay, R.attr.windowActionModeOverlay, R.attr.windowFixedHeightMajor, R.attr.windowFixedHeightMinor, R.attr.windowFixedWidthMajor, R.attr.windowFixedWidthMinor, R.attr.windowMinWidthMajor, R.attr.windowMinWidthMinor, R.attr.windowNoTitle};
+    public static int[] N0 = {R.attr.allowStacking};
+    public static int[] P0 = {android.R.attr.checkMark, R.attr.checkMarkCompat, R.attr.checkMarkTint, R.attr.checkMarkTintMode};
+    public static int[] U0 = {android.R.attr.button, R.attr.buttonCompat, R.attr.buttonTint, R.attr.buttonTintMode};
+    public static int[] Z0 = {R.attr.arrowHeadLength, R.attr.arrowShaftLength, R.attr.barLength, R.attr.color, R.attr.drawableSize, R.attr.gapBetweenBars, R.attr.spinBars, R.attr.thickness};
+
+    /* JADX INFO: renamed from: a1, reason: collision with root package name */
+    public static int[] f439a1 = {android.R.attr.gravity, android.R.attr.orientation, android.R.attr.baselineAligned, android.R.attr.baselineAlignedChildIndex, android.R.attr.weightSum, R.attr.divider, R.attr.dividerPadding, R.attr.measureWithLargestChild, R.attr.showDividers};
+
+    /* JADX INFO: renamed from: k1, reason: collision with root package name */
+    public static int[] f489k1 = {android.R.attr.layout_gravity, android.R.attr.layout_width, android.R.attr.layout_height, android.R.attr.layout_weight};
+
+    /* JADX INFO: renamed from: l1, reason: collision with root package name */
+    public static int[] f494l1 = {android.R.attr.dropDownHorizontalOffset, android.R.attr.dropDownVerticalOffset};
+
+    /* JADX INFO: renamed from: o1, reason: collision with root package name */
+    public static int[] f509o1 = {android.R.attr.enabled, android.R.attr.id, android.R.attr.visible, android.R.attr.menuCategory, android.R.attr.orderInCategory, android.R.attr.checkableBehavior};
+
+    /* JADX INFO: renamed from: v1, reason: collision with root package name */
+    public static int[] f542v1 = {android.R.attr.icon, android.R.attr.enabled, android.R.attr.id, android.R.attr.checked, android.R.attr.visible, android.R.attr.menuCategory, android.R.attr.orderInCategory, android.R.attr.title, android.R.attr.titleCondensed, android.R.attr.alphabeticShortcut, android.R.attr.numericShortcut, android.R.attr.checkable, android.R.attr.onClick, R.attr.actionLayout, R.attr.actionProviderClass, R.attr.actionViewClass, R.attr.alphabeticModifiers, R.attr.contentDescription, R.attr.iconTint, R.attr.iconTintMode, R.attr.numericModifiers, R.attr.showAsAction, R.attr.tooltipText};
+    public static int[] T1 = {android.R.attr.windowAnimationStyle, android.R.attr.itemTextAppearance, android.R.attr.horizontalDivider, android.R.attr.verticalDivider, android.R.attr.headerBackground, android.R.attr.itemBackground, android.R.attr.itemIconDisabledAlpha, R.attr.preserveIconSpacing, R.attr.subMenuArrow};
+    public static int[] Y1 = {android.R.attr.popupBackground, android.R.attr.popupAnimationStyle, R.attr.overlapAnchor};
+
+    /* JADX INFO: renamed from: b2, reason: collision with root package name */
+    public static int[] f445b2 = {R.attr.state_above_anchor};
+
+    /* JADX INFO: renamed from: c2, reason: collision with root package name */
+    public static int[] f450c2 = {R.attr.paddingBottomNoButtons, R.attr.paddingTopNoTitle};
+
+    /* JADX INFO: renamed from: f2, reason: collision with root package name */
+    public static int[] f465f2 = {android.R.attr.textAppearance, android.R.attr.focusable, android.R.attr.maxWidth, android.R.attr.text, android.R.attr.hint, android.R.attr.inputType, android.R.attr.imeOptions, R.attr.animateMenuItems, R.attr.animateNavigationIcon, R.attr.autoShowKeyboard, R.attr.backHandlingEnabled, R.attr.backgroundTint, R.attr.closeIcon, R.attr.commitIcon, R.attr.defaultQueryHint, R.attr.goIcon, R.attr.headerLayout, R.attr.hideNavigationIcon, R.attr.iconifiedByDefault, R.attr.layout, R.attr.queryBackground, R.attr.queryHint, R.attr.searchHintIcon, R.attr.searchIcon, R.attr.searchPrefixText, R.attr.submitBackground, R.attr.suggestionRowLayout, R.attr.useDrawerArrowDrawable, R.attr.voiceIcon};
+
+    /* JADX INFO: renamed from: g2, reason: collision with root package name */
+    public static int[] f470g2 = {android.R.attr.entries, android.R.attr.popupBackground, android.R.attr.prompt, android.R.attr.dropDownWidth, R.attr.popupTheme};
+
+    /* JADX INFO: renamed from: m2, reason: collision with root package name */
+    public static int[] f500m2 = {android.R.attr.textOn, android.R.attr.textOff, android.R.attr.thumb, R.attr.showText, R.attr.splitTrack, R.attr.switchMinWidth, R.attr.switchPadding, R.attr.switchTextAppearance, R.attr.thumbTextPadding, R.attr.thumbTint, R.attr.thumbTintMode, R.attr.track, R.attr.trackTint, R.attr.trackTintMode};
+
+    /* JADX INFO: renamed from: n2, reason: collision with root package name */
+    public static int[] f505n2 = {android.R.attr.textSize, android.R.attr.typeface, android.R.attr.textStyle, android.R.attr.textColor, android.R.attr.textColorHint, android.R.attr.textColorLink, android.R.attr.shadowColor, android.R.attr.shadowDx, android.R.attr.shadowDy, android.R.attr.shadowRadius, android.R.attr.fontFamily, android.R.attr.textFontWeight, R.attr.fontFamily, R.attr.fontVariationSettings, R.attr.textAllCaps, R.attr.textLocale};
+    public static int[] E2 = {android.R.attr.gravity, android.R.attr.minHeight, R.attr.buttonGravity, R.attr.collapseContentDescription, R.attr.collapseIcon, R.attr.contentInsetEnd, R.attr.contentInsetEndWithActions, R.attr.contentInsetLeft, R.attr.contentInsetRight, R.attr.contentInsetStart, R.attr.contentInsetStartWithNavigation, R.attr.logo, R.attr.logoDescription, R.attr.maxButtonHeight, R.attr.menu, R.attr.navigationContentDescription, R.attr.navigationIcon, R.attr.popupTheme, R.attr.subtitle, R.attr.subtitleTextAppearance, R.attr.subtitleTextColor, R.attr.title, R.attr.titleMargin, R.attr.titleMarginBottom, R.attr.titleMarginEnd, R.attr.titleMarginStart, R.attr.titleMarginTop, R.attr.titleMargins, R.attr.titleTextAppearance, R.attr.titleTextColor};
+
+    /* JADX INFO: renamed from: i3, reason: collision with root package name */
+    public static int[] f481i3 = {android.R.attr.theme, android.R.attr.focusable, R.attr.paddingEnd, R.attr.paddingStart, R.attr.theme};
+
+    /* JADX INFO: renamed from: l3, reason: collision with root package name */
+    public static int[] f496l3 = {android.R.attr.background, R.attr.backgroundTint, R.attr.backgroundTintMode};
+
+    /* JADX INFO: renamed from: p3, reason: collision with root package name */
+    public static int[] f516p3 = {android.R.attr.id, android.R.attr.layout, android.R.attr.inflatedId};
+}

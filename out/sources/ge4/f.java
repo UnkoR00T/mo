@@ -1,0 +1,8 @@
+package ge4;
+
+/* JADX INFO: loaded from: classes2.dex */
+public interface f<T> {
+    void a(d<T> dVar, Throwable th4);
+
+    void b(d<T> dVar, x<T> xVar);
+}

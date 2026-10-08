@@ -1,0 +1,34 @@
+package h;
+
+import android.hardware.camera2.CaptureRequest;
+import io.sentry.android.core.c2;
+import java.util.Map;
+import p071kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010$\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010%\n\u0002\b\u0004\u001a'\u0010\u0005\u001a\u00020\u0004*\u00020\u00002\u0012\u0010\u0003\u001a\u000e\u0012\u0002\b\u0003\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u0001H\u0007¢\u0006\u0004\b\u0005\u0010\u0006\u001a'\u0010\t\u001a\u00020\u0004*\u00020\u00002\b\u0010\u0007\u001a\u0004\u0018\u00010\u00022\b\u0010\b\u001a\u0004\u0018\u00010\u0002H\u0007¢\u0006\u0004\b\t\u0010\n\u001a5\u0010\r\u001a\u00020\u0004*\u0010\u0012\u0004\u0012\u00020\u0002\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u000b2\u0012\u0010\f\u001a\u000e\u0012\u0002\b\u0003\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u0001H\u0007¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Landroid/hardware/camera2/CaptureRequest$Builder;", "", "", "parameters", "Loq/i0;", "c", "(Landroid/hardware/camera2/CaptureRequest$Builder;Ljava/util/Map;)V", "key", "value", "b", "(Landroid/hardware/camera2/CaptureRequest$Builder;Ljava/lang/Object;Ljava/lang/Object;)V", "", "metadata", "a", "(Ljava/util/Map;Ljava/util/Map;)V", "camera-camera2-pipe"}, k = 2, mv = {2, 1, 0}, xi = 48)
+public final class l1 {
+    /* JADX WARN: Multi-variable type inference failed */
+    public static final void a(Map<Object, Object> map, Map<?, ? extends Object> map2) {
+        map.putAll(map2);
+    }
+
+    public static final void b(CaptureRequest.Builder builder, Object obj, Object obj2) {
+        if (obj == null || !(obj instanceof CaptureRequest.Key)) {
+            return;
+        }
+        try {
+            builder.set((CaptureRequest.Key) obj, obj2);
+        } catch (IllegalArgumentException e15) {
+            if (k.k.f107055a.d()) {
+                c2.h("CXCP", "Failed to set [" + ((CaptureRequest.Key) obj).getName() + ": " + obj2 + "] on CaptureRequest.Builder", e15);
+            }
+        }
+    }
+
+    public static final void c(CaptureRequest.Builder builder, Map<?, ? extends Object> map) {
+        for (Map.Entry<?, ? extends Object> entry : map.entrySet()) {
+            b(builder, entry.getKey(), entry.getValue());
+        }
+    }
+}

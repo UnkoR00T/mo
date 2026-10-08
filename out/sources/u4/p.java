@@ -1,0 +1,78 @@
+package u4;
+
+import p071kotlin.Metadata;
+import p076m2.f6;
+
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0001\u0018\u00002\u00020\u0001B7\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0002\u0010\u0005\u001a\u00020\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006\u0012\b\b\u0002\u0010\t\u001a\u00020\b\u0012\b\b\u0002\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\f\u0010\rJ\u001d\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00110\u00102\u0006\u0010\u000f\u001a\u00020\u000eH\u0002¢\u0006\u0004\b\u0012\u0010\u0013J7\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\u00110\u00102\b\u0010\u0015\u001a\u0004\u0018\u00010\u00142\u0006\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0019\u001a\u00020\u00182\u0006\u0010\u001b\u001a\u00020\u001aH\u0016¢\u0006\u0004\b\u001c\u0010\u001dR\u001a\u0010\u0003\u001a\u00020\u00028\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u001c\u0010\u001e\u001a\u0004\b\u001f\u0010 R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010\"R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010&R\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010(R \u0010+\u001a\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u00110)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0012\u0010*¨\u0006,"}, d2 = {"Lu4/p;", "Lu4/l$b;", "Lu4/k0;", "platformFontLoader", "Lu4/n0;", "platformResolveInterceptor", "Lu4/z0;", "typefaceRequestCache", "Lu4/u;", "fontListFontFamilyTypefaceAdapter", "Lu4/j0;", "platformFamilyTypefaceAdapter", "<init>", "(Lu4/k0;Lu4/n0;Lu4/z0;Lu4/u;Lu4/j0;)V", "Lu4/x0;", "typefaceRequest", "Lm2/f6;", "", "f", "(Lu4/x0;)Lm2/f6;", "Lu4/l;", "fontFamily", "Lu4/d0;", "fontWeight", "Lu4/y;", "fontStyle", "Lu4/z;", "fontSynthesis", "a", "(Lu4/l;Lu4/d0;II)Lm2/f6;", "Lu4/k0;", "getPlatformFontLoader$ui_text", "()Lu4/k0;", "b", "Lu4/n0;", "c", "Lu4/z0;", "d", "Lu4/u;", "e", "Lu4/j0;", "Lkotlin/Function1;", "Ler/l;", "createDefaultTypeface", "ui-text"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class p implements l.b {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    private final k0 platformFontLoader;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name and from kotlin metadata */
+    private final n0 platformResolveInterceptor;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
+    private final z0 typefaceRequestCache;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
+    private final u fontListFontFamilyTypefaceAdapter;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
+    private final j0 platformFamilyTypefaceAdapter;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
+    private final er.l<TypefaceRequest, Object> createDefaultTypeface;
+
+    public p(k0 k0Var, n0 n0Var, z0 z0Var, u uVar, j0 j0Var) {
+        this.platformFontLoader = k0Var;
+        this.platformResolveInterceptor = n0Var;
+        this.typefaceRequestCache = z0Var;
+        this.fontListFontFamilyTypefaceAdapter = uVar;
+        this.platformFamilyTypefaceAdapter = j0Var;
+        this.createDefaultTypeface = new er.l() { // from class: u4.n
+            @Override // er.l
+            public final Object b(Object obj) {
+                return p.e(this.f195268a, (TypefaceRequest) obj);
+            }
+        };
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final Object e(p pVar, TypefaceRequest typefaceRequest) {
+        return pVar.f(TypefaceRequest.b(typefaceRequest, null, null, 0, 0, null, 30, null)).getValue();
+    }
+
+    private final f6<Object> f(final TypefaceRequest typefaceRequest) {
+        return this.typefaceRequestCache.b(typefaceRequest, new er.l() { // from class: u4.o
+            @Override // er.l
+            public final Object b(Object obj) {
+                return p.g(this.f195272a, typefaceRequest, (er.l) obj);
+            }
+        });
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final a1 g(p pVar, TypefaceRequest typefaceRequest, er.l lVar) {
+        a1 a1VarA = pVar.fontListFontFamilyTypefaceAdapter.a(typefaceRequest, pVar.platformFontLoader, lVar, pVar.createDefaultTypeface);
+        if (a1VarA != null) {
+            return a1VarA;
+        }
+        a1 a1VarA2 = pVar.platformFamilyTypefaceAdapter.a(typefaceRequest, pVar.platformFontLoader, lVar, pVar.createDefaultTypeface);
+        if (a1VarA2 != null) {
+            return a1VarA2;
+        }
+        throw new IllegalStateException("Could not load font");
+    }
+
+    @Override // u4.l.b
+    public f6<Object> a(l fontFamily, FontWeight fontWeight, int fontStyle, int fontSynthesis) {
+        return f(new TypefaceRequest(this.platformResolveInterceptor.b(fontFamily), this.platformResolveInterceptor.a(fontWeight), this.platformResolveInterceptor.c(fontStyle), this.platformResolveInterceptor.d(fontSynthesis), this.platformFontLoader.getCacheKey(), null));
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public /* synthetic */ p(k0 k0Var, n0 n0Var, z0 z0Var, u uVar, j0 j0Var, int i15, fr.k kVar) {
+        this(k0Var, (i15 & 2) != 0 ? n0.INSTANCE.a() : n0Var, (i15 & 4) != 0 ? q.b() : z0Var, (i15 & 8) != 0 ? new u(q.a(), null, 2, 0 == true ? 1 : 0) : uVar, (i15 & 16) != 0 ? new j0() : j0Var);
+    }
+}

@@ -1,0 +1,83 @@
+package pl.gov.mc.fringers.mobywatel;
+
+import android.content.Context;
+import android.os.Bundle;
+import androidx.p016lifecycle.w0;
+
+/* JADX INFO: loaded from: classes2.dex */
+public abstract class f extends oz.f implements lq.c {
+    private volatile iq.a H;
+    private final Object I = new Object();
+    private boolean K = false;
+
+    class a implements p083nUl.a0 {
+        a() {
+        }
+
+        @Override // p083nUl.a0
+        public void a(Context context) {
+            f.this.T0();
+        }
+    }
+
+    f() {
+        P0();
+    }
+
+    private void P0() {
+        Y(new a());
+    }
+
+    private void S0() {
+        Q0().c();
+    }
+
+    public final iq.a Q0() {
+        if (this.H == null) {
+            synchronized (this.I) {
+                try {
+                    if (this.H == null) {
+                        this.H = R0();
+                    }
+                } catch (Throwable th4) {
+                    throw th4;
+                }
+            }
+        }
+        return this.H;
+    }
+
+    protected iq.a R0() {
+        return new iq.a(this);
+    }
+
+    protected void T0() {
+        if (this.K) {
+            return;
+        }
+        this.K = true;
+        ((y) p()).c((MainActivity) lq.e.a(this));
+    }
+
+    @Override // oz.f, androidx.fragment.app.p, CON.p, s5.h, android.app.Activity
+    protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        S0();
+    }
+
+    @Override // androidx.appcompat.app.c, androidx.fragment.app.p, android.app.Activity
+    protected void onDestroy() {
+        super.onDestroy();
+        Q0().a();
+    }
+
+    @Override // lq.b
+    public final Object p() {
+        return Q0().p();
+    }
+
+    @Override // CON.p, androidx.p016lifecycle.h
+    public w0.c w() {
+        return hq.a.a(this, super.w());
+    }
+}

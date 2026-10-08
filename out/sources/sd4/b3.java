@@ -1,0 +1,216 @@
+package sd4;
+
+import android.os.Build;
+import android.os.Bundle;
+import java.io.Serializable;
+import p071kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000J\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0007\u0018\u0000 ,2\u00020\u00012\u00020\u0002:\u0001-B\u0007¢\u0006\u0004\b\u0003\u0010\u0004J\u0015\u0010\u0007\u001a\u0004\u0018\u00010\u0006*\u00020\u0005H\u0002¢\u0006\u0004\b\u0007\u0010\bJ\u0019\u0010\u000b\u001a\u00020\n2\b\u0010\t\u001a\u0004\u0018\u00010\u0005H\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\r\u001a\u00020\nH\u0016¢\u0006\u0004\b\r\u0010\u0004J\u000f\u0010\u000e\u001a\u00020\nH\u0017¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0010H\u0016¢\u0006\u0004\b\u0013\u0010\u0014J\u0017\u0010\u0016\u001a\u00020\u00002\b\u0010\u0015\u001a\u0004\u0018\u00010\u0006¢\u0006\u0004\b\u0016\u0010\u0017R\"\u0010\u001f\u001a\u00020\u00188\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\u0019\u0010\u001a\u001a\u0004\b\u001b\u0010\u001c\"\u0004\b\u001d\u0010\u001eR\"\u0010'\u001a\u00020 8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b!\u0010\"\u001a\u0004\b#\u0010$\"\u0004\b%\u0010&R\"\u0010+\u001a\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\n0(8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b)\u0010*¨\u0006."}, d2 = {"Lsd4/b3;", "Lj00/b;", "Lgx/c;", "<init>", "()V", "Landroid/os/Bundle;", "Lr54/c;", "k2", "(Landroid/os/Bundle;)Lr54/c;", "savedInstanceState", "Loq/i0;", "x0", "(Landroid/os/Bundle;)V", "C0", "S1", "(Lm2/r;I)V", "Lgx/b;", "event", "", "j5", "(Lgx/b;)Z", "localNotificationItem", "m2", "(Lr54/c;)Lsd4/b3;", "Lgx/d;", "L0", "Lgx/d;", "j2", "()Lgx/d;", "setGlobalEventManager", "(Lgx/d;)V", "globalEventManager", "Lrh2/a;", "M0", "Lrh2/a;", "getFragmentNavigator", "()Lrh2/a;", "setFragmentNavigator", "(Lrh2/a;)V", "fragmentNavigator", "Lkotlin/Function1;", "N0", "Ler/l;", "handleGlobalEvents", "O0", "a", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class b3 extends k8 implements gx.c {
+    public static final int P0 = 8;
+
+    /* JADX INFO: renamed from: L0, reason: from kotlin metadata */
+    public gx.d globalEventManager;
+
+    /* JADX INFO: renamed from: M0, reason: from kotlin metadata */
+    public rh2.a fragmentNavigator;
+
+    /* JADX INFO: renamed from: N0, reason: from kotlin metadata */
+    private er.l<? super gx.b, oq.i0> handleGlobalEvents = new er.l() { // from class: sd4.v2
+        @Override // er.l
+        public final Object b(Object obj) {
+            return b3.l2((gx.b) obj);
+        }
+    };
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 e2(final b3 b3Var, gh1.a aVar, p076m2.r rVar, int i15) {
+        if (rVar.r((i15 & 3) != 2, i15 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(5439988, i15, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.DashboardFeatureFragment.GetContent.<anonymous> (DashboardFeatureFragment.kt:63)");
+            }
+            Bundle bundleV = b3Var.v();
+            r54.c cVarK2 = bundleV != null ? b3Var.k2(bundleV) : null;
+            Bundle bundleV2 = b3Var.v();
+            if (bundleV2 != null) {
+                bundleV2.remove("localNotificationItem");
+            }
+            boolean zG = rVar.G(b3Var);
+            Object objE = rVar.E();
+            if (zG || objE == p076m2.r.INSTANCE.a()) {
+                objE = new er.l() { // from class: sd4.y2
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return b3.f2(this.f180949a, (er.l) obj);
+                    }
+                };
+                rVar.v(objE);
+            }
+            er.l lVar = (er.l) objE;
+            boolean zG2 = rVar.G(b3Var);
+            Object objE2 = rVar.E();
+            if (zG2 || objE2 == p076m2.r.INSTANCE.a()) {
+                objE2 = new er.l() { // from class: sd4.z2
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return b3.g2(this.f180966a, (gx.b) obj);
+                    }
+                };
+                rVar.v(objE2);
+            }
+            er.l lVar2 = (er.l) objE2;
+            boolean zG3 = rVar.G(b3Var);
+            Object objE3 = rVar.E();
+            if (zG3 || objE3 == p076m2.r.INSTANCE.a()) {
+                objE3 = new er.a() { // from class: sd4.a3
+                    @Override // er.a
+                    public final Object a() {
+                        return b3.h2(this.f180525a);
+                    }
+                };
+                rVar.v(objE3);
+            }
+            p038eh1.h0.z(aVar, lVar, lVar2, (er.a) objE3, cVarK2, rVar, 0);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVar.O();
+        }
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 f2(b3 b3Var, er.l lVar) {
+        b3Var.handleGlobalEvents = lVar;
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 g2(b3 b3Var, gx.b bVar) {
+        b3Var.j2().c(bVar);
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 h2(b3 b3Var) {
+        b3Var.j2().c(gx.a.b.f78191a);
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 i2(b3 b3Var, int i15, p076m2.r rVar, int i16) {
+        b3Var.S1(rVar, p076m2.g4.a(i15 | 1));
+        return oq.i0.f148189a;
+    }
+
+    private final r54.c k2(Bundle bundle) {
+        if (Build.VERSION.SDK_INT >= 33) {
+            return (r54.c) bundle.getSerializable("localNotificationItem", r54.c.class);
+        }
+        Serializable serializable = bundle.getSerializable("localNotificationItem");
+        if (serializable instanceof r54.c) {
+            return (r54.c) serializable;
+        }
+        return null;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 l2(gx.b bVar) {
+        return oq.i0.f148189a;
+    }
+
+    @Override // androidx.fragment.app.o
+    public void C0() {
+        j2().a(this);
+        super.C0();
+    }
+
+    @Override // j00.b
+    public void S1(p076m2.r rVar, final int i15) {
+        int i16;
+        Object obj;
+        p076m2.r rVarH = rVar.h(-1775646304);
+        if ((i15 & 6) == 0) {
+            i16 = (rVarH.G(this) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(-1775646304, i16, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.DashboardFeatureFragment.GetContent (DashboardFeatureFragment.kt:54)");
+            }
+            boolean zA = w0.h0.a(rVarH, 0);
+            boolean zA2 = rVarH.a(zA);
+            Object objE = rVarH.E();
+            if (zA2 || objE == p076m2.r.INSTANCE.a()) {
+                if (zA) {
+                    obj = gh1.d.f72954a;
+                } else {
+                    if (zA) {
+                        throw new oq.p();
+                    }
+                    obj = gh1.e.f72980a;
+                }
+                objE = obj;
+                rVarH.v(objE);
+            }
+            final gh1.a aVar = (gh1.a) objE;
+            mc4.d.d(false, y2.m.d(5439988, true, new er.p() { // from class: sd4.w2
+                @Override // er.p
+                public final Object B(Object obj2, Object obj3) {
+                    return b3.e2(this.f180918a, aVar, (p076m2.r) obj2, ((Integer) obj3).intValue());
+                }
+            }, rVarH, 54), rVarH, 48, 1);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        p076m2.d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: sd4.x2
+                @Override // er.p
+                public final Object B(Object obj2, Object obj3) {
+                    return b3.i2(this.f180934a, i15, (p076m2.r) obj2, ((Integer) obj3).intValue());
+                }
+            });
+        }
+    }
+
+    public final gx.d j2() {
+        gx.d dVar = this.globalEventManager;
+        if (dVar != null) {
+            return dVar;
+        }
+        return null;
+    }
+
+    @Override // gx.c
+    public boolean j5(gx.b event) {
+        if (!(event instanceof tg1.a.C4953a) && !(event instanceof tg1.a.NavigateToNotificationDocument) && !(event instanceof tg1.a.c)) {
+            return false;
+        }
+        this.handleGlobalEvents.b(event);
+        return true;
+    }
+
+    public final b3 m2(r54.c localNotificationItem) {
+        b3 b3Var = new b3();
+        if (localNotificationItem != null) {
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("localNotificationItem", localNotificationItem);
+            b3Var.F1(bundle);
+        }
+        return b3Var;
+    }
+
+    @Override // androidx.fragment.app.o
+    public void x0(Bundle savedInstanceState) {
+        super.x0(savedInstanceState);
+        ij2.a.b(false);
+        j2().b(this);
+    }
+}

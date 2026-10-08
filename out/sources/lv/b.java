@@ -1,0 +1,180 @@
+package lv;
+
+import fu.r;
+import fv.b0;
+import fv.c0;
+import fv.d0;
+import fv.e0;
+import fv.w;
+import java.io.IOException;
+import java.net.ProtocolException;
+import p071kotlin.Metadata;
+import vv.v;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0017\u0010\b\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\b\u0010\tJ\u0017\u0010\r\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\r\u0010\u000eR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\r\u0010\u000f¨\u0006\u0010"}, d2 = {"Llv/b;", "Lfv/w;", "", "forWebSocket", "<init>", "(Z)V", "", "code", "b", "(I)Z", "Lfv/w$a;", "chain", "Lfv/d0;", "a", "(Lfv/w$a;)Lfv/d0;", "Z", "okhttp"}, k = 1, mv = {1, 8, 0}, xi = 48)
+public final class b implements w {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    private final boolean forWebSocket;
+
+    public b(boolean z15) {
+        this.forWebSocket = z15;
+    }
+
+    private final boolean b(int code) {
+        if (code == 100) {
+            return true;
+        }
+        return 102 <= code && code < 200;
+    }
+
+    /* JADX WARN: Code duplicated, block: B:32:0x0091 A[Catch: IOException -> 0x0062, TRY_LEAVE, TryCatch #1 {IOException -> 0x0062, blocks: (B:17:0x004d, B:19:0x0053, B:30:0x008b, B:32:0x0091, B:22:0x0064, B:23:0x0073, B:25:0x0080), top: B:84:0x0024 }] */
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r9v0 */
+    /* JADX WARN: Type inference failed for: r9v1 */
+    /* JADX WARN: Type inference failed for: r9v13, types: [boolean] */
+    /* JADX WARN: Type inference failed for: r9v14 */
+    /* JADX WARN: Type inference failed for: r9v15 */
+    /* JADX WARN: Type inference failed for: r9v16 */
+    /* JADX WARN: Type inference failed for: r9v2 */
+    /* JADX WARN: Type inference failed for: r9v23 */
+    /* JADX WARN: Type inference failed for: r9v24 */
+    /* JADX WARN: Type inference failed for: r9v25 */
+    /* JADX WARN: Type inference failed for: r9v26 */
+    /* JADX WARN: Type inference failed for: r9v27 */
+    /* JADX WARN: Type inference failed for: r9v28 */
+    /* JADX WARN: Type inference failed for: r9v29 */
+    /* JADX WARN: Type inference failed for: r9v3, types: [fv.d0$a] */
+    /* JADX WARN: Type inference failed for: r9v30 */
+    /* JADX WARN: Type inference failed for: r9v4, types: [fv.d0$a] */
+    @Override // fv.w
+    public d0 a(w.a chain) throws IOException {
+        boolean z15;
+        ?? r15;
+        ?? Q;
+        d0.a aVar;
+        g gVar = (g) chain;
+        kv.c exchange = gVar.getExchange();
+        b0 b0VarI = gVar.i();
+        c0 body = b0VarI.getBody();
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        try {
+            exchange.u(b0VarI);
+            ?? A = f.a(b0VarI.getMethod());
+            try {
+                if (A == 0 || body == null) {
+                    exchange.o();
+                    z15 = true;
+                    A = 0;
+                } else {
+                    if (r.G("100-continue", b0VarI.d("Expect"), true)) {
+                        exchange.f();
+                        d0.a aVarQ = exchange.q(true);
+                        try {
+                            exchange.s();
+                            z15 = false;
+                            aVar = aVarQ;
+                        } catch (IOException e15) {
+                            e = e15;
+                            z15 = true;
+                            r15 = aVarQ;
+                            if (e instanceof nv.a) {
+                                throw e;
+                            }
+                            if (!exchange.getHasFailure()) {
+                                Q = r15;
+                                throw e;
+                            }
+                        }
+                    } else {
+                        z15 = true;
+                        aVar = null;
+                    }
+                    if (aVar != null) {
+                        exchange.o();
+                        if (!exchange.getConnection().w()) {
+                            A = aVar;
+                            exchange.n();
+                            A = aVar;
+                        }
+                    } else if (body.f()) {
+                        exchange.f();
+                        body.h(v.b(exchange.c(b0VarI, true)));
+                    } else {
+                        vv.f fVarB = v.b(exchange.c(b0VarI, false));
+                        body.h(fVarB);
+                        fVarB.close();
+                    }
+                }
+                if (body != null) {
+                    A = aVar;
+                    if (!body.f()) {
+                        A = aVar;
+                        A = aVar;
+                        A = aVar;
+                        exchange.e();
+                    }
+                } else {
+                    A = aVar;
+                    A = aVar;
+                    A = aVar;
+                    exchange.e();
+                }
+                A = aVar;
+                e = null;
+                Q = A;
+            } catch (IOException e16) {
+                e = e16;
+                r15 = A;
+            }
+        } catch (IOException e17) {
+            e = e17;
+            z15 = true;
+            r15 = 0;
+        }
+        if (Q == 0) {
+            try {
+                Q = exchange.q(false);
+                if (z15) {
+                    exchange.s();
+                    z15 = false;
+                }
+            } catch (IOException e18) {
+                if (e == null) {
+                    throw e18;
+                }
+                oq.c.a(e, e18);
+                throw e;
+            }
+        }
+        d0 d0VarC = Q.r(b0VarI).i(exchange.getConnection().getHandshake()).s(jCurrentTimeMillis).q(System.currentTimeMillis()).c();
+        int code = d0VarC.getCode();
+        if (b(code)) {
+            d0.a aVarQ2 = exchange.q(false);
+            if (z15) {
+                exchange.s();
+            }
+            d0VarC = aVarQ2.r(b0VarI).i(exchange.getConnection().getHandshake()).s(jCurrentTimeMillis).q(System.currentTimeMillis()).c();
+            code = d0VarC.getCode();
+        }
+        exchange.r(d0VarC);
+        d0 d0VarC2 = (this.forWebSocket && code == 101) ? d0VarC.K().b(gv.d.f77105c).c() : d0VarC.K().b(exchange.p(d0VarC)).c();
+        if (r.G("close", d0VarC2.getRequest().d("Connection"), true) || r.G("close", d0.E(d0VarC2, "Connection", null, 2, null), true)) {
+            exchange.n();
+        }
+        if (code == 204 || code == 205) {
+            e0 body2 = d0VarC2.getBody();
+            if ((body2 != null ? body2.getContentLength() : -1L) > 0) {
+                StringBuilder sb5 = new StringBuilder();
+                sb5.append("HTTP ");
+                sb5.append(code);
+                sb5.append(" had non-zero Content-Length: ");
+                e0 body3 = d0VarC2.getBody();
+                sb5.append(body3 != null ? Long.valueOf(body3.getContentLength()) : null);
+                throw new ProtocolException(sb5.toString());
+            }
+        }
+        return d0VarC2;
+    }
+}

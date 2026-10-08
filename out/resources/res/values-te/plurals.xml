@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d సెకండ్ వేగంగా ఫార్వర్డ్ చేయండి</item>
+        <item quantity="other">%d సెకన్లు వేగంగా ఫార్వర్డ్ చేయండి</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d సెకండ్ రివైండ్ చేయండి</item>
+        <item quantity="other">%d సెకన్లు రివైండ్ చేయండి</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d కొత్త నోటిఫికేషన్</item>
+        <item quantity="other">%d కొత్త నోటిఫికేషన్‌లు</item>
+    </plurals>
+    <plurals name="place_details_photo_count">
+        <item quantity="one">%1$d ఫోటో</item>
+        <item quantity="other">%1$d ఫోటోలు</item>
+    </plurals>
+    <plurals name="place_details_ratings_content_description">
+        <item quantity="one">%1$s స్టార్</item>
+        <item quantity="other">%1$s స్టార్లు</item>
+    </plurals>
+    <plurals name="place_details_review_count_a11y_label">
+        <item quantity="one">%1$d రివ్యూ</item>
+        <item quantity="other">%1$d రివ్యూలు</item>
+    </plurals>
+</resources>

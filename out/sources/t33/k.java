@@ -1,0 +1,206 @@
+package t33;
+
+import d1.a3;
+import d1.d3;
+import d1.r3;
+import f1.b1;
+import f1.y0;
+import i50.BaseScaffoldData;
+import mx.Label;
+import oq.i0;
+import p071kotlin.Metadata;
+import p076m2.d5;
+import p076m2.f6;
+import p076m2.g4;
+import p088nul.q0;
+
+/* JADX INFO: loaded from: classes9.dex */
+@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\u001a\u0017\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\u0007¢\u0006\u0004\b\u0003\u0010\u0004\u001a\u0017\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0007¢\u0006\u0004\b\u0007\u0010\b¨\u0006\u000b²\u0006\f\u0010\n\u001a\u00020\t8\nX\u008a\u0084\u0002"}, d2 = {"Lt33/c;", "viewModel", "Loq/i0;", "m", "(Lt33/c;Lm2/r;I)V", "Lt33/c$a$c;", "data", "g", "(Lt33/c$a$c;Lm2/r;I)V", "Lt33/c$a;", "state", "sanitary_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class k {
+    public static final void g(final c.a.Initialized initialized, p076m2.r rVar, final int i15) {
+        int i16;
+        p076m2.r rVarH = rVar.h(278666264);
+        if ((i15 & 6) == 0) {
+            i16 = ((i15 & 8) == 0 ? rVarH.W(initialized) : rVarH.G(initialized) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(278666264, i16, -1, "pl.gov.coi.mobywatel.feature.sanitary.presentation.screens.newreport.reportcategory.ReportCategoryContent (ReportCategoryScreen.kt:43)");
+            }
+            final y0 y0VarC = b1.c(0, 0, rVarH, 0, 3);
+            int i17 = i16;
+            i50.s.r(initialized.getBaseScaffoldData(), null, null, 0, 0L, null, y0VarC, false, null, null, null, null, false, 0.0f, 0.0f, y2.m.d(-2120276155, true, new er.q() { // from class: t33.f
+                @Override // er.q
+                public final Object w(Object obj, Object obj2, Object obj3) {
+                    return k.h(y0VarC, initialized, (d3) obj, (p076m2.r) obj2, ((Integer) obj3).intValue());
+                }
+            }, rVarH, 54), rVarH, BaseScaffoldData.f89350g, 196608, 32702);
+            rVarH = rVarH;
+            boolean z15 = (i17 & 14) == 4 || ((i17 & 8) != 0 && rVarH.G(initialized));
+            Object objE = rVarH.E();
+            if (z15 || objE == p076m2.r.INSTANCE.a()) {
+                objE = new er.a() { // from class: t33.g
+                    @Override // er.a
+                    public final Object a() {
+                        return k.k(initialized);
+                    }
+                };
+                rVarH.v(objE);
+            }
+            q0.g(false, (er.a) objE, rVarH, 0, 1);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: t33.h
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return k.l(initialized, i15, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 h(y0 y0Var, final c.a.Initialized initialized, d3 d3Var, p076m2.r rVar, int i15) {
+        int i16;
+        if ((i15 & 6) == 0) {
+            i16 = i15 | (rVar.W(d3Var) ? 4 : 2);
+        } else {
+            i16 = i15;
+        }
+        if (rVar.r((i16 & 19) != 18, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(-2120276155, i16, -1, "pl.gov.coi.mobywatel.feature.sanitary.presentation.screens.newreport.reportcategory.ReportCategoryContent.<anonymous> (ReportCategoryScreen.kt:50)");
+            }
+            d3 d3VarD = t70.s.D(rVar, 0);
+            f3.m mVarF = androidx.compose.foundation.layout.d.f(a3.l(f3.m.INSTANCE, d3Var), 0.0f, 1, null);
+            boolean zG = rVar.G(initialized);
+            Object objE = rVar.E();
+            if (zG || objE == p076m2.r.INSTANCE.a()) {
+                objE = new er.l() { // from class: t33.i
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return k.i(initialized, (f1.q0) obj);
+                    }
+                };
+                rVar.v(objE);
+            }
+            f1.d.c(mVarF, y0Var, d3VarD, false, null, null, null, false, null, (er.l) objE, rVar, 0, 504);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVar.O();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 i(final c.a.Initialized initialized, f1.q0 q0Var) {
+        f1.q0.c(q0Var, null, null, y2.m.b(-401160870, true, new er.q() { // from class: t33.j
+            @Override // er.q
+            public final Object w(Object obj, Object obj2, Object obj3) {
+                return k.j(initialized, (f1.e) obj, (p076m2.r) obj2, ((Integer) obj3).intValue());
+            }
+        }), 3, null);
+        m30.m.h(q0Var, initialized.getCards());
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 j(c.a.Initialized initialized, f1.e eVar, p076m2.r rVar, int i15) {
+        if (rVar.r((i15 & 17) != 16, i15 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(-401160870, i15, -1, "pl.gov.coi.mobywatel.feature.sanitary.presentation.screens.newreport.reportcategory.ReportCategoryContent.<anonymous>.<anonymous>.<anonymous>.<anonymous> (ReportCategoryScreen.kt:58)");
+            }
+            Label headline = initialized.getHeadline();
+            k70.a aVar = k70.a.f108864a;
+            int i16 = k70.a.f108865b;
+            j70.h.g(null, null, headline, null, null, aVar.a(rVar, i16).getCom.tom_roush.pdfbox.pdmodel.documentinterchange.taggedpdf.f.p java.lang.String().i(), 0L, null, null, null, 0L, null, null, 0L, 0, false, 0, 0, null, aVar.f(rVar, i16).m(), null, null, false, false, null, rVar, 0, 0, 0, 33030107);
+            r3.a(androidx.compose.foundation.layout.d.i(f3.m.INSTANCE, aVar.b(rVar, i16).getSpacing200()), rVar, 0);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVar.O();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 k(c.a.Initialized initialized) {
+        initialized.d().a();
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 l(c.a.Initialized initialized, int i15, p076m2.r rVar, int i16) {
+        g(initialized, rVar, g4.a(i15 | 1));
+        return i0.f148189a;
+    }
+
+    public static final void m(final c cVar, p076m2.r rVar, final int i15) {
+        int i16;
+        p076m2.r rVarH = rVar.h(-2041481029);
+        if ((i15 & 6) == 0) {
+            i16 = ((i15 & 8) == 0 ? rVarH.W(cVar) : rVarH.G(cVar) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(-2041481029, i16, -1, "pl.gov.coi.mobywatel.feature.sanitary.presentation.screens.newreport.reportcategory.ReportCategoryScreen (ReportCategoryScreen.kt:28)");
+            }
+            c.a aVarN = n(m7.b.c(cVar.getState(), null, null, null, rVarH, 0, 7));
+            if (fr.t.c(aVarN, c.a.C4870a.f187522a)) {
+                rVarH.X(936791884);
+                c60.b.b(rVarH, 0);
+                rVarH.R();
+            } else if (aVarN instanceof c.a.Error) {
+                rVarH.X(936794371);
+                ((c.a.Error) aVarN).getErrorVMS().b(rVarH, 0);
+                rVarH.R();
+            } else {
+                if (!(aVarN instanceof c.a.Initialized)) {
+                    rVarH.X(936789918);
+                    rVarH.R();
+                    throw new oq.p();
+                }
+                rVarH.X(936796362);
+                g((c.a.Initialized) aVarN, rVarH, 0);
+                rVarH.R();
+            }
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: t33.e
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return k.o(cVar, i15, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    private static final c.a n(f6<? extends c.a> f6Var) {
+        return f6Var.getValue();
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 o(c cVar, int i15, p076m2.r rVar, int i16) {
+        m(cVar, rVar, g4.a(i15 | 1));
+        return i0.f148189a;
+    }
+}

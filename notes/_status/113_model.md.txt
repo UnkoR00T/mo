@@ -1,0 +1,1 @@
+113_model.md | SKIPPED (biblioteka: GMS parcelable CREATOR)

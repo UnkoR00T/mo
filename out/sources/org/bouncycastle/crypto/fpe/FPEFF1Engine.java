@@ -1,0 +1,67 @@
+package org.bouncycastle.crypto.fpe;
+
+import org.bouncycastle.crypto.BlockCipher;
+import org.bouncycastle.crypto.CipherParameters;
+import org.bouncycastle.crypto.engines.AESEngine;
+import org.bouncycastle.crypto.params.FPEParameters;
+import org.bouncycastle.util.Properties;
+
+/* JADX INFO: loaded from: classes5.dex */
+public class FPEFF1Engine extends FPEEngine {
+    public FPEFF1Engine() {
+        this(AESEngine.newInstance());
+    }
+
+    @Override // org.bouncycastle.crypto.fpe.FPEEngine
+    protected int decryptBlock(byte[] bArr, int i15, int i16, byte[] bArr2, int i17) {
+        int i18;
+        byte[] bArrDecryptFF1;
+        if (this.fpeParameters.getRadix() > 256) {
+            bArrDecryptFF1 = FPEEngine.toByteArray(SP80038G.decryptFF1w(this.baseCipher, this.fpeParameters.getRadixConverter(), this.fpeParameters.getTweak(), FPEEngine.toShortArray(bArr), i15, i16 / 2));
+            i18 = i16;
+        } else {
+            i18 = i16;
+            bArrDecryptFF1 = SP80038G.decryptFF1(this.baseCipher, this.fpeParameters.getRadixConverter(), this.fpeParameters.getTweak(), bArr, i15, i18);
+        }
+        System.arraycopy(bArrDecryptFF1, 0, bArr2, i17, i18);
+        return i18;
+    }
+
+    @Override // org.bouncycastle.crypto.fpe.FPEEngine
+    protected int encryptBlock(byte[] bArr, int i15, int i16, byte[] bArr2, int i17) {
+        int i18;
+        byte[] bArrEncryptFF1;
+        if (this.fpeParameters.getRadix() > 256) {
+            bArrEncryptFF1 = FPEEngine.toByteArray(SP80038G.encryptFF1w(this.baseCipher, this.fpeParameters.getRadixConverter(), this.fpeParameters.getTweak(), FPEEngine.toShortArray(bArr), i15, i16 / 2));
+            i18 = i16;
+        } else {
+            i18 = i16;
+            bArrEncryptFF1 = SP80038G.encryptFF1(this.baseCipher, this.fpeParameters.getRadixConverter(), this.fpeParameters.getTweak(), bArr, i15, i18);
+        }
+        System.arraycopy(bArrEncryptFF1, 0, bArr2, i17, i18);
+        return i18;
+    }
+
+    @Override // org.bouncycastle.crypto.fpe.FPEEngine
+    public String getAlgorithmName() {
+        return "FF1";
+    }
+
+    @Override // org.bouncycastle.crypto.fpe.FPEEngine
+    public void init(boolean z15, CipherParameters cipherParameters) {
+        this.forEncryption = z15;
+        FPEParameters fPEParameters = (FPEParameters) cipherParameters;
+        this.fpeParameters = fPEParameters;
+        this.baseCipher.init(!fPEParameters.isUsingInverseFunction(), this.fpeParameters.getKey());
+    }
+
+    public FPEFF1Engine(BlockCipher blockCipher) {
+        super(blockCipher);
+        if (blockCipher.getBlockSize() != 16) {
+            throw new IllegalArgumentException("base cipher needs to be 128 bits");
+        }
+        if (Properties.isOverrideSet("org.bouncycastle.fpe.disable") || Properties.isOverrideSet("org.bouncycastle.fpe.disable_ff1")) {
+            throw new UnsupportedOperationException("FF1 encryption disabled");
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@drawable/_ic049_mobywatel_europa__0_res_0x7f0803b2"
+        android:pathData="M24,4.728H15.68V0L3.385,4.813L3.383,4.809C2.098,5.384 -0.029,6.335 0,8.702L0,19.965C0,22.19 1.82,24 4.056,24H20.702L20.702,17.347L24,14.066V4.728ZM21.299,12.953L20.698,13.55C20.612,11.536 18.938,9.923 16.892,9.923H4.038C3.215,9.931 2.703,9.405 2.704,8.74C2.706,7.992 3.392,7.683 3.525,7.617L4.3,7.287L12.979,3.946V7.416H21.299V12.953Z"/>
+</vector>

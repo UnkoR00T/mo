@@ -1,0 +1,1 @@
+108_model.md | SKIPPED (biblioteka: play-services-wallet, androidx core-ktx, Firebase JobIntent)

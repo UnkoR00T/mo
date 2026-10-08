@@ -1,0 +1,1 @@
+211_model.md | SKIPPED (biblioteka: kotlinx.serialization SealedClassSerializer - polimorficzny serializer sealed)

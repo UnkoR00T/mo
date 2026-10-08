@@ -1,0 +1,1 @@
+219_model.md | DONE (2 modele aplikacji + 1 biblioteka play-core)

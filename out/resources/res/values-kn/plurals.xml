@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d ಸೆಕೆಂಡ್‌ಗಳಷ್ಟು ಫಾಸ್ಟ್ ಫಾರ್ವರ್ಡ್ ಮಾಡಿ</item>
+        <item quantity="other">%d ಸೆಕೆಂಡ್‌ಗಳಷ್ಟು ಫಾಸ್ಟ್ ಫಾರ್ವರ್ಡ್ ಮಾಡಿ</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d ಸೆಕೆಂಡ್‌ಗಳಷ್ಟು ರಿವೈಂಡ್ ಮಾಡಿ</item>
+        <item quantity="other">%d ಸೆಕೆಂಡ್‌ಗಳಷ್ಟು ರಿವೈಂಡ್ ಮಾಡಿ</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ಹೊಸ ನೋಟಿಫಿಕೇಶನ್‍ಗಳು</item>
+        <item quantity="other">%d ಹೊಸ ನೋಟಿಫಿಕೇಶನ್‍ಗಳು</item>
+    </plurals>
+    <plurals name="place_details_photo_count">
+        <item quantity="one">%1$d ಫೋಟೋಗಳು</item>
+        <item quantity="other">%1$d ಫೋಟೋಗಳು</item>
+    </plurals>
+    <plurals name="place_details_ratings_content_description">
+        <item quantity="one">%1$s ಸ್ಟಾರ್‌ಗಳು</item>
+        <item quantity="other">%1$s ಸ್ಟಾರ್‌ಗಳು</item>
+    </plurals>
+    <plurals name="place_details_review_count_a11y_label">
+        <item quantity="one">%1$d ವಿಮರ್ಶೆಗಳು</item>
+        <item quantity="other">%1$d ವಿಮರ್ಶೆಗಳು</item>
+    </plurals>
+</resources>

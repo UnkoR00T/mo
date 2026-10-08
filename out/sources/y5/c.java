@@ -1,0 +1,10 @@
+package y5;
+
+import android.graphics.drawable.Drawable;
+
+/* JADX INFO: loaded from: classes.dex */
+public interface c {
+    Drawable a();
+
+    void b(Drawable drawable);
+}

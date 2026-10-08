@@ -1,0 +1,1 @@
+035_net.md | SKIPPED (biblioteka: Glide - rejestr komponentow image loadera)

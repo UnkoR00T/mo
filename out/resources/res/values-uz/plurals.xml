@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d soniya oldinga</item>
+        <item quantity="other">%d soniya oldinga</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d soniya orqaga</item>
+        <item quantity="other">%d soniya orqaga</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ta yangi bildirishnoma</item>
+        <item quantity="other">%d ta yangi bildirishnoma</item>
+    </plurals>
+    <plurals name="place_details_photo_count">
+        <item quantity="one">%1$d ta surat</item>
+        <item quantity="other">%1$d ta surat</item>
+    </plurals>
+    <plurals name="place_details_ratings_content_description">
+        <item quantity="one">%1$s ta yulduzcha</item>
+        <item quantity="other">%1$s ta yulduzcha</item>
+    </plurals>
+    <plurals name="place_details_review_count_a11y_label">
+        <item quantity="one">%1$d ta sharh</item>
+        <item quantity="other">%1$d ta sharh</item>
+    </plurals>
+</resources>

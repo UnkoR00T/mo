@@ -1,0 +1,1 @@
+235_model.md | SKIPPED (biblioteka: play-services GMS wallet - Parcelable CREATOR boilerplate)

@@ -1,0 +1,40 @@
+package dh;
+
+/* JADX INFO: loaded from: classes3.dex */
+final class r3 implements dl.d {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    static final r3 f42180a = new r3();
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private static final dl.c f42181b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private static final dl.c f42182c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    private static final dl.c f42183d;
+
+    static {
+        dl.c.b bVarA = dl.c.a("identifyLanguageConfidenceThreshold");
+        f fVar = new f();
+        fVar.a(1);
+        f42181b = bVarA.b(fVar.b()).a();
+        dl.c.b bVarA2 = dl.c.a("identifyAllLanguagesConfidenceThreshold");
+        f fVar2 = new f();
+        fVar2.a(2);
+        f42182c = bVarA2.b(fVar2.b()).a();
+        dl.c.b bVarA3 = dl.c.a("confidenceThreshold");
+        f fVar3 = new f();
+        fVar3.a(3);
+        f42183d = bVarA3.b(fVar3.b()).a();
+    }
+
+    private r3() {
+    }
+
+    @Override // dl.d
+    public final /* bridge */ /* synthetic */ void a(Object obj, Object obj2) {
+        throw null;
+    }
+}

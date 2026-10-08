@@ -1,0 +1,1 @@
+011_net.md | SKIPPED (biblioteka: CameraX)

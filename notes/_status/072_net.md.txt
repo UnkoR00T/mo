@@ -1,0 +1,1 @@
+072_net.md | SKIPPED (biblioteka: coil-core, androidx.compose.ui-text)

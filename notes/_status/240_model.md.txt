@@ -1,0 +1,1 @@
+240_model.md | SKIPPED (biblioteka: Google Play services location + ClientIdentity$Companion; zh/a to bezlogiczny Parcelable)

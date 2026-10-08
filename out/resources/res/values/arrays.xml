@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="assume_strong_biometrics_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="coi_common_ui_poland_flag_resources">
+        <item>@drawable/flag_pl_0</item>
+        <item>@drawable/flag_pl_1</item>
+        <item>@drawable/flag_pl_2</item>
+        <item>@drawable/flag_pl_3</item>
+        <item>@drawable/flag_pl_4</item>
+        <item>@drawable/flag_pl_5</item>
+        <item>@drawable/flag_pl_6</item>
+        <item>@drawable/flag_pl_7</item>
+        <item>@drawable/flag_pl_8</item>
+        <item>@drawable/flag_pl_9</item>
+        <item>@drawable/flag_pl_10</item>
+        <item>@drawable/flag_pl_11</item>
+        <item>@drawable/flag_pl_12</item>
+        <item>@drawable/flag_pl_13</item>
+        <item>@drawable/flag_pl_14</item>
+        <item>@drawable/flag_pl_15</item>
+        <item>@drawable/flag_pl_16</item>
+        <item>@drawable/flag_pl_17</item>
+        <item>@drawable/flag_pl_18</item>
+        <item>@drawable/flag_pl_19</item>
+        <item>@drawable/flag_pl_20</item>
+        <item>@drawable/flag_pl_21</item>
+        <item>@drawable/flag_pl_22</item>
+        <item>@drawable/flag_pl_23</item>
+        <item>@drawable/flag_pl_24</item>
+        <item>@drawable/flag_pl_25</item>
+        <item>@drawable/flag_pl_26</item>
+        <item>@drawable/flag_pl_27</item>
+        <item>@drawable/flag_pl_28</item>
+        <item>@drawable/flag_pl_29</item>
+        <item>@drawable/flag_pl_30</item>
+        <item>@drawable/flag_pl_31</item>
+        <item>@drawable/flag_pl_32</item>
+        <item>@drawable/flag_pl_33</item>
+        <item>@drawable/flag_pl_34</item>
+        <item>@drawable/flag_pl_35</item>
+        <item>@drawable/flag_pl_36</item>
+        <item>@drawable/flag_pl_37</item>
+        <item>@drawable/flag_pl_38</item>
+        <item>@drawable/flag_pl_39</item>
+        <item>@drawable/flag_pl_40</item>
+        <item>@drawable/flag_pl_41</item>
+        <item>@drawable/flag_pl_42</item>
+        <item>@drawable/flag_pl_43</item>
+        <item>@drawable/flag_pl_44</item>
+        <item>@drawable/flag_pl_45</item>
+        <item>@drawable/flag_pl_46</item>
+        <item>@drawable/flag_pl_47</item>
+        <item>@drawable/flag_pl_48</item>
+        <item>@drawable/flag_pl_49</item>
+        <item>@drawable/flag_pl_50</item>
+        <item>@drawable/flag_pl_51</item>
+        <item>@drawable/flag_pl_52</item>
+        <item>@drawable/flag_pl_53</item>
+        <item>@drawable/flag_pl_54</item>
+        <item>@drawable/flag_pl_55</item>
+        <item>@drawable/flag_pl_56</item>
+        <item>@drawable/flag_pl_57</item>
+        <item>@drawable/flag_pl_58</item>
+        <item>@drawable/flag_pl_59</item>
+    </array>
+    <array name="coi_common_ui_ukraine_flag_resources">
+        <item>@drawable/flag_ua_0</item>
+        <item>@drawable/flag_ua_1</item>
+        <item>@drawable/flag_ua_2</item>
+        <item>@drawable/flag_ua_3</item>
+        <item>@drawable/flag_ua_4</item>
+        <item>@drawable/flag_ua_5</item>
+        <item>@drawable/flag_ua_6</item>
+        <item>@drawable/flag_ua_7</item>
+        <item>@drawable/flag_ua_8</item>
+        <item>@drawable/flag_ua_9</item>
+        <item>@drawable/flag_ua_10</item>
+        <item>@drawable/flag_ua_11</item>
+        <item>@drawable/flag_ua_12</item>
+        <item>@drawable/flag_ua_13</item>
+        <item>@drawable/flag_ua_14</item>
+        <item>@drawable/flag_ua_15</item>
+        <item>@drawable/flag_ua_16</item>
+        <item>@drawable/flag_ua_17</item>
+        <item>@drawable/flag_ua_18</item>
+        <item>@drawable/flag_ua_19</item>
+        <item>@drawable/flag_ua_20</item>
+        <item>@drawable/flag_ua_21</item>
+        <item>@drawable/flag_ua_22</item>
+        <item>@drawable/flag_ua_23</item>
+        <item>@drawable/flag_ua_24</item>
+        <item>@drawable/flag_ua_25</item>
+        <item>@drawable/flag_ua_26</item>
+        <item>@drawable/flag_ua_27</item>
+        <item>@drawable/flag_ua_28</item>
+        <item>@drawable/flag_ua_29</item>
+        <item>@drawable/flag_ua_30</item>
+        <item>@drawable/flag_ua_31</item>
+        <item>@drawable/flag_ua_32</item>
+        <item>@drawable/flag_ua_33</item>
+        <item>@drawable/flag_ua_34</item>
+        <item>@drawable/flag_ua_35</item>
+        <item>@drawable/flag_ua_36</item>
+        <item>@drawable/flag_ua_37</item>
+        <item>@drawable/flag_ua_38</item>
+        <item>@drawable/flag_ua_39</item>
+        <item>@drawable/flag_ua_40</item>
+        <item>@drawable/flag_ua_41</item>
+        <item>@drawable/flag_ua_42</item>
+        <item>@drawable/flag_ua_43</item>
+        <item>@drawable/flag_ua_44</item>
+        <item>@drawable/flag_ua_45</item>
+        <item>@drawable/flag_ua_46</item>
+        <item>@drawable/flag_ua_47</item>
+        <item>@drawable/flag_ua_48</item>
+        <item>@drawable/flag_ua_49</item>
+        <item>@drawable/flag_ua_50</item>
+        <item>@drawable/flag_ua_51</item>
+        <item>@drawable/flag_ua_52</item>
+        <item>@drawable/flag_ua_53</item>
+        <item>@drawable/flag_ua_54</item>
+        <item>@drawable/flag_ua_55</item>
+        <item>@drawable/flag_ua_56</item>
+        <item>@drawable/flag_ua_57</item>
+        <item>@drawable/flag_ua_58</item>
+        <item>@drawable/flag_ua_59</item>
+    </array>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <array name="com_google_android_gms_fonts_certs_dev">
+        <item>MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=</item>
+    </array>
+    <array name="com_google_android_gms_fonts_certs_prod">
+        <item>MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK</item>
+    </array>
+    <array name="crypto_fingerprint_fallback_prefixes">
+    </array>
+    <array name="crypto_fingerprint_fallback_vendors">
+        <item>samsung</item>
+    </array>
+    <array name="delay_showing_prompt_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>Normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
+    <array name="flood_voivodeships">
+        <item>@string/flood_alert_all</item>
+        <item>@string/common_voivodeship_dolnoslaskie</item>
+        <item>@string/common_voivodeship_kujawsko_pomorskie</item>
+        <item>@string/common_voivodeship_lubelskie</item>
+        <item>@string/common_voivodeship_lubuskie</item>
+        <item>@string/common_voivodeship_lodzkie</item>
+        <item>@string/common_voivodeship_malopolskie</item>
+        <item>@string/common_voivodeship_mazowieckie</item>
+        <item>@string/common_voivodeship_opolskie</item>
+        <item>@string/common_voivodeship_podkarpackie</item>
+        <item>@string/common_voivodeship_podlaskie</item>
+        <item>@string/common_voivodeship_pomorskie</item>
+        <item>@string/common_voivodeship_slaskie</item>
+        <item>@string/common_voivodeship_swietokrzyskie</item>
+        <item>@string/common_voivodeship_warminsko_mazurskie</item>
+        <item>@string/common_voivodeship_wielkopolskie</item>
+        <item>@string/common_voivodeship_zachodniopomorskie</item>
+    </array>
+    <array name="gios_voivodeships">
+        <item>@string/gios_voivodeship_dolnoslaskie</item>
+        <item>@string/gios_voivodeship_kujawsko_pomorskie</item>
+        <item>@string/gios_voivodeship_lubelskie</item>
+        <item>@string/gios_voivodeship_lubuskie</item>
+        <item>@string/gios_voivodeship_lodzkie</item>
+        <item>@string/gios_voivodeship_malopolskie</item>
+        <item>@string/gios_voivodeship_mazowieckie</item>
+        <item>@string/gios_voivodeship_opolskie</item>
+        <item>@string/gios_voivodeship_podkarpackie</item>
+        <item>@string/gios_voivodeship_podlaskie</item>
+        <item>@string/gios_voivodeship_pomorskie</item>
+        <item>@string/gios_voivodeship_slaskie</item>
+        <item>@string/gios_voivodeship_swietokrzyskie</item>
+        <item>@string/gios_voivodeship_warminsko_mazurskie</item>
+        <item>@string/gios_voivodeship_wielkopolskie</item>
+        <item>@string/gios_voivodeship_zachodniopomorskie</item>
+    </array>
+    <array name="hide_fingerprint_instantly_prefixes">
+        <item>SM-A50</item>
+        <item>SM-G973</item>
+        <item>SM-G975</item>
+        <item>SM-G977</item>
+        <item>SM-G770</item>
+        <item>SM-N970</item>
+        <item>SM-N971</item>
+        <item>SM-N975</item>
+        <item>SM-N976</item>
+        <item>SM-N770</item>
+        <item>SC-03L</item>
+        <item>SC-04L</item>
+        <item>SC-05L</item>
+        <item>SC-01M</item>
+        <item>SCV41</item>
+        <item>SCV42</item>
+        <item>SCV45</item>
+    </array>
+</resources>

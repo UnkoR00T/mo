@@ -1,0 +1,321 @@
+package pa4;
+
+import android.content.Context;
+import androidx.compose.ui.platform.AndroidCompositionLocals_androidKt;
+import androidx.p016lifecycle.w0;
+import androidx.p016lifecycle.y0;
+import fr.q0;
+import oq.i0;
+import org.bouncycastle.asn1.cmp.PKIFailureInfo;
+import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
+import p071kotlin.Metadata;
+import p076m2.c4;
+import p076m2.d0;
+import p076m2.d5;
+import p076m2.g4;
+import p136y9.d1;
+import p7.CreationExtras;
+import ua4.f0;
+
+/* JADX INFO: loaded from: classes5.dex */
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\u001aC\u0010\n\u001a\u00020\b2\u0006\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u00042\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00042\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u0007H\u0007¢\u0006\u0004\b\n\u0010\u000b\u001a9\u0010\f\u001a\u00020\b2\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u00042\b\u0010\u0006\u001a\u0004\u0018\u00010\u00042\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u0007H\u0007¢\u0006\u0004\b\f\u0010\r¨\u0006\u000e"}, d2 = {"Lqa4/a;", "colorScheme", "Lma4/a;", "featureConfig", "", "studentId", "lessonId", "Lkotlin/Function0;", "Loq/i0;", "navResult", "l", "(Lqa4/a;Lma4/a;Ljava/lang/String;Ljava/lang/String;Ler/a;Lm2/r;II)V", "o", "(Lma4/a;Ljava/lang/String;Ljava/lang/String;Ler/a;Lm2/r;I)V", "schooltimetable_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class p {
+    public static final void l(final qa4.a aVar, final ma4.a aVar2, final String str, final String str2, final er.a<i0> aVar3, p076m2.r rVar, final int i15, final int i16) {
+        int i17;
+        p076m2.r rVarH = rVar.h(-903491449);
+        if ((i15 & 6) == 0) {
+            i17 = ((i15 & 8) == 0 ? rVarH.W(aVar) : rVarH.G(aVar) ? 4 : 2) | i15;
+        } else {
+            i17 = i15;
+        }
+        if ((i15 & 48) == 0) {
+            i17 |= rVarH.c(aVar2.ordinal()) ? 32 : 16;
+        }
+        if ((i15 & MLKEMEngine.KyberPolyBytes) == 0) {
+            i17 |= rVarH.W(str) ? 256 : 128;
+        }
+        int i18 = i16 & 8;
+        if (i18 != 0) {
+            i17 |= 3072;
+        } else if ((i15 & 3072) == 0) {
+            i17 |= rVarH.W(str2) ? 2048 : 1024;
+        }
+        if ((i15 & 24576) == 0) {
+            i17 |= rVarH.G(aVar3) ? 16384 : PKIFailureInfo.certRevoked;
+        }
+        if (rVarH.r((i17 & 9363) != 9362, i17 & 1)) {
+            if (i18 != 0) {
+                str2 = null;
+            }
+            if (p076m2.t.k()) {
+                p076m2.t.o(-903491449, i17, -1, "pl.gov.coi.shared.feature.schooltimetable.presentation.SchoolTimetableNavContent (SchoolTimetableNavContent.kt:32)");
+            }
+            d0.c(qa4.c.c().d(aVar), y2.m.d(85243207, true, new er.p() { // from class: pa4.e
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return p.m(aVar2, str, str2, aVar3, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            }, rVarH, 54), rVarH, c4.f122821i | 48);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        final String str3 = str2;
+        d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: pa4.g
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return p.n(aVar, aVar2, str, str3, aVar3, i15, i16, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 m(ma4.a aVar, String str, String str2, er.a aVar2, p076m2.r rVar, int i15) {
+        if (rVar.r((i15 & 3) != 2, i15 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(85243207, i15, -1, "pl.gov.coi.shared.feature.schooltimetable.presentation.SchoolTimetableNavContent.<anonymous> (SchoolTimetableNavContent.kt:36)");
+            }
+            o(aVar, str, str2, aVar2, rVar, 0);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVar.O();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 n(qa4.a aVar, ma4.a aVar2, String str, String str2, er.a aVar3, int i15, int i16, p076m2.r rVar, int i17) {
+        l(aVar, aVar2, str, str2, aVar3, rVar, g4.a(i15 | 1), i16);
+        return i0.f148189a;
+    }
+
+    /* JADX WARN: Type inference fix 'apply assigned field type' failed
+    java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$UnknownArg
+    	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:596)
+    	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
+    	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
+     */
+    public static final void o(final ma4.a aVar, final String str, final String str2, final er.a<i0> aVar2, p076m2.r rVar, final int i15) {
+        int i16;
+        p076m2.r rVarH = rVar.h(-360663993);
+        if ((i15 & 6) == 0) {
+            i16 = (rVarH.c(aVar.ordinal()) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if ((i15 & 48) == 0) {
+            i16 |= rVarH.W(str) ? 32 : 16;
+        }
+        if ((i15 & MLKEMEngine.KyberPolyBytes) == 0) {
+            i16 |= rVarH.W(str2) ? 256 : 128;
+        }
+        if ((i15 & 3072) == 0) {
+            i16 |= rVarH.G(aVar2) ? 2048 : 1024;
+        }
+        if (rVarH.r((i16 & 1171) != 1170, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(-360663993, i16, -1, "pl.gov.coi.shared.feature.schooltimetable.presentation.SchoolTimetableNavGraph (SchoolTimetableNavContent.kt:52)");
+            }
+            final f00.s sVarJ = f00.r.J(null, rVarH, 0, 1);
+            int i17 = i16 & 896;
+            boolean z15 = ((i16 & 14) == 4) | ((i16 & 112) == 32) | (i17 == 256);
+            Object objE = rVarH.E();
+            if (z15 || objE == p076m2.r.INSTANCE.a()) {
+                objE = new er.l() { // from class: pa4.h
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return p.p(aVar, str, str2, (u.a) obj);
+                    }
+                };
+                rVarH.v(objE);
+            }
+            er.l lVar = (er.l) objE;
+            y0 y0VarC = q7.b.f165175a.c(rVarH, q7.b.f165177c);
+            if (y0VarC == null) {
+                throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+            }
+            final u uVar = (u) q7.d.c(q0.c(u.class), y0VarC, null, j7.a.a(y0VarC, rVarH, 0), y0VarC instanceof androidx.p016lifecycle.h ? kq.a.b(((androidx.p016lifecycle.h) y0VarC).x(), lVar) : kq.a.b(CreationExtras.b.f153222c, lVar), rVarH, 0, 0);
+            zx.a aVar3 = str2 == null ? c.f153978a : b.f153976a;
+            boolean zG = rVarH.G(uVar) | ((i16 & 7168) == 2048) | rVarH.G(sVarJ) | (i17 == 256);
+            Object objE2 = rVarH.E();
+            if (zG || objE2 == p076m2.r.INSTANCE.a()) {
+                objE2 = new er.l() { // from class: pa4.i
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return p.q(sVarJ, uVar, aVar2, str2, (d1) obj);
+                    }
+                };
+                rVarH.v(objE2);
+            }
+            f00.d0.j(sVarJ, aVar3, (er.l) objE2, rVarH, f00.s.f54562e);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: pa4.j
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return p.x(aVar, str, str2, aVar2, i15, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final u p(ma4.a aVar, String str, String str2, u.a aVar2) {
+        return aVar2.a(aVar, str, str2);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 q(final f00.s sVar, final u uVar, final er.a aVar, final String str, d1 d1Var) {
+        f00.r.u(d1Var, c.f153978a, null, y2.m.b(487322184, true, new er.r() { // from class: pa4.k
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return p.r(uVar, aVar, sVar, (p114t0.f) obj, (p136y9.w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        uw.m.c(d1Var, a.f153974a, sVar);
+        f00.r.u(d1Var, b.f153976a, null, y2.m.b(-1186018831, true, new er.r() { // from class: pa4.l
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return p.u(uVar, str, sVar, aVar, (p114t0.f) obj, (p136y9.w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 r(final u uVar, final er.a aVar, final f00.s sVar, p114t0.f fVar, p136y9.w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(487322184, i15, -1, "pl.gov.coi.shared.feature.schooltimetable.presentation.SchoolTimetableNavGraph.<anonymous>.<anonymous>.<anonymous> (SchoolTimetableNavContent.kt:68)");
+        }
+        boolean zG = rVar.G(uVar);
+        Object objE = rVar.E();
+        if (zG || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.l() { // from class: pa4.o
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return p.s(uVar, (f0.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        w0.c cVarA = i7.a.a((Context) rVar.N(AndroidCompositionLocals_androidKt.c()), wVar.w());
+        CreationExtras creationExtrasB = kq.a.b(wVar.x(), (er.l) objE);
+        f0 f0Var = (f0) q7.d.c(q0.c(f0.class), wVar, null, cVarA, creationExtrasB, rVar, (((i15 >> 3) & 14) << 3) & 112, 0);
+        xw.b<ua4.c.a> bVarY1 = f0Var.Y1();
+        boolean zW = rVar.W(aVar) | rVar.G(sVar);
+        Object objE2 = rVar.E();
+        if (zW || objE2 == p076m2.r.INSTANCE.a()) {
+            objE2 = new er.l() { // from class: pa4.f
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return p.t(aVar, sVar, (ua4.c.a) obj);
+                }
+            };
+            rVar.v(objE2);
+        }
+        f00.f0.b(bVarY1, (er.l) objE2, rVar, xw.b.f221619c);
+        ua4.s.z(f0Var, rVar, 0);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final f0 s(u uVar, f0.a aVar) {
+        return (f0) aVar.a(uVar);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 t(er.a aVar, f00.s sVar, ua4.c.a aVar2) {
+        if (fr.t.c(aVar2, ua4.c.a.C5122a.f196885a)) {
+            aVar.a();
+        } else if (aVar2 instanceof ua4.c.a.GoToDatePicker) {
+            f00.s.l(sVar, a.f153974a, ((ua4.c.a.GoToDatePicker) aVar2).getData(), null, 4, null);
+        } else {
+            if (!(aVar2 instanceof ua4.c.a.GoToLessonDetails)) {
+                throw new oq.p();
+            }
+            f00.s.m(sVar, b.f153976a, null, 2, null);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 u(final u uVar, final String str, final f00.s sVar, final er.a aVar, p114t0.f fVar, p136y9.w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(-1186018831, i15, -1, "pl.gov.coi.shared.feature.schooltimetable.presentation.SchoolTimetableNavGraph.<anonymous>.<anonymous>.<anonymous> (SchoolTimetableNavContent.kt:94)");
+        }
+        boolean zG = rVar.G(uVar);
+        Object objE = rVar.E();
+        if (zG || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.l() { // from class: pa4.m
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return p.v(uVar, (ra4.p.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        ra4.p pVar = (ra4.p) q7.d.c(q0.c(ra4.p.class), wVar, null, i7.a.a((Context) rVar.N(AndroidCompositionLocals_androidKt.c()), wVar.w()), kq.a.b(wVar.x(), (er.l) objE), rVar, (((i15 >> 3) & 14) << 3) & 112, 0);
+        xw.b<ra4.g.a> bVarY1 = pVar.Y1();
+        boolean zW = rVar.W(str) | rVar.G(sVar) | rVar.W(aVar);
+        Object objE2 = rVar.E();
+        if (zW || objE2 == p076m2.r.INSTANCE.a()) {
+            objE2 = new er.l() { // from class: pa4.n
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return p.w(str, sVar, aVar, (ra4.g.a) obj);
+                }
+            };
+            rVar.v(objE2);
+        }
+        f00.f0.b(bVarY1, (er.l) objE2, rVar, xw.b.f221619c);
+        ra4.f.m(pVar, rVar, 0);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final ra4.p v(u uVar, ra4.p.a aVar) {
+        return aVar.a(uVar);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 w(String str, f00.s sVar, er.a aVar, ra4.g.a aVar2) {
+        if (!fr.t.c(aVar2, ra4.g.a.C4406a.f172771a)) {
+            throw new oq.p();
+        }
+        if (str == null) {
+            sVar.c();
+        } else {
+            aVar.a();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 x(ma4.a aVar, String str, String str2, er.a aVar2, int i15, p076m2.r rVar, int i16) {
+        o(aVar, str, str2, aVar2, rVar, g4.a(i15 | 1));
+        return i0.f148189a;
+    }
+}

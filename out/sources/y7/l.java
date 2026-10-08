@@ -1,0 +1,538 @@
+package y7;
+
+import ak.b2;
+import ak.i0;
+import ak.p0;
+import android.net.TrafficStats;
+import android.net.Uri;
+import android.os.Build;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InterruptedIOException;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.NoRouteToHostException;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.zip.GZIPInputStream;
+import org.bouncycastle.asn1.cmp.PKIFailureInfo;
+import w7.o0;
+
+/* JADX INFO: loaded from: classes3.dex */
+public class l extends y7.b implements f {
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    private final boolean f224900e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    private final boolean f224901f;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    private final int f224902g;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    private final int f224903h;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    private final String f224904i;
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    private final t f224905j;
+
+    /* JADX INFO: renamed from: k, reason: collision with root package name */
+    private final t f224906k;
+
+    /* JADX INFO: renamed from: l, reason: collision with root package name */
+    private final zj.q<String> f224907l;
+
+    /* JADX INFO: renamed from: m, reason: collision with root package name */
+    private final boolean f224908m;
+
+    /* JADX INFO: renamed from: n, reason: collision with root package name */
+    private j f224909n;
+
+    /* JADX INFO: renamed from: o, reason: collision with root package name */
+    private HttpURLConnection f224910o;
+
+    /* JADX INFO: renamed from: p, reason: collision with root package name */
+    private InputStream f224911p;
+
+    /* JADX INFO: renamed from: q, reason: collision with root package name */
+    private boolean f224912q;
+
+    /* JADX INFO: renamed from: r, reason: collision with root package name */
+    private int f224913r;
+
+    /* JADX INFO: renamed from: s, reason: collision with root package name */
+    private long f224914s;
+
+    /* JADX INFO: renamed from: t, reason: collision with root package name */
+    private long f224915t;
+
+    public static final class b implements f.a {
+
+        /* JADX INFO: renamed from: b, reason: collision with root package name */
+        private x f224917b;
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        private zj.q<String> f224918c;
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        private String f224919d;
+
+        /* JADX INFO: renamed from: g, reason: collision with root package name */
+        private boolean f224922g;
+
+        /* JADX INFO: renamed from: h, reason: collision with root package name */
+        private boolean f224923h;
+
+        /* JADX INFO: renamed from: i, reason: collision with root package name */
+        private boolean f224924i;
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        private final t f224916a = new t();
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        private int f224920e = 8000;
+
+        /* JADX INFO: renamed from: f, reason: collision with root package name */
+        private int f224921f = 8000;
+
+        @Override // y7.f.a
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public l a() {
+            l lVar = new l(this.f224919d, this.f224920e, this.f224921f, this.f224922g, this.f224923h, this.f224916a, this.f224918c, this.f224924i);
+            x xVar = this.f224917b;
+            if (xVar != null) {
+                lVar.m(xVar);
+            }
+            return lVar;
+        }
+
+        public b c(String str) {
+            this.f224919d = str;
+            return this;
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    static class c extends i0<String, List<String>> {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        private final Map<String, List<String>> f224925a;
+
+        public c(Map<String, List<String>> map) {
+            this.f224925a = map;
+        }
+
+        public static /* synthetic */ boolean o(Map.Entry entry) {
+            return entry.getKey() != null;
+        }
+
+        public static /* synthetic */ boolean p(String str) {
+            return str != null;
+        }
+
+        @Override // ak.i0, java.util.Map
+        public boolean containsKey(Object obj) {
+            return obj != null && super.containsKey(obj);
+        }
+
+        @Override // java.util.Map
+        public boolean containsValue(Object obj) {
+            return super.k(obj);
+        }
+
+        @Override // ak.i0, java.util.Map
+        public Set<Map.Entry<String, List<String>>> entrySet() {
+            return b2.b(super.entrySet(), new zj.q() { // from class: y7.m
+                @Override // zj.q
+                public final boolean apply(Object obj) {
+                    return l.c.o((Map.Entry) obj);
+                }
+            });
+        }
+
+        @Override // java.util.Map
+        public boolean equals(Object obj) {
+            return obj != null && super.l(obj);
+        }
+
+        /* JADX INFO: Access modifiers changed from: protected */
+        @Override // ak.j0
+        public Map<String, List<String>> g() {
+            return this.f224925a;
+        }
+
+        @Override // java.util.Map
+        public int hashCode() {
+            return super.n();
+        }
+
+        @Override // ak.i0, java.util.Map
+        public boolean isEmpty() {
+            return super.isEmpty() || (super.size() == 1 && super.containsKey(null));
+        }
+
+        @Override // ak.i0, java.util.Map
+        public Set<String> keySet() {
+            return b2.b(super.keySet(), new zj.q() { // from class: y7.n
+                @Override // zj.q
+                public final boolean apply(Object obj) {
+                    return l.c.p((String) obj);
+                }
+            });
+        }
+
+        @Override // ak.i0, java.util.Map
+        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
+        public List<String> get(Object obj) {
+            if (obj == null) {
+                return null;
+            }
+            return (List) super.get(obj);
+        }
+
+        @Override // ak.i0, java.util.Map
+        public int size() {
+            return super.size() - (super.containsKey(null) ? 1 : 0);
+        }
+    }
+
+    private int B(byte[] bArr, int i15, int i16) throws IOException {
+        if (i16 == 0) {
+            return 0;
+        }
+        long j15 = this.f224914s;
+        if (j15 != -1) {
+            long j16 = j15 - this.f224915t;
+            if (j16 == 0) {
+                return -1;
+            }
+            i16 = (int) Math.min(i16, j16);
+        }
+        int i17 = ((InputStream) o0.h(this.f224911p)).read(bArr, i15, i16);
+        if (i17 == -1) {
+            return -1;
+        }
+        this.f224915t += (long) i17;
+        q(i17);
+        return i17;
+    }
+
+    private void C(long j15, j jVar) throws IOException {
+        if (j15 == 0) {
+            return;
+        }
+        byte[] bArr = new byte[PKIFailureInfo.certConfirmed];
+        while (j15 > 0) {
+            int i15 = ((InputStream) o0.h(this.f224911p)).read(bArr, 0, (int) Math.min(j15, PKIFailureInfo.certConfirmed));
+            if (Thread.currentThread().isInterrupted()) {
+                throw new q(new InterruptedIOException(), jVar, 2000, 1);
+            }
+            if (i15 == -1) {
+                throw new q(jVar, 2008, 1);
+            }
+            j15 -= (long) i15;
+            q(i15);
+        }
+    }
+
+    private void u() {
+        HttpURLConnection httpURLConnection = this.f224910o;
+        if (httpURLConnection != null) {
+            try {
+                httpURLConnection.disconnect();
+            } catch (Exception e15) {
+                w7.t.d("DefaultHttpDataSource", "Unexpected error while disconnecting", e15);
+            }
+        }
+    }
+
+    private static long v() {
+        Thread threadCurrentThread = Thread.currentThread();
+        return Build.VERSION.SDK_INT < 36 ? threadCurrentThread.getId() : threadCurrentThread.threadId();
+    }
+
+    private URL w(URL url, String str, j jVar) throws q {
+        if (str == null) {
+            throw new q("Null location redirect", jVar, 2001, 1);
+        }
+        try {
+            URL url2 = new URL(url, str);
+            String protocol = url2.getProtocol();
+            if (!"https".equals(protocol) && !"http".equals(protocol)) {
+                throw new q("Unsupported protocol redirect: " + protocol, jVar, 2001, 1);
+            }
+            if (this.f224900e || protocol.equals(url.getProtocol())) {
+                return url2;
+            }
+            if (this.f224901f) {
+                try {
+                    return new URL(url2.toString().replaceFirst(protocol, url.getProtocol()));
+                } catch (MalformedURLException e15) {
+                    throw new q(e15, jVar, 2001, 1);
+                }
+            }
+            throw new q("Disallowed cross-protocol redirect (" + url.getProtocol() + " to " + protocol + ")", jVar, 2001, 1);
+        } catch (MalformedURLException e16) {
+            throw new q(e16, jVar, 2001, 1);
+        }
+    }
+
+    private static boolean x(HttpURLConnection httpURLConnection) {
+        return "gzip".equalsIgnoreCase(httpURLConnection.getHeaderField("Content-Encoding"));
+    }
+
+    private HttpURLConnection y(URL url, int i15, byte[] bArr, long j15, long j16, boolean z15, boolean z16, Map<String, String> map) throws IOException {
+        HttpURLConnection httpURLConnectionA = A(url);
+        httpURLConnectionA.setConnectTimeout(this.f224902g);
+        httpURLConnectionA.setReadTimeout(this.f224903h);
+        HashMap map2 = new HashMap();
+        t tVar = this.f224905j;
+        if (tVar != null) {
+            map2.putAll(tVar.a());
+        }
+        map2.putAll(this.f224906k.a());
+        map2.putAll(map);
+        for (Map.Entry entry : map2.entrySet()) {
+            httpURLConnectionA.setRequestProperty((String) entry.getKey(), (String) entry.getValue());
+        }
+        String strA = u.a(j15, j16);
+        if (strA != null) {
+            httpURLConnectionA.setRequestProperty("Range", strA);
+        }
+        String str = this.f224904i;
+        if (str != null) {
+            httpURLConnectionA.setRequestProperty("User-Agent", str);
+        }
+        httpURLConnectionA.setRequestProperty("Accept-Encoding", z15 ? "gzip" : "identity");
+        httpURLConnectionA.setInstanceFollowRedirects(z16);
+        httpURLConnectionA.setDoOutput(bArr != null);
+        httpURLConnectionA.setRequestMethod(j.c(i15));
+        if (bArr == null) {
+            httpURLConnectionA.connect();
+            return httpURLConnectionA;
+        }
+        httpURLConnectionA.setFixedLengthStreamingMode(bArr.length);
+        httpURLConnectionA.connect();
+        OutputStream outputStream = httpURLConnectionA.getOutputStream();
+        outputStream.write(bArr);
+        outputStream.close();
+        return httpURLConnectionA;
+    }
+
+    private HttpURLConnection z(j jVar) throws IOException {
+        URL url = new URL(jVar.f224865a.toString());
+        int i15 = jVar.f224867c;
+        byte[] bArr = jVar.f224868d;
+        long j15 = jVar.f224871g;
+        long j16 = jVar.f224872h;
+        int i16 = 1;
+        boolean zD = jVar.d(1);
+        if (!this.f224900e && !this.f224901f && !this.f224908m) {
+            return y(url, i15, bArr, j15, j16, zD, true, jVar.f224869e);
+        }
+        int i17 = 0;
+        while (true) {
+            int i18 = i17 + 1;
+            if (i17 > 20) {
+                throw new q(new NoRouteToHostException("Too many redirects: " + i18), jVar, 2001, 1);
+            }
+            HttpURLConnection httpURLConnectionY = y(url, i15, bArr, j15, j16, zD, false, jVar.f224869e);
+            int responseCode = httpURLConnectionY.getResponseCode();
+            String headerField = httpURLConnectionY.getHeaderField("Location");
+            if ((i15 == i16 || i15 == 3) && (responseCode == 300 || responseCode == 301 || responseCode == 302 || responseCode == 303 || responseCode == 307 || responseCode == 308)) {
+                httpURLConnectionY.disconnect();
+                url = w(url, headerField, jVar);
+            } else {
+                if (i15 != 2 || (responseCode != 300 && responseCode != 301 && responseCode != 302 && responseCode != 303)) {
+                    return httpURLConnectionY;
+                }
+                httpURLConnectionY.disconnect();
+                if (!this.f224908m || responseCode != 302) {
+                    bArr = null;
+                    i15 = 1;
+                }
+                url = w(url, headerField, jVar);
+            }
+            i17 = i18;
+            i16 = 1;
+        }
+    }
+
+    HttpURLConnection A(URL url) {
+        return (HttpURLConnection) url.openConnection();
+    }
+
+    @Override // y7.f
+    public Uri c() {
+        HttpURLConnection httpURLConnection = this.f224910o;
+        if (httpURLConnection != null) {
+            return Uri.parse(httpURLConnection.getURL().toString());
+        }
+        j jVar = this.f224909n;
+        if (jVar != null) {
+            return jVar.f224865a;
+        }
+        return null;
+    }
+
+    @Override // y7.f
+    public void close() {
+        try {
+            InputStream inputStream = this.f224911p;
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException e15) {
+                    throw new q(e15, (j) o0.h(this.f224909n), 2000, 3);
+                }
+            }
+            this.f224911p = null;
+            u();
+            if (this.f224912q) {
+                this.f224912q = false;
+                r();
+            }
+            this.f224910o = null;
+            this.f224909n = null;
+            TrafficStats.clearThreadStatsTag();
+        } catch (Throwable th4) {
+            this.f224911p = null;
+            u();
+            if (this.f224912q) {
+                this.f224912q = false;
+                r();
+            }
+            this.f224910o = null;
+            this.f224909n = null;
+            TrafficStats.clearThreadStatsTag();
+            throw th4;
+        }
+    }
+
+    @Override // y7.f
+    public Map<String, List<String>> f() {
+        HttpURLConnection httpURLConnection = this.f224910o;
+        return httpURLConnection == null ? p0.m() : new c(httpURLConnection.getHeaderFields());
+    }
+
+    @Override // y7.f
+    public long i(j jVar) throws q {
+        byte[] bArrB;
+        this.f224909n = jVar;
+        long j15 = 0;
+        this.f224915t = 0L;
+        this.f224914s = 0L;
+        s(jVar);
+        try {
+            TrafficStats.setThreadStatsTag((int) v());
+            HttpURLConnection httpURLConnectionZ = z(jVar);
+            this.f224910o = httpURLConnectionZ;
+            this.f224913r = httpURLConnectionZ.getResponseCode();
+            String responseMessage = httpURLConnectionZ.getResponseMessage();
+            int i15 = this.f224913r;
+            if (i15 < 200 || i15 > 299) {
+                Map<String, List<String>> headerFields = httpURLConnectionZ.getHeaderFields();
+                if (this.f224913r == 416) {
+                    if (jVar.f224871g == u.c(httpURLConnectionZ.getHeaderField("Content-Range"))) {
+                        this.f224912q = true;
+                        t(jVar);
+                        long j16 = jVar.f224872h;
+                        if (j16 != -1) {
+                            return j16;
+                        }
+                        return 0L;
+                    }
+                }
+                InputStream errorStream = httpURLConnectionZ.getErrorStream();
+                try {
+                    bArrB = errorStream != null ? bk.b.b(errorStream) : o0.f210729f;
+                } catch (IOException unused) {
+                    bArrB = o0.f210729f;
+                }
+                byte[] bArr = bArrB;
+                u();
+                throw new s(this.f224913r, responseMessage, this.f224913r == 416 ? new g(2008) : null, headerFields, jVar, bArr);
+            }
+            String contentType = httpURLConnectionZ.getContentType();
+            zj.q<String> qVar = this.f224907l;
+            if (qVar != null && !qVar.apply(contentType)) {
+                u();
+                throw new r(contentType, jVar);
+            }
+            if (this.f224913r == 200) {
+                long j17 = jVar.f224871g;
+                if (j17 != 0) {
+                    j15 = j17;
+                }
+            }
+            boolean zX = x(httpURLConnectionZ);
+            if (zX) {
+                this.f224914s = jVar.f224872h;
+            } else {
+                long j18 = jVar.f224872h;
+                if (j18 != -1) {
+                    this.f224914s = j18;
+                } else {
+                    long jB = u.b(httpURLConnectionZ.getHeaderField("Content-Length"), httpURLConnectionZ.getHeaderField("Content-Range"));
+                    this.f224914s = jB != -1 ? jB - j15 : -1L;
+                }
+            }
+            try {
+                this.f224911p = httpURLConnectionZ.getInputStream();
+                if (zX) {
+                    this.f224911p = new GZIPInputStream(this.f224911p);
+                }
+                this.f224912q = true;
+                t(jVar);
+                try {
+                    C(j15, jVar);
+                    return this.f224914s;
+                } catch (IOException e15) {
+                    u();
+                    if (e15 instanceof q) {
+                        throw ((q) e15);
+                    }
+                    throw new q(e15, jVar, 2000, 1);
+                }
+            } catch (IOException e16) {
+                u();
+                throw new q(e16, jVar, 2000, 1);
+            }
+        } catch (IOException e17) {
+            u();
+            throw q.b(e17, jVar, 1);
+        }
+    }
+
+    @Override // t7.h
+    public int read(byte[] bArr, int i15, int i16) throws q {
+        try {
+            return B(bArr, i15, i16);
+        } catch (IOException e15) {
+            throw q.b(e15, (j) o0.h(this.f224909n), 2);
+        }
+    }
+
+    private l(String str, int i15, int i16, boolean z15, boolean z16, t tVar, zj.q<String> qVar, boolean z17) {
+        super(true);
+        this.f224904i = str;
+        this.f224902g = i15;
+        this.f224903h = i16;
+        this.f224900e = z15;
+        this.f224901f = z16;
+        if (z15 && z16) {
+            throw new IllegalArgumentException("crossProtocolRedirectsForceOriginal should not be set if allowCrossProtocolRedirects is true");
+        }
+        this.f224905j = tVar;
+        this.f224907l = qVar;
+        this.f224906k = new t();
+        this.f224908m = z17;
+    }
+}

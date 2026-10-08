@@ -1,0 +1,1 @@
+122_model.md | SKIPPED (biblioteka: play-services GMS wewnetrzne Parcelable + androidx VersionedParcelable helper)

@@ -1,0 +1,319 @@
+package p023bs2;
+
+import androidx.p016lifecycle.h;
+import androidx.p016lifecycle.y0;
+import er.l;
+import er.p;
+import es2.a;
+import f00.d0;
+import f00.f0;
+import f00.s;
+import fr.q;
+import fr.q0;
+import hs2.k;
+import hs2.o;
+import mr.g;
+import oq.i0;
+import p071kotlin.Metadata;
+import p076m2.d5;
+import p076m2.g4;
+import p076m2.r;
+import p076m2.t;
+import p114t0.f;
+import p136y9.d1;
+import p136y9.w;
+import p7.CreationExtras;
+import q7.b;
+import q7.d;
+import qv0.Violation;
+import y2.m;
+
+/* JADX INFO: renamed from: bs2.p, reason: from Kotlin metadata */
+/* JADX INFO: loaded from: classes9.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u001a\u001d\u0010\u0003\u001a\u00020\u00012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000H\u0007¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005"}, d2 = {"Lkotlin/Function0;", "Loq/i0;", "navResult", "l", "(Ler/a;Lm2/r;I)V", "penaltypoints_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class Function0 {
+
+    /* JADX INFO: renamed from: bs2.p$a */
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    static final /* synthetic */ class a extends q implements l<Violation, i0> {
+        a(Object obj) {
+            super(1, obj, o.class, "setup", "setup(Lpl/gov/coi/mobywatel/be/vehicleservice/contract/model/penaltypoints/Violation;)V", 0);
+        }
+
+        public final void E(Violation violation) {
+            ((o) this.f66391b).P5(violation);
+        }
+
+        @Override // er.l
+        public /* bridge */ /* synthetic */ i0 b(Violation violation) {
+            E(violation);
+            return i0.f148189a;
+        }
+    }
+
+    public static final void l(final er.a<i0> aVar, r rVar, final int i15) {
+        int i16;
+        r rVarH = rVar.h(1315905179);
+        if ((i15 & 6) == 0) {
+            i16 = (rVarH.G(aVar) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (t.k()) {
+                t.o(1315905179, i16, -1, "pl.gov.coi.mobywatel.feature.penaltypoints.presentation.penaltypoints.PenaltyPointsNavContent (PenaltyPointsNavContent.kt:26)");
+            }
+            final s sVarJ = f00.r.J(null, rVarH, 0, 1);
+            c cVar = c.f21344a;
+            boolean zG = rVarH.G(sVarJ) | ((i16 & 14) == 4);
+            Object objE = rVarH.E();
+            if (zG || objE == r.INSTANCE.a()) {
+                objE = new l() { // from class: bs2.e
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return Function0.m(aVar, sVarJ, (d1) obj);
+                    }
+                };
+                rVarH.v(objE);
+            }
+            d0.j(sVarJ, cVar, (l) objE, rVarH, s.f54562e | 48);
+            if (t.k()) {
+                t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new p() { // from class: bs2.g
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return Function0.w(aVar, i15, (r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 m(final er.a aVar, final s sVar, d1 d1Var) {
+        f00.r.u(d1Var, c.f21344a, null, m.b(1087513692, true, new er.r() { // from class: bs2.h
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return Function0.n(aVar, sVar, (f) obj, (w) obj2, (r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, d.f21346a, null, m.b(1834326469, true, new er.r() { // from class: bs2.i
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return Function0.p(sVar, (f) obj, (w) obj2, (r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, b.f21342a, null, m.b(1349381220, true, new er.r() { // from class: bs2.j
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return Function0.r(sVar, (f) obj, (w) obj2, (r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, p023bs2.a.f21340a, null, m.b(864435971, true, new er.r() { // from class: bs2.k
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return Function0.t(sVar, (f) obj, (w) obj2, (r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 n(final er.a aVar, final s sVar, f fVar, w wVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(1087513692, i15, -1, "pl.gov.coi.mobywatel.feature.penaltypoints.presentation.penaltypoints.PenaltyPointsNavContent.<anonymous>.<anonymous>.<anonymous> (PenaltyPointsNavContent.kt:33)");
+        }
+        y0 y0VarC = b.f165175a.c(rVar, b.f165177c);
+        if (y0VarC == null) {
+            throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+        }
+        es2.s sVar2 = (es2.s) d.c(q0.c(es2.s.class), y0VarC, null, j7.a.a(y0VarC, rVar, 0), y0VarC instanceof h ? ((h) y0VarC).x() : CreationExtras.b.f153222c, rVar, 0, 0);
+        xw.b<es2.a.e> bVarY1 = sVar2.Y1();
+        boolean zW = rVar.W(aVar) | rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zW || objE == r.INSTANCE.a()) {
+            objE = new l() { // from class: bs2.l
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.o(aVar, sVar, (a.e) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (l) objE, rVar, xw.b.f221619c);
+        es2.l.f(sVar2, rVar, 0);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 o(er.a aVar, s sVar, es2.a.e eVar) {
+        if (fr.t.c(eVar, es2.a.e.C1254a.f53269a)) {
+            aVar.a();
+        } else if (fr.t.c(eVar, es2.a.e.d.f53272a)) {
+            s.i(sVar, b.f21342a, null, null, 6, null);
+        } else if (eVar instanceof es2.a.e.ShowError) {
+            s.i(sVar, p023bs2.a.f21340a, ((es2.a.e.ShowError) eVar).getErrorData(), null, 4, null);
+        } else {
+            if (!(eVar instanceof es2.a.e.GoToDetails)) {
+                throw new oq.p();
+            }
+            s.i(sVar, d.f21346a, ((es2.a.e.GoToDetails) eVar).getViolation(), null, 4, null);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 p(final s sVar, f fVar, w wVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(1834326469, i15, -1, "pl.gov.coi.mobywatel.feature.penaltypoints.presentation.penaltypoints.PenaltyPointsNavContent.<anonymous>.<anonymous>.<anonymous> (PenaltyPointsNavContent.kt:56)");
+        }
+        y0 y0VarC = b.f165175a.c(rVar, b.f165177c);
+        if (y0VarC == null) {
+            throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+        }
+        o oVar = (o) d.c(q0.c(o.class), y0VarC, null, j7.a.a(y0VarC, rVar, 0), y0VarC instanceof h ? ((h) y0VarC).x() : CreationExtras.b.f153222c, rVar, 0, 0);
+        xw.b<hs2.b> bVarY1 = oVar.Y1();
+        boolean zG = rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zG || objE == r.INSTANCE.a()) {
+            objE = new l() { // from class: bs2.m
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.q(sVar, (hs2.b) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (l) objE, rVar, xw.b.f221619c);
+        d dVar = d.f21346a;
+        boolean zG2 = rVar.G(oVar);
+        Object objE2 = rVar.E();
+        if (zG2 || objE2 == r.INSTANCE.a()) {
+            objE2 = new a(oVar);
+            rVar.v(objE2);
+        }
+        sVar.f(dVar, (l) ((g) objE2));
+        k.e(oVar, rVar, 0);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 q(s sVar, hs2.b bVar) {
+        if (fr.t.c(bVar, hs2.b.a.f86536a)) {
+            sVar.c();
+        } else {
+            if (!fr.t.c(bVar, hs2.b.C2019b.f86537a)) {
+                throw new oq.p();
+            }
+            s.i(sVar, b.f21342a, null, null, 6, null);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 r(final s sVar, f fVar, w wVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(1349381220, i15, -1, "pl.gov.coi.mobywatel.feature.penaltypoints.presentation.penaltypoints.PenaltyPointsNavContent.<anonymous>.<anonymous>.<anonymous> (PenaltyPointsNavContent.kt:76)");
+        }
+        y0 y0VarC = b.f165175a.c(rVar, b.f165177c);
+        if (y0VarC == null) {
+            throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+        }
+        cs2.p pVar = (cs2.p) d.c(q0.c(cs2.p.class), y0VarC, null, j7.a.a(y0VarC, rVar, 0), y0VarC instanceof h ? ((h) y0VarC).x() : CreationExtras.b.f153222c, rVar, 0, 0);
+        xw.b<cs2.b> bVarY1 = pVar.Y1();
+        boolean zG = rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zG || objE == r.INSTANCE.a()) {
+            objE = new l() { // from class: bs2.n
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.s(sVar, (cs2.b) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (l) objE, rVar, xw.b.f221619c);
+        cs2.l.m(pVar, rVar, 0);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 s(s sVar, cs2.b bVar) {
+        if (!fr.t.c(bVar, cs2.b.a.f37522a)) {
+            throw new oq.p();
+        }
+        sVar.c();
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 t(final s sVar, f fVar, w wVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(864435971, i15, -1, "pl.gov.coi.mobywatel.feature.penaltypoints.presentation.penaltypoints.PenaltyPointsNavContent.<anonymous>.<anonymous>.<anonymous> (PenaltyPointsNavContent.kt:88)");
+        }
+        p023bs2.a aVar = p023bs2.a.f21340a;
+        f00.r.D(wVar, aVar, sVar.e(aVar), m.d(303910084, true, new er.q() { // from class: bs2.o
+            @Override // er.q
+            public final Object w(Object obj, Object obj2, Object obj3) {
+                return Function0.u(sVar, (hb4.b) obj, (r) obj2, ((Integer) obj3).intValue());
+            }
+        }, rVar, 54), rVar, ((i15 >> 3) & 14) | 3120);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 u(final s sVar, hb4.b bVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(303910084, i15, -1, "pl.gov.coi.mobywatel.feature.penaltypoints.presentation.penaltypoints.PenaltyPointsNavContent.<anonymous>.<anonymous>.<anonymous>.<anonymous> (PenaltyPointsNavContent.kt:92)");
+        }
+        xw.b<hb4.b.a> bVarY1 = bVar.Y1();
+        boolean zG = rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zG || objE == r.INSTANCE.a()) {
+            objE = new l() { // from class: bs2.f
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.v(sVar, (hb4.b.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (l) objE, rVar, xw.b.f221619c);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 v(s sVar, hb4.b.a aVar) {
+        if (!fr.t.c(aVar, hb4.b.a.C1910a.f83033a)) {
+            throw new oq.p();
+        }
+        sVar.c();
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 w(er.a aVar, int i15, r rVar, int i16) {
+        l(aVar, rVar, g4.a(i15 | 1));
+        return i0.f148189a;
+    }
+}

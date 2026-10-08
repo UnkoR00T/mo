@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="zero">Pārtīt uz priekšu par %d sekundēm</item>
+        <item quantity="one">Pārtīt uz priekšu par %d sekundi</item>
+        <item quantity="other">Pārtīt uz priekšu par %d sekundēm</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="zero">Attīt atpakaļ par %d sekundēm</item>
+        <item quantity="one">Attīt atpakaļ par %d sekundi</item>
+        <item quantity="other">Attīt atpakaļ par %d sekundēm</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="zero">%d jaunu paziņojumu</item>
+        <item quantity="one">%d jauns paziņojums</item>
+        <item quantity="other">%d jauni paziņojumi</item>
+    </plurals>
+    <plurals name="place_details_photo_count">
+        <item quantity="zero">%1$d fotoattēli</item>
+        <item quantity="one">%1$d fotoattēls</item>
+        <item quantity="other">%1$d fotoattēli</item>
+    </plurals>
+    <plurals name="place_details_ratings_content_description">
+        <item quantity="zero">%1$s zvaigznīšu</item>
+        <item quantity="one">%1$s zvaigznīte</item>
+        <item quantity="other">%1$s zvaigznītes</item>
+    </plurals>
+    <plurals name="place_details_review_count_a11y_label">
+        <item quantity="zero">%1$d atsauksmju</item>
+        <item quantity="one">%1$d atsauksme</item>
+        <item quantity="other">%1$d atsauksmes</item>
+    </plurals>
+</resources>

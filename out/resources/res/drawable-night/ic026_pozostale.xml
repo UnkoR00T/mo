@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group>
+        <clip-path android:pathData="M0,0h24v24h-24z"/>
+        <path
+            android:fillColor="@drawable/_ic026_pozostale__0_res_0x7f08038d"
+            android:pathData="M12,0C18.627,0 24,5.373 24,12C24,18.627 18.627,24 12,24C5.373,24 0,18.627 0,12C0,5.373 5.373,0 12,0ZM7,10.5C6.172,10.5 5.5,11.172 5.5,12C5.5,12.828 6.172,13.5 7,13.5C7.828,13.5 8.5,12.828 8.5,12C8.5,11.172 7.828,10.5 7,10.5ZM12,10.5C11.172,10.5 10.5,11.172 10.5,12C10.5,12.828 11.172,13.5 12,13.5C12.828,13.5 13.5,12.828 13.5,12C13.5,11.172 12.828,10.5 12,10.5ZM17,10.5C16.172,10.5 15.5,11.172 15.5,12C15.5,12.828 16.172,13.5 17,13.5C17.828,13.5 18.5,12.828 18.5,12C18.5,11.172 17.828,10.5 17,10.5Z"/>
+    </group>
+</vector>

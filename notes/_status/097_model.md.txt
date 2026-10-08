@@ -1,0 +1,1 @@
+097_model.md | SKIPPED (biblioteka: parcelable boilerplate - SafeParcelable ch.*)

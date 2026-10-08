@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="272dp"
+    android:width="129dp"
+    android:viewportWidth="129"
+    android:viewportHeight="272">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M113.58,104.93H14.45C12.68,104.93 11.24,106.37 11.24,108.14V266.79C11.24,268.56 12.68,270 14.45,270H113.58C115.36,270 116.79,268.56 116.79,266.79V108.14C116.79,106.37 115.36,104.93 113.58,104.93Z"
+        android:strokeColor="#787878"
+        android:strokeWidth="2.61"/>
+    <path
+        android:fillColor="#787878"
+        android:pathData="M116.52,31.25V96.7C116.52,100.13 113.68,102.9 110.14,102.9V105.67H17.9V102.9C14.38,102.9 11.53,100.12 11.53,96.7V31.25C11.53,13.99 25.91,0 43.65,0H84.4C102.14,0 116.52,13.99 116.52,31.25Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__0_res_0x7f0801bb"
+        android:pathData="M48.93,0H79.12C98.78,0 114.74,15.96 114.74,35.62V95.11C114.74,99.02 111.57,102.19 107.66,102.19H20.39C16.48,102.19 13.31,99.02 13.31,95.11V35.62C13.31,15.96 29.27,0 48.92,0H48.93Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__1_res_0x7f0801bc"
+        android:pathData="M20.16,20.3C20.16,20.3 29.06,11.53 39.01,4.78L27.99,7.56C24.44,8.45 21.59,11.78 20.69,16.13C20.39,17.64 20.16,19.12 20.16,20.3Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__2_res_0x7f0801c4"
+        android:pathData="M106.54,20.3C106.54,20.3 97.65,11.53 87.7,4.78L98.72,7.56C102.27,8.45 105.12,11.78 106.02,16.13C106.32,17.64 106.54,19.12 106.54,20.3Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__3_res_0x7f0801c5"
+        android:pathData="M19.88,51.01C17.35,51.01 15.36,48.84 15.59,46.32L16.84,31.9C17.22,27.55 18.46,23.38 20.56,19.53C22.64,15.71 25.44,12.4 28.9,9.69C34.44,5.38 41.34,3.01 48.35,3.01H78.36C85.37,3.01 92.27,5.38 97.81,9.69C101.27,12.4 104.08,15.71 106.15,19.54C108.24,23.38 109.48,27.55 109.86,31.9L111.11,46.32C111.34,48.84 109.35,51.01 106.82,51.01H19.88Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__4_res_0x7f0801c6"
+        android:pathData="M107.67,47.47H19.02L20.36,32.2C20.69,28.31 21.82,24.58 23.66,21.22C25.48,17.85 27.99,14.88 31.07,12.48C36.01,8.63 42.09,6.54 48.35,6.54H78.36C84.62,6.54 90.7,8.63 95.64,12.48C98.72,14.88 101.23,17.85 103.05,21.22C104.87,24.58 106.02,28.3 106.35,32.2L107.69,47.47H107.67Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__5_res_0x7f0801c7"
+        android:pathData="M44.41,47.15L29.04,47.66L34.21,23.37C35.23,18.56 39.49,15.12 44.4,15.12V47.14L44.41,47.15Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__6_res_0x7f0801c8"
+        android:pathData="M82.29,47.15L97.65,47.66L92.49,23.37C91.47,18.56 87.21,15.12 82.3,15.12V47.14L82.29,47.15Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__7_res_0x7f0801c9"
+        android:pathData="M98.07,76.47C97.63,76.47 97.2,76.43 96.77,76.35C85.79,74.28 74.54,73.23 63.35,73.23C52.16,73.23 40.93,74.27 29.95,76.35C29.52,76.43 29.09,76.47 28.65,76.47C25.38,76.47 22.52,74.17 21.87,71L18.04,52.51C17.67,50.79 18.04,48.99 19.04,47.48C20.13,45.85 21.92,44.7 23.92,44.32C36.88,41.88 50.16,40.65 63.35,40.65C76.55,40.65 89.83,41.88 102.79,44.32C104.8,44.7 106.58,45.86 107.67,47.49C108.68,49 109.04,50.8 108.67,52.52L104.84,70.99C104.18,74.17 101.32,76.48 98.06,76.48L98.07,76.47Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__8_res_0x7f0801ca"
+        android:pathData="M97.42,72.88C74.91,68.65 51.8,68.65 29.29,72.88C27.47,73.23 25.69,72.07 25.31,70.27C24.03,64.11 22.76,57.95 21.48,51.79C21.11,49.99 22.47,48.17 24.57,47.78C50.2,42.96 76.51,42.96 102.14,47.78C104.23,48.17 105.6,49.99 105.23,51.79C103.95,57.95 102.68,64.11 101.4,70.27C101.02,72.07 99.24,73.23 97.42,72.88Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__9_res_0x7f0801cb"
+        android:pathData="M113.58,104.93H14.45C12.68,104.93 11.24,106.37 11.24,108.14V266.79C11.24,268.56 12.68,270 14.45,270H113.58C115.36,270 116.79,268.56 116.79,266.79V108.14C116.79,106.37 115.36,104.93 113.58,104.93Z"/>
+    <path
+        android:fillColor="#4a4a4a"
+        android:pathData="M78.36,3.01H48.8L49.21,2.3C49.52,1.73 50.12,1.39 50.77,1.39H76.4C77.05,1.39 77.64,1.73 77.96,2.3L78.36,3.01Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__10_res_0x7f0801bd"
+        android:pathData="M108.57,102.19H19.48V104.93H108.57V102.19Z"/>
+    <path
+        android:fillColor="#151a1c"
+        android:pathData="M105.22,51.79C105.1,52.39 104.98,52.98 104.84,53.59C104.32,52.68 103.35,51.98 102.14,51.75C76.5,46.93 50.2,46.93 24.57,51.75C23.35,51.98 22.38,52.68 21.86,53.59C21.73,52.99 21.61,52.39 21.48,51.79C21.11,49.98 22.47,48.17 24.57,47.78C50.2,42.95 76.51,42.95 102.14,47.78C104.23,48.16 105.59,49.99 105.22,51.79Z"
+        android:strokeAlpha="0.6"
+        android:fillAlpha="0.6"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__11_res_0x7f0801be"
+        android:pathData="M21.53,71.9L18.53,56.71L17.16,57.39V94.17C17.16,94.56 17.48,94.89 17.88,94.89H21.25C21.64,94.89 21.97,94.56 21.97,94.17V76.26C21.97,74.8 21.82,73.34 21.54,71.9H21.53Z"/>
+    <path
+        android:fillColor="#3b3b3b"
+        android:pathData="M13.95,55.06H16.77C17.73,55.06 18.52,55.84 18.52,56.81C18.52,57.77 17.74,58.56 16.77,58.56H13.95V55.06Z"/>
+    <path
+        android:fillColor="#4a4a4a"
+        android:pathData="M14.8,60.09L1.23,62.73C0.63,62.85 0.07,62.41 0.01,61.84C-0.01,61.74 0,61.64 0.01,61.54L0.41,59.27C0.7,57.54 2.01,56.15 3.7,55.74L11.89,53.71C13.64,53.27 15.42,54.28 15.96,56.01L16.39,57.42C16.45,57.6 16.48,57.79 16.47,57.97C16.52,58.98 15.82,59.91 14.79,60.1L14.8,60.09Z"/>
+    <path
+        android:fillColor="#22292d"
+        android:pathData="M14.8,60.09L1.23,62.72C0.63,62.85 0.07,62.41 0.01,61.84L14.93,58.15C15.44,58.02 15.96,57.97 16.48,57.96C16.53,58.97 15.83,59.9 14.8,60.09Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__12_res_0x7f0801bf"
+        android:pathData="M106.51,71.9L109.51,56.71L110.89,57.39V94.17C110.89,94.56 110.57,94.89 110.17,94.89H106.8C106.4,94.89 106.08,94.56 106.08,94.17V76.26C106.08,74.8 106.22,73.34 106.5,71.9H106.51Z"/>
+    <path
+        android:fillColor="#3b3b3b"
+        android:pathData="M114.09,58.55H111.26C110.3,58.55 109.51,57.77 109.51,56.8C109.51,55.84 110.29,55.05 111.26,55.05H114.09V58.55Z"/>
+    <path
+        android:fillColor="#4a4a4a"
+        android:pathData="M113.25,60.09L126.82,62.73C127.42,62.85 127.97,62.41 128.03,61.84C128.05,61.74 128.04,61.64 128.03,61.54L127.64,59.27C127.35,57.54 126.04,56.15 124.35,55.74L116.16,53.71C114.4,53.27 112.62,54.28 112.08,56.01L111.66,57.42C111.6,57.6 111.57,57.79 111.58,57.97C111.53,58.98 112.23,59.91 113.26,60.1L113.25,60.09Z"/>
+    <path
+        android:fillColor="#22292d"
+        android:pathData="M113.25,60.09L126.82,62.72C127.42,62.85 127.97,62.41 128.03,61.84L113.12,58.15C112.6,58.02 112.08,57.97 111.57,57.96C111.52,58.97 112.22,59.9 113.25,60.09Z"/>
+    <path
+        android:fillColor="#939393"
+        android:pathData="M71.77,3.67H54.94C54.33,3.67 53.84,4.16 53.84,4.77C53.84,5.38 54.33,5.87 54.94,5.87H71.77C72.38,5.87 72.87,5.38 72.87,4.77C72.87,4.16 72.38,3.67 71.77,3.67Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__13_res_0x7f0801c0"
+        android:pathData="M32.56,75.88V102.19H27.99V76.44C28.2,76.47 28.43,76.47 28.64,76.47C29.08,76.47 29.5,76.44 29.93,76.36C30.8,76.18 31.67,76.03 32.56,75.88Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__14_res_0x7f0801c1"
+        android:pathData="M94.15,75.88V102.19H98.72V76.44C98.5,76.47 98.28,76.47 98.07,76.47C97.63,76.47 97.21,76.44 96.78,76.36C95.91,76.18 95.04,76.03 94.15,75.88Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__15_res_0x7f0801c2"
+        android:pathData="M63.35,73.23C73.65,73.23 84,74.12 94.15,75.87V102.18H32.56V75.87C42.72,74.12 53.06,73.23 63.34,73.23H63.35Z"/>
+    <path
+        android:fillColor="#4a4a4a"
+        android:pathData="M12.72,81.5H13.31V79.38H12.86C11.14,79.38 9.74,80.78 9.74,82.5V86.83C9.74,88.55 11.14,89.95 12.86,89.95H13.31V87.83H12.72C12.15,87.83 11.69,87.36 11.69,86.8V82.53C11.69,81.97 12.15,81.5 12.72,81.5Z"/>
+    <path
+        android:fillColor="#4a4a4a"
+        android:pathData="M115.32,81.5H114.74V79.38H115.18C116.9,79.38 118.3,80.78 118.3,82.5V86.83C118.3,88.55 116.9,89.95 115.18,89.95H114.74V87.83H115.32C115.89,87.83 116.36,87.36 116.36,86.8V82.53C116.36,81.97 115.89,81.5 115.32,81.5Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_truck_rigid__16_res_0x7f0801c3"
+        android:pathData="M64.97,78.7C64.97,78.16 64.55,77.73 64.02,77.73C63.49,77.73 63.06,78.16 63.06,78.7V80.76C63.06,81.29 63.49,81.72 64.02,81.72C64.55,81.72 64.97,81.29 64.97,80.76V78.7Z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M64.02,104.93V269.91"
+        android:strokeColor="#b5b5b5"
+        android:strokeWidth="1"/>
+    <path
+        android:fillColor="#d4d4d4"
+        android:pathData="M84.13,171.62H43.91C41.29,171.62 39.17,173.74 39.17,176.36V198.59C39.17,201.2 41.29,203.32 43.91,203.32H84.13C86.75,203.32 88.87,201.2 88.87,198.59V176.36C88.87,173.74 86.75,171.62 84.13,171.62Z"
+        android:strokeColor="#b5b5b5"
+        android:strokeWidth="1"/>
+</vector>

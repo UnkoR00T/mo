@@ -1,0 +1,1 @@
+089_model.md | SKIPPED (biblioteka: androidx.activity.ComponentActivity cz.4/4 - CreationExtras, setContentView, multiwindow/PiP)

@@ -1,0 +1,291 @@
+package p112se0;
+
+import android.content.Context;
+import androidx.compose.ui.platform.AndroidCompositionLocals_androidKt;
+import androidx.p016lifecycle.h;
+import androidx.p016lifecycle.w0;
+import androidx.p016lifecycle.y0;
+import er.a;
+import er.l;
+import er.p;
+import f00.d0;
+import f00.f0;
+import f00.s;
+import fr.q0;
+import oq.i0;
+import p071kotlin.Metadata;
+import p076m2.d5;
+import p076m2.g4;
+import p076m2.r;
+import p076m2.t;
+import p114t0.f;
+import p136y9.d1;
+import p136y9.w;
+import p7.CreationExtras;
+import pe0.VerificationDocumentData;
+import q7.b;
+import q7.d;
+import ue0.x;
+import we0.v;
+import y2.m;
+import ze0.c;
+import ze0.k;
+import ze0.n;
+
+/* JADX INFO: renamed from: se0.o, reason: from Kotlin metadata */
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u001a\u001d\u0010\u0003\u001a\u00020\u00012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000H\u0007¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005"}, d2 = {"Lkotlin/Function0;", "Loq/i0;", "onClose", "k", "(Ler/a;Lm2/r;I)V", "verification_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class Function0 {
+    /* JADX WARN: Type inference fix 'apply assigned field type' failed
+    java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$UnknownArg
+    	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:596)
+    	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
+    	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
+    	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
+     */
+    public static final void k(final a<i0> aVar, r rVar, final int i15) {
+        int i16;
+        r rVarH = rVar.h(2103025774);
+        if ((i15 & 6) == 0) {
+            i16 = (rVarH.G(aVar) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (t.k()) {
+                t.o(2103025774, i16, -1, "pl.gov.coi.mjunior.feature.verification.presentation.VerificationSharedNavContent (VerificationSharedNavContent.kt:22)");
+            }
+            final s sVarJ = f00.r.J(null, rVarH, 0, 1);
+            y0 y0VarC = b.f165175a.c(rVarH, b.f165177c);
+            if (y0VarC == null) {
+                throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+            }
+            final v vVar = (v) d.c(q0.c(v.class), y0VarC, null, j7.a.a(y0VarC, rVarH, 0), y0VarC instanceof h ? ((h) y0VarC).x() : CreationExtras.b.f153222c, rVarH, 0, 0);
+            VerificationDocumentData verificationDocumentData = (VerificationDocumentData) sVarJ.g(d.f181007a);
+            if (verificationDocumentData != null) {
+                vVar.i9(verificationDocumentData);
+            }
+            c cVar = c.f181005a;
+            boolean zG = rVarH.G(vVar) | ((i16 & 14) == 4) | rVarH.G(sVarJ);
+            Object objE = rVarH.E();
+            if (zG || objE == r.INSTANCE.a()) {
+                objE = new l() { // from class: se0.e
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return Function0.l(vVar, aVar, sVarJ, (d1) obj);
+                    }
+                };
+                rVarH.v(objE);
+            }
+            d0.j(sVarJ, cVar, (l) objE, rVarH, s.f54562e | 48);
+            if (t.k()) {
+                t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new p() { // from class: se0.f
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return Function0.u(aVar, i15, (r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 l(final v vVar, final a aVar, final s sVar, d1 d1Var) {
+        f00.r.u(d1Var, c.f181005a, null, m.b(251863501, true, new er.r() { // from class: se0.g
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return Function0.m(vVar, aVar, sVar, (f) obj, (w) obj2, (r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, a.f181001a, null, m.b(717291652, true, new er.r() { // from class: se0.h
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return Function0.p(sVar, aVar, vVar, (f) obj, (w) obj2, (r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, b.f181003a, null, m.b(356831941, true, new er.r() { // from class: se0.i
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return Function0.r(vVar, sVar, aVar, (f) obj, (w) obj2, (r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 m(final v vVar, final a aVar, final s sVar, f fVar, w wVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(251863501, i15, -1, "pl.gov.coi.mjunior.feature.verification.presentation.VerificationSharedNavContent.<anonymous>.<anonymous>.<anonymous> (VerificationSharedNavContent.kt:35)");
+        }
+        boolean zG = rVar.G(vVar);
+        Object objE = rVar.E();
+        if (zG || objE == r.INSTANCE.a()) {
+            objE = new l() { // from class: se0.j
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.n(vVar, (n.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        w0.c cVarA = i7.a.a((Context) rVar.N(AndroidCompositionLocals_androidKt.c()), wVar.w());
+        CreationExtras creationExtrasB = kq.a.b(wVar.x(), (l) objE);
+        n nVar = (n) d.c(q0.c(n.class), wVar, null, cVarA, creationExtrasB, rVar, (((i15 >> 3) & 14) << 3) & 112, 0);
+        xw.b<c> bVarY1 = nVar.Y1();
+        boolean zW = rVar.W(aVar) | rVar.G(sVar);
+        Object objE2 = rVar.E();
+        if (zW || objE2 == r.INSTANCE.a()) {
+            objE2 = new l() { // from class: se0.k
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.o(aVar, sVar, (c) obj);
+                }
+            };
+            rVar.v(objE2);
+        }
+        f0.b(bVarY1, (l) objE2, rVar, xw.b.f221619c);
+        k.i(nVar, rVar, 0);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final n n(v vVar, n.a aVar) {
+        return aVar.a(vVar);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 o(a aVar, s sVar, c cVar) {
+        if (fr.t.c(cVar, c.a.f234633a)) {
+            aVar.a();
+        } else {
+            if (!fr.t.c(cVar, c.b.f234634a)) {
+                throw new oq.p();
+            }
+            s.m(sVar, a.f181001a, null, 2, null);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 p(final s sVar, final a aVar, final v vVar, f fVar, w wVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(717291652, i15, -1, "pl.gov.coi.mjunior.feature.verification.presentation.VerificationSharedNavContent.<anonymous>.<anonymous>.<anonymous> (VerificationSharedNavContent.kt:52)");
+        }
+        y0 y0VarC = b.f165175a.c(rVar, b.f165177c);
+        if (y0VarC == null) {
+            throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+        }
+        x xVar = (x) d.c(q0.c(x.class), y0VarC, null, j7.a.a(y0VarC, rVar, 0), y0VarC instanceof h ? ((h) y0VarC).x() : CreationExtras.b.f153222c, rVar, 0, 0);
+        xw.b<ue0.a.f> bVarY1 = xVar.Y1();
+        boolean zG = rVar.G(sVar) | rVar.W(aVar) | rVar.G(vVar);
+        Object objE = rVar.E();
+        if (zG || objE == r.INSTANCE.a()) {
+            objE = new l() { // from class: se0.l
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.q(sVar, aVar, vVar, (ue0.a.f) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (l) objE, rVar, xw.b.f221619c);
+        ue0.n.s(xVar, false, rVar, 0, 2);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 q(s sVar, a aVar, v vVar, ue0.a.f fVar) {
+        if (fr.t.c(fVar, ue0.a.f.C5141a.f197809a)) {
+            sVar.c();
+        } else if (fr.t.c(fVar, ue0.a.f.b.f197810a)) {
+            aVar.a();
+        } else {
+            if (!(fVar instanceof ue0.a.f.GoToNextStep)) {
+                throw new oq.p();
+            }
+            vVar.j9(((ue0.a.f.GoToNextStep) fVar).getData());
+            s.m(sVar, b.f181003a, null, 2, null);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 r(final v vVar, final s sVar, final a aVar, f fVar, w wVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(356831941, i15, -1, "pl.gov.coi.mjunior.feature.verification.presentation.VerificationSharedNavContent.<anonymous>.<anonymous>.<anonymous> (VerificationSharedNavContent.kt:71)");
+        }
+        boolean zG = rVar.G(vVar);
+        Object objE = rVar.E();
+        if (zG || objE == r.INSTANCE.a()) {
+            objE = new l() { // from class: se0.m
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.s(vVar, (v.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        w0.c cVarA = i7.a.a((Context) rVar.N(AndroidCompositionLocals_androidKt.c()), wVar.w());
+        CreationExtras creationExtrasB = kq.a.b(wVar.x(), (l) objE);
+        v vVar2 = (v) d.c(q0.c(v.class), wVar, null, cVarA, creationExtrasB, rVar, (((i15 >> 3) & 14) << 3) & 112, 0);
+        xw.b<we0.a.e> bVarY1 = vVar2.Y1();
+        boolean zG2 = rVar.G(sVar) | rVar.W(aVar);
+        Object objE2 = rVar.E();
+        if (zG2 || objE2 == r.INSTANCE.a()) {
+            objE2 = new l() { // from class: se0.n
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.t(sVar, aVar, (we0.a.e) obj);
+                }
+            };
+            rVar.v(objE2);
+        }
+        f0.b(bVarY1, (l) objE2, rVar, xw.b.f221619c);
+        we0.n.m(vVar2, rVar, 0);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final v s(v vVar, v.a aVar) {
+        return aVar.a(vVar);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 t(s sVar, a aVar, we0.a.e eVar) {
+        if (fr.t.c(eVar, we0.a.e.C5607a.f212554a)) {
+            sVar.c();
+        } else if (fr.t.c(eVar, we0.a.e.b.f212555a)) {
+            aVar.a();
+        } else {
+            if (!fr.t.c(eVar, we0.a.e.c.f212556a)) {
+                throw new oq.p();
+            }
+            s.m(sVar, a.f181001a, null, 2, null);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 u(a aVar, int i15, r rVar, int i16) {
+        k(aVar, rVar, g4.a(i15 | 1));
+        return i0.f148189a;
+    }
+}

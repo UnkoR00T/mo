@@ -1,0 +1,1 @@
+232_model.md | SKIPPED (biblioteka: play-services GMS wallet/identity)

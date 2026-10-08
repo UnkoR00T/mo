@@ -1,0 +1,1 @@
+079_net.md | SKIPPED (biblioteka: androidx.core.text + kotlinx.coroutines)

@@ -1,0 +1,198 @@
+package yj2;
+
+import er.l;
+import oq.i0;
+import org.bouncycastle.asn1.cmp.PKIFailureInfo;
+import p071kotlin.Metadata;
+import q34.b2;
+import v64.m;
+import vq.k;
+
+/* JADX INFO: loaded from: classes8.dex */
+@Metadata(d1 = {"\u0000^\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0014\b\u0001\u0018\u00002\u00020\u0001BO\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012¢\u0006\u0004\b\u0014\u0010\u0015J\u0010\u0010\u0017\u001a\u00020\u0016H\u0082@¢\u0006\u0004\b\u0017\u0010\u0018J$\u0010\u001e\u001a\u000e\u0012\u0004\u0012\u00020\u001c\u0012\u0004\u0012\u00020\u001d0\u001b2\u0006\u0010\u001a\u001a\u00020\u0019H\u0096B¢\u0006\u0004\b\u001e\u0010\u001fR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001e\u0010 R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010\"R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010&R\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010(R\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b)\u0010*R\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b+\u0010,R\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b-\u0010.R\u0014\u0010\u0013\u001a\u00020\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b/\u00100¨\u00061"}, d2 = {"Lyj2/b;", "Lyj2/a;", "Lac4/a;", "callActionWithLoaderUseCase", "Lsj2/a;", "loginInteractor", "Lug1/e;", "setUpdateRecommendationDisplayedUseCase", "Lyj2/f;", "manageDocumentsDownloadStatusesAfterLoginUC", "Lax0/c;", "isAnyMainDocumentDownloadingUC", "Lv64/h;", "clearUnusedLegacyDataUC", "Lq34/b2;", "updateNeededDocumentSummaryDataUC", "Lz92/g;", "storeLocalAppActivityLogUC", "Lv64/m;", "doAfterUserLoginUseCase", "<init>", "(Lac4/a;Lsj2/a;Lug1/e;Lyj2/f;Lax0/c;Lv64/h;Lq34/b2;Lz92/g;Lv64/m;)V", "Loq/i0;", "k", "(Ltq/e;)Ljava/lang/Object;", "Lgz/b$a$a;", "params", "Ldx/i;", "Ldx/b;", "", "a", "(Lgz/b$a$a;Ltq/e;)Ljava/lang/Object;", "Lac4/a;", "b", "Lsj2/a;", "c", "Lug1/e;", "d", "Lyj2/f;", "e", "Lax0/c;", "f", "Lv64/h;", "g", "Lq34/b2;", "h", "Lz92/g;", "i", "Lv64/m;", "login_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class b implements yj2.a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    private final ac4.a callActionWithLoaderUseCase;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name and from kotlin metadata */
+    private final sj2.a loginInteractor;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
+    private final ug1.e setUpdateRecommendationDisplayedUseCase;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
+    private final f manageDocumentsDownloadStatusesAfterLoginUC;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
+    private final ax0.c isAnyMainDocumentDownloadingUC;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
+    private final v64.h clearUnusedLegacyDataUC;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
+    private final b2 updateNeededDocumentSummaryDataUC;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
+    private final z92.g storeLocalAppActivityLogUC;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
+    private final m doAfterUserLoginUseCase;
+
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    static final class a extends vq.d {
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        /* synthetic */ Object f227343d;
+
+        /* JADX INFO: renamed from: f, reason: collision with root package name */
+        int f227345f;
+
+        a(tq.e<? super a> eVar) {
+            super(eVar);
+        }
+
+        @Override // vq.a
+        public final Object J(Object obj) {
+            this.f227343d = obj;
+            this.f227345f |= PKIFailureInfo.systemUnavail;
+            return b.this.k(this);
+        }
+    }
+
+    /* JADX INFO: renamed from: yj2.b$b, reason: collision with other inner class name */
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Ldx/i$c;", "", "<anonymous>", "()Ldx/i$c;"}, k = 3, mv = {2, 2, 0})
+    static final class C6095b extends k implements l<tq.e<? super dx.i.Right<Boolean>>, Object> {
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        int f227346e;
+
+        C6095b(tq.e<? super C6095b> eVar) {
+            super(1, eVar);
+        }
+
+        /* JADX WARN: Code duplicated, block: B:18:0x004e  */
+        /* JADX WARN: Code duplicated, block: B:21:0x0060  */
+        /* JADX WARN: Code duplicated, block: B:24:0x0072  */
+        /* JADX WARN: Code duplicated, block: B:27:0x0088  */
+        /* JADX WARN: Code duplicated, block: B:30:0x0098  */
+        /* JADX WARN: Code duplicated, block: B:33:0x00aa  */
+        /* JADX WARN: Code restructure failed: missing block: B:34:0x00b3, code lost:
+        
+            if (r5.k(r4) == r0) goto L35;
+         */
+        @Override // vq.a
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+            To view partially-correct add '--show-bad-code' argument
+        */
+        public final java.lang.Object J(java.lang.Object r5) throws java.lang.Throwable {
+            /*
+                Method dump skipped, instruction units count: 212
+                To view this dump add '--comments-level debug' option
+            */
+            throw new UnsupportedOperationException("Method not decompiled: yj2.b.C6095b.J(java.lang.Object):java.lang.Object");
+        }
+
+        public final tq.e<i0> M(tq.e<?> eVar) {
+            return b.this.new C6095b(eVar);
+        }
+
+        @Override // er.l
+        /* JADX INFO: renamed from: N, reason: merged with bridge method [inline-methods] */
+        public final Object b(tq.e<? super dx.i.Right<Boolean>> eVar) {
+            return ((C6095b) M(eVar)).J(i0.f148189a);
+        }
+    }
+
+    public b(ac4.a aVar, sj2.a aVar2, ug1.e eVar, f fVar, ax0.c cVar, v64.h hVar, b2 b2Var, z92.g gVar, m mVar) {
+        this.callActionWithLoaderUseCase = aVar;
+        this.loginInteractor = aVar2;
+        this.setUpdateRecommendationDisplayedUseCase = eVar;
+        this.manageDocumentsDownloadStatusesAfterLoginUC = fVar;
+        this.isAnyMainDocumentDownloadingUC = cVar;
+        this.clearUnusedLegacyDataUC = hVar;
+        this.updateNeededDocumentSummaryDataUC = b2Var;
+        this.storeLocalAppActivityLogUC = gVar;
+        this.doAfterUserLoginUseCase = mVar;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX WARN: Code duplicated, block: B:7:0x0013  */
+    /* JADX WARN: Code restructure failed: missing block: B:20:0x005b, code lost:
+    
+        if (r8.c(r5, r0) == r1) goto L21;
+     */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final java.lang.Object k(tq.e<? super oq.i0> r8) throws java.lang.Throwable {
+        /*
+            r7 = this;
+            boolean r0 = r8 instanceof yj2.b.a
+            if (r0 == 0) goto L13
+            r0 = r8
+            yj2.b$a r0 = (yj2.b.a) r0
+            int r1 = r0.f227345f
+            r2 = -2147483648(0xffffffff80000000, float:-0.0)
+            r3 = r1 & r2
+            if (r3 == 0) goto L13
+            int r1 = r1 - r2
+            r0.f227345f = r1
+            goto L18
+        L13:
+            yj2.b$a r0 = new yj2.b$a
+            r0.<init>(r8)
+        L18:
+            java.lang.Object r8 = r0.f227343d
+            java.lang.Object r1 = uq.b.e()
+            int r2 = r0.f227345f
+            r3 = 2
+            r4 = 1
+            if (r2 == 0) goto L38
+            if (r2 == r4) goto L34
+            if (r2 != r3) goto L2c
+            oq.u.b(r8)
+            goto L5e
+        L2c:
+            java.lang.IllegalStateException r8 = new java.lang.IllegalStateException
+            java.lang.String r0 = "call to 'resume' before 'invoke' with coroutine"
+            r8.<init>(r0)
+            throw r8
+        L34:
+            oq.u.b(r8)
+            goto L48
+        L38:
+            oq.u.b(r8)
+            v64.m r8 = r7.doAfterUserLoginUseCase
+            gz.b$a$a r2 = gz.b.a.C1792a.f78542a
+            r0.f227345f = r4
+            java.lang.Object r8 = r8.c(r2, r0)
+            if (r8 != r1) goto L48
+            goto L5d
+        L48:
+            z92.g r8 = r7.storeLocalAppActivityLogUC
+            y92.e r2 = y92.e.INFO
+            y92.f r4 = y92.f.LOGIN_SUCCESS
+            z92.g$a r5 = new z92.g$a
+            java.lang.String r6 = ""
+            r5.<init>(r4, r2, r6)
+            r0.f227345f = r3
+            java.lang.Object r8 = r8.c(r5, r0)
+            if (r8 != r1) goto L5e
+        L5d:
+            return r1
+        L5e:
+            oq.i0 r8 = oq.i0.f148189a
+            return r8
+        */
+        throw new UnsupportedOperationException("Method not decompiled: yj2.b.k(tq.e):java.lang.Object");
+    }
+
+    @Override // gz.b
+    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+    public Object c(gz.b.a.C1792a c1792a, tq.e<? super dx.i<? extends dx.b, Boolean>> eVar) {
+        return ac4.a.a(this.callActionWithLoaderUseCase, null, new C6095b(null), eVar, 1, null);
+    }
+}

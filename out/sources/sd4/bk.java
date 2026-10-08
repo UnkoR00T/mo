@@ -1,0 +1,175 @@
+package sd4;
+
+import android.os.Bundle;
+import java.io.Serializable;
+import p071kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0007\u0018\u0000 \u00192\u00020\u0001:\u0001\u001aB\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0017¢\u0006\u0004\b\u0005\u0010\u0006R\"\u0010\u000e\u001a\u00020\u00078\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\b\u0010\t\u001a\u0004\b\n\u0010\u000b\"\u0004\b\f\u0010\rR\u0016\u0010\u0012\u001a\u0004\u0018\u00010\u000f8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011R\u0016\u0010\u0014\u001a\u0004\u0018\u00010\u000f8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u0013\u0010\u0011R\u0016\u0010\u0018\u001a\u0004\u0018\u00010\u00158BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u0016\u0010\u0017¨\u0006\u001b"}, d2 = {"Lsd4/bk;", "Lj00/b;", "<init>", "()V", "Loq/i0;", "S1", "(Lm2/r;I)V", "Lrh2/a;", "L0", "Lrh2/a;", "g2", "()Lrh2/a;", "setNavigator", "(Lrh2/a;)V", "navigator", "", "h2", "()Ljava/lang/String;", "studentId", "f2", "initialSemesterId", "Ls84/h;", "e2", "()Ls84/h;", "initialAttendanceType", "M0", "a", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class bk extends oa {
+
+    /* JADX INFO: renamed from: M0, reason: from kotlin metadata */
+    public static final Companion INSTANCE = new Companion(null);
+    public static final int N0 = 8;
+
+    /* JADX INFO: renamed from: L0, reason: from kotlin metadata */
+    public rh2.a navigator;
+
+    /* JADX INFO: renamed from: sd4.bk$a, reason: from kotlin metadata */
+    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0015\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0007\u0010\bJ%\u0010\f\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\f\u0010\rR\u0014\u0010\u000e\u001a\u00020\u00048\u0006X\u0086T¢\u0006\u0006\n\u0004\b\u000e\u0010\u000fR\u0014\u0010\u0010\u001a\u00020\u00048\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u0010\u0010\u000fR\u0014\u0010\u0011\u001a\u00020\u00048\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u0011\u0010\u000fR\u0014\u0010\u0012\u001a\u00020\u00048\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u0012\u0010\u000f¨\u0006\u0013"}, d2 = {"Lsd4/bk$a;", "", "<init>", "()V", "", "studentId", "Lsd4/bk;", "a", "(Ljava/lang/String;)Lsd4/bk;", "semesterId", "Ls84/h;", "attendanceType", "b", "(Ljava/lang/String;Ljava/lang/String;Ls84/h;)Lsd4/bk;", "TAG", "Ljava/lang/String;", "ARG_STUDENT_ID", "ARG_SEMESTER_ID", "ARG_ATTENDANCE_TYPE", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class Companion {
+        public /* synthetic */ Companion(fr.k kVar) {
+            this();
+        }
+
+        public final bk a(String studentId) {
+            bk bkVar = new bk();
+            Bundle bundle = new Bundle();
+            bundle.putString("arg_student_id", studentId);
+            bkVar.F1(bundle);
+            return bkVar;
+        }
+
+        public final bk b(String studentId, String semesterId, s84.h attendanceType) {
+            bk bkVar = new bk();
+            Bundle bundle = new Bundle();
+            bundle.putString("arg_student_id", studentId);
+            bundle.putString("arg_semester_id", semesterId);
+            bundle.putSerializable("arg_attendance_type", attendanceType);
+            bkVar.F1(bundle);
+            return bkVar;
+        }
+
+        private Companion() {
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 b2(u84.a aVar, final bk bkVar, p076m2.r rVar, int i15) {
+        if (rVar.r((i15 & 3) != 2, i15 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(-1124793332, i15, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.SchoolAttendanceFeatureFragment.GetContent.<anonymous> (SchoolAttendanceFeatureFragment.kt:44)");
+            }
+            q84.a aVar2 = q84.a.MOBYWATEL;
+            String strH2 = bkVar.h2();
+            String strF2 = bkVar.f2();
+            s84.h hVarE2 = bkVar.e2();
+            boolean zG = rVar.G(bkVar);
+            Object objE = rVar.E();
+            if (zG || objE == p076m2.r.INSTANCE.a()) {
+                objE = new er.a() { // from class: sd4.ak
+                    @Override // er.a
+                    public final Object a() {
+                        return bk.c2(this.f180538a);
+                    }
+                };
+                rVar.v(objE);
+            }
+            t84.s.o(aVar, aVar2, strH2, strF2, hVarE2, (er.a) objE, rVar, 48, 0);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVar.O();
+        }
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 c2(bk bkVar) {
+        bkVar.g2().c("SCHOOL_ATTENDANCE_TAG");
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 d2(bk bkVar, int i15, p076m2.r rVar, int i16) {
+        bkVar.S1(rVar, p076m2.g4.a(i15 | 1));
+        return oq.i0.f148189a;
+    }
+
+    private final s84.h e2() {
+        Bundle bundleV = v();
+        Serializable serializable = bundleV != null ? bundleV.getSerializable("arg_attendance_type") : null;
+        if (serializable instanceof s84.h) {
+            return (s84.h) serializable;
+        }
+        return null;
+    }
+
+    private final String f2() {
+        Bundle bundleV = v();
+        if (bundleV != null) {
+            return bundleV.getString("arg_semester_id");
+        }
+        return null;
+    }
+
+    private final String h2() {
+        Bundle bundleV = v();
+        if (bundleV != null) {
+            return bundleV.getString("arg_student_id");
+        }
+        return null;
+    }
+
+    @Override // j00.b
+    public void S1(p076m2.r rVar, final int i15) {
+        int i16;
+        Object obj;
+        p076m2.r rVarH = rVar.h(1397681848);
+        if ((i15 & 6) == 0) {
+            i16 = (rVarH.G(this) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(1397681848, i16, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.SchoolAttendanceFeatureFragment.GetContent (SchoolAttendanceFeatureFragment.kt:35)");
+            }
+            boolean zA = w0.h0.a(rVarH, 0);
+            boolean zA2 = rVarH.a(zA);
+            Object objE = rVarH.E();
+            if (zA2 || objE == p076m2.r.INSTANCE.a()) {
+                if (zA) {
+                    obj = u84.d.f196517a;
+                } else {
+                    if (zA) {
+                        throw new oq.p();
+                    }
+                    obj = u84.e.f196518a;
+                }
+                objE = obj;
+                rVarH.v(objE);
+            }
+            final u84.a aVar = (u84.a) objE;
+            mc4.d.d(false, y2.m.d(-1124793332, true, new er.p() { // from class: sd4.yj
+                @Override // er.p
+                public final Object B(Object obj2, Object obj3) {
+                    return bk.b2(aVar, this, (p076m2.r) obj2, ((Integer) obj3).intValue());
+                }
+            }, rVarH, 54), rVarH, 48, 1);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        p076m2.d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: sd4.zj
+                @Override // er.p
+                public final Object B(Object obj2, Object obj3) {
+                    return bk.d2(this.f180978a, i15, (p076m2.r) obj2, ((Integer) obj3).intValue());
+                }
+            });
+        }
+    }
+
+    public final rh2.a g2() {
+        rh2.a aVar = this.navigator;
+        if (aVar != null) {
+            return aVar;
+        }
+        return null;
+    }
+}

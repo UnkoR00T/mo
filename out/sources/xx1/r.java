@@ -1,0 +1,467 @@
+package xx1;
+
+import android.content.Context;
+import androidx.compose.ui.platform.AndroidCompositionLocals_androidKt;
+import androidx.p016lifecycle.y0;
+import cb4.DialogData;
+import f00.f0;
+import fr.q0;
+import oq.i0;
+import org.bouncycastle.asn1.cmp.PKIFailureInfo;
+import org.bouncycastle.pqc.crypto.mlkem.MLKEMEngine;
+import p071kotlin.Metadata;
+import p076m2.d5;
+import p076m2.g4;
+import p136y9.d1;
+import p7.CreationExtras;
+import py1.ResetPinData;
+import wv3.FaqScreenData;
+import zw0.EIdActivationData;
+
+/* JADX INFO: loaded from: classes8.dex */
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\u001aa\u0010\f\u001a\u00020\u00042\u0006\u0010\u0001\u001a\u00020\u00002\u0012\u0010\u0005\u001a\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u00022\u0012\u0010\u0007\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00040\u00022\u0012\u0010\t\u001a\u000e\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\u00040\u00022\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00040\nH\u0007¢\u0006\u0004\b\f\u0010\r¨\u0006\u000e"}, d2 = {"Lxx1/v;", "sharedViewModel", "Lkotlin/Function1;", "Lgx/b;", "Loq/i0;", "navigateToGlobalDestination", "Lwv3/d;", "goToFaqScreen", "Lcb4/d;", "showDialog", "Lkotlin/Function0;", "onClose", "r", "(Lxx1/v;Ler/l;Ler/l;Ler/l;Ler/a;Lm2/r;I)V", "eidservices_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class r {
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 A(f00.s sVar, er.a aVar, v vVar, er.l lVar, dx1.a.c cVar) {
+        if (fr.t.c(cVar, dx1.a.c.C1038a.f45254a)) {
+            sVar.c();
+        } else if (fr.t.c(cVar, dx1.a.c.b.f45255a)) {
+            aVar.a();
+        } else if (cVar instanceof dx1.a.c.Next) {
+            vVar.x3(((dx1.a.c.Next) cVar).getPin());
+            f00.s.m(sVar, lw1.a.d.C2946a.f120629b, null, 2, null);
+        } else if (cVar instanceof dx1.a.c.ResetPin) {
+            f00.s.l(sVar, lw1.a.k.f120651a, new ResetPinData(vVar.O(), ((dx1.a.c.ResetPin) cVar).getCertificateType(), lw1.a.d.c.f120631b, lw1.a.j.c.f120649b), null, 4, null);
+        } else {
+            if (!(cVar instanceof dx1.a.c.ShowDialog)) {
+                throw new oq.p();
+            }
+            lVar.b(((dx1.a.c.ShowDialog) cVar).getDialogData());
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 B(final v vVar, final f00.s sVar, final er.a aVar, final er.l lVar, final er.l lVar2, p114t0.f fVar, p136y9.w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(2138068234, i15, -1, "pl.gov.coi.mobywatel.feature.eidservices.eidactivation.EIdActivationSharedNavContent.<anonymous>.<anonymous>.<anonymous> (EIdActivationSharedNavContent.kt:122)");
+        }
+        boolean zG = rVar.G(vVar);
+        Object objE = rVar.E();
+        if (zG || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.l() { // from class: xx1.o
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.C(vVar, (yx1.z.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        yx1.z zVar = (yx1.z) q7.d.c(q0.c(yx1.z.class), wVar, null, i7.a.a((Context) rVar.N(AndroidCompositionLocals_androidKt.c()), wVar.w()), kq.a.b(wVar.x(), (er.l) objE), rVar, (((i15 >> 3) & 14) << 3) & 112, 0);
+        xw.b<yx1.e.f> bVarY1 = zVar.Y1();
+        boolean zG2 = rVar.G(sVar) | rVar.W(aVar) | rVar.G(vVar) | rVar.W(lVar) | rVar.W(lVar2);
+        Object objE2 = rVar.E();
+        if (zG2 || objE2 == p076m2.r.INSTANCE.a()) {
+            er.l lVar3 = new er.l() { // from class: xx1.p
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.D(sVar, aVar, vVar, lVar, lVar2, (yx1.e.f) obj);
+                }
+            };
+            rVar.v(lVar3);
+            objE2 = lVar3;
+        }
+        f0.b(bVarY1, (er.l) objE2, rVar, xw.b.f221619c);
+        yx1.m.i(zVar, rVar, 0);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final yx1.z C(v vVar, yx1.z.a aVar) {
+        return aVar.a(vVar);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 D(f00.s sVar, er.a aVar, v vVar, er.l lVar, er.l lVar2, yx1.e.f fVar) {
+        if (fr.t.c(fVar, yx1.e.f.a.f230316a)) {
+            sVar.c();
+        } else if (fr.t.c(fVar, yx1.e.f.b.f230317a)) {
+            aVar.a();
+        } else if (fr.t.c(fVar, yx1.e.f.C6185f.f230323a)) {
+            f00.s.m(sVar, lw1.a.d.C2947d.f120632b, null, 2, null);
+        } else if (fr.t.c(fVar, yx1.e.f.d.f230321a)) {
+            iy.b0.Companion companion = iy.b0.INSTANCE;
+            vVar.Z(companion.a());
+            vVar.x3(companion.a());
+            lw1.a.d.b bVar = lw1.a.d.b.f120630b;
+            sVar.k(bVar, bVar);
+        } else if (fr.t.c(fVar, yx1.e.f.C6184e.f230322a)) {
+            vVar.x3(iy.b0.INSTANCE.a());
+            lw1.a.d.c cVar = lw1.a.d.c.f120631b;
+            sVar.k(cVar, cVar);
+        } else if (fVar instanceof yx1.e.f.GoToActivationProcess) {
+            yx1.e.f.GoToActivationProcess goToActivationProcess = (yx1.e.f.GoToActivationProcess) fVar;
+            lVar.b(new zw0.a.ToAddDocument(false, zw0.a.ToAddDocument.EnumC6430a.E_ID_ACTIVATION, false, false, new EIdActivationData(iy.c0.e(goToActivationProcess.getChallenge()), goToActivationProcess.getActiveDeviceName()), 12, null));
+        } else {
+            if (!(fVar instanceof yx1.e.f.ShowDialog)) {
+                throw new oq.p();
+            }
+            lVar2.b(((yx1.e.f.ShowDialog) fVar).getDialogData());
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 E(final f00.s sVar, final v vVar, final er.l lVar, p114t0.f fVar, p136y9.w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(332564939, i15, -1, "pl.gov.coi.mobywatel.feature.eidservices.eidactivation.EIdActivationSharedNavContent.<anonymous>.<anonymous>.<anonymous> (EIdActivationSharedNavContent.kt:174)");
+        }
+        y0 y0VarC = q7.b.f165175a.c(rVar, q7.b.f165177c);
+        if (y0VarC == null) {
+            throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+        }
+        my1.a0 a0Var = (my1.a0) q7.d.c(q0.c(my1.a0.class), y0VarC, null, j7.a.a(y0VarC, rVar, 0), y0VarC instanceof androidx.p016lifecycle.h ? ((androidx.p016lifecycle.h) y0VarC).x() : CreationExtras.b.f153222c, rVar, 0, 0);
+        ResetPinData resetPinData = (ResetPinData) sVar.g(lw1.a.k.f120651a);
+        if (resetPinData != null) {
+            a0Var.Z(resetPinData.getCan());
+            a0Var.l9(resetPinData.getCertificateType());
+            a0Var.n4(resetPinData.getFirstScreenInFlow());
+            a0Var.m9(resetPinData.getEntryDestination());
+        }
+        boolean zG = rVar.G(vVar) | rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zG || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.p() { // from class: xx1.d
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return r.F(sVar, vVar, (lw1.a) obj, (py1.c) obj2);
+                }
+            };
+            rVar.v(objE);
+        }
+        er.p pVar = (er.p) objE;
+        boolean zW = rVar.W(lVar);
+        Object objE2 = rVar.E();
+        if (zW || objE2 == p076m2.r.INSTANCE.a()) {
+            objE2 = new er.l() { // from class: xx1.e
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.G(lVar, (DialogData) obj);
+                }
+            };
+            rVar.v(objE2);
+        }
+        er.l lVar2 = (er.l) objE2;
+        boolean zG2 = rVar.G(sVar);
+        Object objE3 = rVar.E();
+        if (zG2 || objE3 == p076m2.r.INSTANCE.a()) {
+            objE3 = new er.a() { // from class: xx1.f
+                @Override // er.a
+                public final Object a() {
+                    return r.H(sVar);
+                }
+            };
+            rVar.v(objE3);
+        }
+        my1.o.o(a0Var, pVar, lVar2, (er.a) objE3, rVar, 0);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 F(f00.s sVar, v vVar, lw1.a aVar, py1.c cVar) {
+        if (cVar instanceof py1.c.Success) {
+            if (aVar != null) {
+                vVar.Z(((py1.c.Success) cVar).getCan());
+                lw1.a.d.c cVar2 = lw1.a.d.c.f120631b;
+                sVar.k(cVar2, cVar2);
+            }
+        } else {
+            if (!fr.t.c(cVar, py1.c.a.f163246a)) {
+                throw new oq.p();
+            }
+            f00.s.m(sVar, lw1.a.d.c.f120631b, null, 2, null);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 G(er.l lVar, DialogData dialogData) {
+        lVar.b(dialogData);
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 H(f00.s sVar) {
+        sVar.c();
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 I(v vVar, er.l lVar, er.l lVar2, er.l lVar3, er.a aVar, int i15, p076m2.r rVar, int i16) {
+        r(vVar, lVar, lVar2, lVar3, aVar, rVar, g4.a(i15 | 1));
+        return i0.f148189a;
+    }
+
+    public static final void r(final v vVar, final er.l<? super gx.b, i0> lVar, final er.l<? super FaqScreenData, i0> lVar2, final er.l<? super DialogData, i0> lVar3, final er.a<i0> aVar, p076m2.r rVar, final int i15) {
+        int i16;
+        er.l<? super FaqScreenData, i0> lVar4;
+        er.l<? super DialogData, i0> lVar5;
+        er.a<i0> aVar2;
+        final f00.s sVar;
+        p076m2.r rVarH = rVar.h(1426314354);
+        if ((i15 & 6) == 0) {
+            i16 = ((i15 & 8) == 0 ? rVarH.W(vVar) : rVarH.G(vVar) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if ((i15 & 48) == 0) {
+            i16 |= rVarH.G(lVar) ? 32 : 16;
+        }
+        if ((i15 & MLKEMEngine.KyberPolyBytes) == 0) {
+            lVar4 = lVar2;
+            i16 |= rVarH.G(lVar4) ? 256 : 128;
+        } else {
+            lVar4 = lVar2;
+        }
+        if ((i15 & 3072) == 0) {
+            lVar5 = lVar3;
+            i16 |= rVarH.G(lVar5) ? 2048 : 1024;
+        } else {
+            lVar5 = lVar3;
+        }
+        if ((i15 & 24576) == 0) {
+            aVar2 = aVar;
+            i16 |= rVarH.G(aVar2) ? 16384 : PKIFailureInfo.certRevoked;
+        } else {
+            aVar2 = aVar;
+        }
+        if (rVarH.r((i16 & 9363) != 9362, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(1426314354, i16, -1, "pl.gov.coi.mobywatel.feature.eidservices.eidactivation.EIdActivationSharedNavContent (EIdActivationSharedNavContent.kt:42)");
+            }
+            f00.s sVarJ = f00.r.J(null, rVarH, 0, 1);
+            lw1.a.d.C2947d c2947d = lw1.a.d.C2947d.f120632b;
+            boolean zG = ((i16 & 14) == 4 || ((i16 & 8) != 0 && rVarH.G(vVar))) | ((i16 & 896) == 256) | ((57344 & i16) == 16384) | rVarH.G(sVarJ) | ((i16 & 7168) == 2048) | ((i16 & 112) == 32);
+            Object objE = rVarH.E();
+            if (zG || objE == p076m2.r.INSTANCE.a()) {
+                sVar = sVarJ;
+                final er.l<? super FaqScreenData, i0> lVar6 = lVar4;
+                final er.l<? super DialogData, i0> lVar7 = lVar5;
+                final er.a<i0> aVar3 = aVar2;
+                er.l lVar8 = new er.l() { // from class: xx1.a
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return r.s(aVar3, sVar, lVar6, vVar, lVar7, lVar, (d1) obj);
+                    }
+                };
+                rVarH.v(lVar8);
+                objE = lVar8;
+            } else {
+                sVar = sVarJ;
+            }
+            f00.d0.j(sVar, c2947d, (er.l) objE, rVarH, f00.s.f54562e | 48);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: xx1.i
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return r.I(vVar, lVar, lVar2, lVar3, aVar, i15, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 s(final er.a aVar, final f00.s sVar, final er.l lVar, final v vVar, final er.l lVar2, final er.l lVar3, d1 d1Var) {
+        f00.r.u(d1Var, lw1.a.d.C2947d.f120632b, null, y2.m.b(819462993, true, new er.r() { // from class: xx1.j
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return r.t(aVar, sVar, lVar, (p114t0.f) obj, (p136y9.w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, lw1.a.d.b.f120630b, null, y2.m.b(1454107528, true, new er.r() { // from class: xx1.k
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return r.v(vVar, sVar, aVar, lVar2, (p114t0.f) obj, (p136y9.w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, lw1.a.d.c.f120631b, null, y2.m.b(-351395767, true, new er.r() { // from class: xx1.l
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return r.y(vVar, sVar, aVar, lVar2, (p114t0.f) obj, (p136y9.w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, lw1.a.d.C2946a.f120629b, null, y2.m.b(2138068234, true, new er.r() { // from class: xx1.m
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return r.B(vVar, sVar, aVar, lVar3, lVar2, (p114t0.f) obj, (p136y9.w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.u(d1Var, lw1.a.k.f120651a, null, y2.m.b(332564939, true, new er.r() { // from class: xx1.n
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return r.E(sVar, vVar, lVar2, (p114t0.f) obj, (p136y9.w) obj2, (p076m2.r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 t(final er.a aVar, final f00.s sVar, final er.l lVar, p114t0.f fVar, p136y9.w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(819462993, i15, -1, "pl.gov.coi.mobywatel.feature.eidservices.eidactivation.EIdActivationSharedNavContent.<anonymous>.<anonymous>.<anonymous> (EIdActivationSharedNavContent.kt:50)");
+        }
+        y0 y0VarC = q7.b.f165175a.c(rVar, q7.b.f165177c);
+        if (y0VarC == null) {
+            throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+        }
+        by1.n nVar = (by1.n) q7.d.c(q0.c(by1.n.class), y0VarC, null, j7.a.a(y0VarC, rVar, 0), y0VarC instanceof androidx.p016lifecycle.h ? ((androidx.p016lifecycle.h) y0VarC).x() : CreationExtras.b.f153222c, rVar, 0, 0);
+        xw.b<by1.i> bVarY1 = nVar.Y1();
+        boolean zW = rVar.W(aVar) | rVar.G(sVar) | rVar.W(lVar);
+        Object objE = rVar.E();
+        if (zW || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.l() { // from class: xx1.c
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.u(aVar, sVar, lVar, (by1.i) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (er.l) objE, rVar, xw.b.f221619c);
+        by1.e.i(nVar, rVar, 0);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 u(er.a aVar, f00.s sVar, er.l lVar, by1.i iVar) {
+        if (fr.t.c(iVar, by1.i.a.f21970a)) {
+            aVar.a();
+        } else if (fr.t.c(iVar, by1.i.b.f21971a)) {
+            f00.s.m(sVar, lw1.a.d.b.f120630b, null, 2, null);
+        } else {
+            if (!(iVar instanceof by1.i.GoToFaq)) {
+                throw new oq.p();
+            }
+            lVar.b(((by1.i.GoToFaq) iVar).getModel());
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 v(final v vVar, final f00.s sVar, final er.a aVar, final er.l lVar, p114t0.f fVar, p136y9.w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(1454107528, i15, -1, "pl.gov.coi.mobywatel.feature.eidservices.eidactivation.EIdActivationSharedNavContent.<anonymous>.<anonymous>.<anonymous> (EIdActivationSharedNavContent.kt:66)");
+        }
+        boolean zG = rVar.G(vVar);
+        Object objE = rVar.E();
+        if (zG || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.l() { // from class: xx1.g
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.w(vVar, (sw1.o.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        sw1.o oVar = (sw1.o) q7.d.c(q0.c(sw1.o.class), wVar, null, i7.a.a((Context) rVar.N(AndroidCompositionLocals_androidKt.c()), wVar.w()), kq.a.b(wVar.x(), (er.l) objE), rVar, (((i15 >> 3) & 14) << 3) & 112, 0);
+        xw.b<sw1.a.d> bVarY1 = oVar.Y1();
+        boolean zG2 = rVar.G(sVar) | rVar.W(aVar) | rVar.G(vVar) | rVar.W(lVar);
+        Object objE2 = rVar.E();
+        if (zG2 || objE2 == p076m2.r.INSTANCE.a()) {
+            objE2 = new er.l() { // from class: xx1.h
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.x(sVar, aVar, vVar, lVar, (sw1.a.d) obj);
+                }
+            };
+            rVar.v(objE2);
+        }
+        f0.b(bVarY1, (er.l) objE2, rVar, xw.b.f221619c);
+        sw1.k.f(oVar, rVar, 0);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final sw1.o w(v vVar, sw1.o.a aVar) {
+        return aVar.a(vVar);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 x(f00.s sVar, er.a aVar, v vVar, er.l lVar, sw1.a.d dVar) {
+        if (fr.t.c(dVar, sw1.a.d.C4776a.f184879a)) {
+            sVar.c();
+        } else if (fr.t.c(dVar, sw1.a.d.b.f184880a)) {
+            aVar.a();
+        } else if (dVar instanceof sw1.a.d.Next) {
+            vVar.Z(((sw1.a.d.Next) dVar).getCan());
+            f00.s.m(sVar, lw1.a.d.c.f120631b, null, 2, null);
+        } else {
+            if (!(dVar instanceof sw1.a.d.ShowDialog)) {
+                throw new oq.p();
+            }
+            lVar.b(((sw1.a.d.ShowDialog) dVar).getDialogData());
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 y(final v vVar, final f00.s sVar, final er.a aVar, final er.l lVar, p114t0.f fVar, p136y9.w wVar, p076m2.r rVar, int i15) {
+        if (p076m2.t.k()) {
+            p076m2.t.o(-351395767, i15, -1, "pl.gov.coi.mobywatel.feature.eidservices.eidactivation.EIdActivationSharedNavContent.<anonymous>.<anonymous>.<anonymous> (EIdActivationSharedNavContent.kt:89)");
+        }
+        boolean zG = rVar.G(vVar);
+        Object objE = rVar.E();
+        if (zG || objE == p076m2.r.INSTANCE.a()) {
+            objE = new er.l() { // from class: xx1.q
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.z(vVar, (dx1.o.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        dx1.o oVar = (dx1.o) q7.d.c(q0.c(dx1.o.class), wVar, null, i7.a.a((Context) rVar.N(AndroidCompositionLocals_androidKt.c()), wVar.w()), kq.a.b(wVar.x(), (er.l) objE), rVar, (((i15 >> 3) & 14) << 3) & 112, 0);
+        xw.b<dx1.a.c> bVarY1 = oVar.Y1();
+        boolean zG2 = rVar.G(sVar) | rVar.W(aVar) | rVar.G(vVar) | rVar.W(lVar);
+        Object objE2 = rVar.E();
+        if (zG2 || objE2 == p076m2.r.INSTANCE.a()) {
+            objE2 = new er.l() { // from class: xx1.b
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return r.A(sVar, aVar, vVar, lVar, (dx1.a.c) obj);
+                }
+            };
+            rVar.v(objE2);
+        }
+        f0.b(bVarY1, (er.l) objE2, rVar, xw.b.f221619c);
+        dx1.k.f(oVar, rVar, 0);
+        if (p076m2.t.k()) {
+            p076m2.t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final dx1.o z(v vVar, dx1.o.a aVar) {
+        return aVar.a(vVar);
+    }
+}

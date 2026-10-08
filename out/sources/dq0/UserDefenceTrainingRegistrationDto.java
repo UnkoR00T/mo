@@ -1,0 +1,64 @@
+package dq0;
+
+import java.util.List;
+import p071kotlin.Metadata;
+
+/* JADX INFO: renamed from: dq0.p0, reason: from toString */
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0086\b\u0018\u00002\u00020\u0001J\u0010\u0010\u0003\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u0003\u0010\u0004J\u0010\u0010\u0006\u001a\u00020\u0005HÖ\u0001¢\u0006\u0004\b\u0006\u0010\u0007J\u001a\u0010\n\u001a\u00020\t2\b\u0010\b\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\n\u0010\u000bR \u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\r0\f8\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u000e\u0010\u000f\u001a\u0004\b\u000e\u0010\u0010R\u001a\u0010\u0016\u001a\u00020\u00128\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0013\u0010\u0014\u001a\u0004\b\u0013\u0010\u0015R\u001a\u0010\u001b\u001a\u00020\u00178\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u0018\u0010\u001aR\u001a\u0010 \u001a\u00020\u001c8\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u001d\u0010\u001e\u001a\u0004\b\u001d\u0010\u001f¨\u0006!"}, d2 = {"Ldq0/p0;", "", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "", "Ldq0/o0;", "a", "Ljava/util/List;", "()Ljava/util/List;", "childRegistrations", "Ldq0/g;", "b", "Ldq0/g;", "()Ldq0/g;", "status", "Ldq0/n0;", "c", "Ldq0/n0;", "()Ldq0/n0;", "training", "Ldq0/q0;", "d", "Ldq0/q0;", "()Ldq0/q0;", "unit", "militaryservice_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final /* data */ class UserDefenceTrainingRegistrationDto {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
+    @vl.c("childRegistrations")
+    private final List<UserDefenceTrainingRegistrationChildRegistrationDto> childRegistrations;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name and from kotlin metadata and from toString */
+    @vl.c("status")
+    private final g status;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata and from toString */
+    @vl.c("training")
+    private final UserDefenceTrainingDto training;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata and from toString */
+    @vl.c("unit")
+    private final UserDefenceTrainingUnitDto unit;
+
+    public final List<UserDefenceTrainingRegistrationChildRegistrationDto> a() {
+        return this.childRegistrations;
+    }
+
+    /* JADX INFO: renamed from: b, reason: from getter */
+    public final g getStatus() {
+        return this.status;
+    }
+
+    /* JADX INFO: renamed from: c, reason: from getter */
+    public final UserDefenceTrainingDto getTraining() {
+        return this.training;
+    }
+
+    /* JADX INFO: renamed from: d, reason: from getter */
+    public final UserDefenceTrainingUnitDto getUnit() {
+        return this.unit;
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof UserDefenceTrainingRegistrationDto)) {
+            return false;
+        }
+        UserDefenceTrainingRegistrationDto userDefenceTrainingRegistrationDto = (UserDefenceTrainingRegistrationDto) other;
+        return fr.t.c(this.childRegistrations, userDefenceTrainingRegistrationDto.childRegistrations) && this.status == userDefenceTrainingRegistrationDto.status && fr.t.c(this.training, userDefenceTrainingRegistrationDto.training) && fr.t.c(this.unit, userDefenceTrainingRegistrationDto.unit);
+    }
+
+    public int hashCode() {
+        return (((((this.childRegistrations.hashCode() * 31) + this.status.hashCode()) * 31) + this.training.hashCode()) * 31) + this.unit.hashCode();
+    }
+
+    public String toString() {
+        return "UserDefenceTrainingRegistrationDto(childRegistrations=" + this.childRegistrations + ", status=" + this.status + ", training=" + this.training + ", unit=" + this.unit + ')';
+    }
+}

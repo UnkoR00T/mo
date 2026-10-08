@@ -1,0 +1,46 @@
+package com.google.android.gms.internal.mlkit_vision_text_bundled_common;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class c1 extends bw implements kx {
+    private static final c1 zbb;
+    private int zbd;
+    private int zbe;
+    private String zbf = "";
+    private float zbg;
+    private float zbh;
+
+    static {
+        c1 c1Var = new c1();
+        zbb = c1Var;
+        bw.l(c1.class, c1Var);
+    }
+
+    private c1() {
+    }
+
+    public static c1 F() {
+        return zbb;
+    }
+
+    @Override // com.google.android.gms.internal.mlkit_vision_text_bundled_common.bw
+    protected final Object p(int i15, Object obj, Object obj2) {
+        int i16 = i15 - 1;
+        if (i16 == 0) {
+            return (byte) 1;
+        }
+        if (i16 == 2) {
+            return bw.f(zbb, "\u0001\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001᠌\u0000\u0002ဈ\u0001\u0003ခ\u0002\u0004ခ\u0003", new Object[]{"zbd", "zbe", b1.f30363a, "zbf", "zbg", "zbh"});
+        }
+        if (i16 == 3) {
+            return new c1();
+        }
+        z0 z0Var = null;
+        if (i16 == 4) {
+            return new a1(z0Var);
+        }
+        if (i16 != 5) {
+            return null;
+        }
+        return zbb;
+    }
+}

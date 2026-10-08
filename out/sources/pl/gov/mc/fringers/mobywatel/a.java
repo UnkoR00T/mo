@@ -1,0 +1,100 @@
+package pl.gov.mc.fringers.mobywatel;
+
+import java.util.Iterator;
+import p071kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000\u0090\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b*\b\u0007\u0018\u00002\u00020\u0001B§\u0001\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001b\u001a\u00020\u001a\u0012\u0006\u0010\u001d\u001a\u00020\u001c\u0012\u0006\u0010\u001f\u001a\u00020\u001e\u0012\u0006\u0010!\u001a\u00020 \u0012\u0006\u0010#\u001a\u00020\"\u0012\u0006\u0010%\u001a\u00020$\u0012\u0006\u0010'\u001a\u00020&\u0012\u0006\u0010)\u001a\u00020(¢\u0006\u0004\b*\u0010+J\u0017\u0010/\u001a\u00020.2\u0006\u0010-\u001a\u00020,H\u0016¢\u0006\u0004\b/\u00100R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b1\u00102R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b3\u00104R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b5\u00106R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b7\u00108R\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b/\u00109R\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b:\u0010;R\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b<\u0010=R\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b>\u0010?R\u0014\u0010\u0013\u001a\u00020\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b@\u0010AR\u0014\u0010\u0015\u001a\u00020\u00148\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bB\u0010CR\u0014\u0010\u0017\u001a\u00020\u00168\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bD\u0010ER\u0014\u0010\u0019\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bF\u0010GR\u0014\u0010\u001b\u001a\u00020\u001a8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bH\u0010IR\u0014\u0010\u001d\u001a\u00020\u001c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bJ\u0010KR\u0014\u0010\u001f\u001a\u00020\u001e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bL\u0010MR\u0014\u0010!\u001a\u00020 8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bN\u0010OR\u0014\u0010#\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bP\u0010QR\u0014\u0010%\u001a\u00020$8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bR\u0010SR\u0014\u0010'\u001a\u00020&8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bT\u0010UR\u0014\u0010)\u001a\u00020(8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bV\u0010W¨\u0006X"}, d2 = {"Lpl/gov/mc/fringers/mobywatel/a;", "Loz/c;", "Loz/d;", "activityViewLifecycleConnector", "Ly00/a0;", "secureWindowConnector", "Lw00/a;", "permissionManagerConnector", "Lb00/p;", "photoTakerManagerConnector", "Lb00/u;", "takePictureOrPickMediaManagerConnector", "Lzz/c;", "filePickerManagerActivityLifecycleConnector", "Lb00/h;", "mediaPickerManagerConnector", "Lb00/m;", "multipleMediaPickerManagerConnector", "Lmz/m;", "intentManagerConnector", "Lpz/c;", "loaderManagerConnector", "Lqw/b;", "biometricManagerConnector", "Lmz/h;", "intentActionManagerConnector", "Lkz/b;", "inAppReviewPromptManagerConnector", "Ls00/c;", "nfcManagerLifecycleConnector", "Lnz/a;", "keyboardManagerConnector", "Li70/f;", "globalSnackBarManagerConnector", "Ly00/t;", "keyguardManagerActivityLifecycleConnector", "Lrw/a;", "bluetoothManagerConnector", "Lv44/b;", "googlePayManagerConnector", "Loz/s;", "restartApplicationConnector", "<init>", "(Loz/d;Ly00/a0;Lw00/a;Lb00/p;Lb00/u;Lzz/c;Lb00/h;Lb00/m;Lmz/m;Lpz/c;Lqw/b;Lmz/h;Lkz/b;Ls00/c;Lnz/a;Li70/f;Ly00/t;Lrw/a;Lv44/b;Loz/s;)V", "LCON/p;", "activity", "Loq/i0;", "e", "(LCON/p;)V", "a", "Loz/d;", "b", "Ly00/a0;", "c", "Lw00/a;", "d", "Lb00/p;", "Lb00/u;", "f", "Lzz/c;", "g", "Lb00/h;", "h", "Lb00/m;", "j", "Lmz/m;", "k", "Lpz/c;", "l", "Lqw/b;", "m", "Lmz/h;", "n", "Lkz/b;", "p", "Ls00/c;", "q", "Lnz/a;", "r", "Li70/f;", "s", "Ly00/t;", "t", "Lrw/a;", "v", "Lv44/b;", "w", "Loz/s;", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class a implements oz.c {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    private final oz.d activityViewLifecycleConnector;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name and from kotlin metadata */
+    private final y00.a0 secureWindowConnector;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
+    private final w00.a permissionManagerConnector;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
+    private final b00.p photoTakerManagerConnector;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
+    private final b00.u takePictureOrPickMediaManagerConnector;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
+    private final zz.c filePickerManagerActivityLifecycleConnector;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
+    private final b00.h mediaPickerManagerConnector;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
+    private final b00.m multipleMediaPickerManagerConnector;
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name and from kotlin metadata */
+    private final mz.m intentManagerConnector;
+
+    /* JADX INFO: renamed from: k, reason: collision with root package name and from kotlin metadata */
+    private final pz.c loaderManagerConnector;
+
+    /* JADX INFO: renamed from: l, reason: collision with root package name and from kotlin metadata */
+    private final qw.b biometricManagerConnector;
+
+    /* JADX INFO: renamed from: m, reason: collision with root package name and from kotlin metadata */
+    private final mz.h intentActionManagerConnector;
+
+    /* JADX INFO: renamed from: n, reason: collision with root package name and from kotlin metadata */
+    private final kz.b inAppReviewPromptManagerConnector;
+
+    /* JADX INFO: renamed from: p, reason: collision with root package name and from kotlin metadata */
+    private final s00.c nfcManagerLifecycleConnector;
+
+    /* JADX INFO: renamed from: q, reason: collision with root package name and from kotlin metadata */
+    private final nz.a keyboardManagerConnector;
+
+    /* JADX INFO: renamed from: r, reason: collision with root package name and from kotlin metadata */
+    private final i70.f globalSnackBarManagerConnector;
+
+    /* JADX INFO: renamed from: s, reason: collision with root package name and from kotlin metadata */
+    private final y00.t keyguardManagerActivityLifecycleConnector;
+
+    /* JADX INFO: renamed from: t, reason: collision with root package name and from kotlin metadata */
+    private final rw.a bluetoothManagerConnector;
+
+    /* JADX INFO: renamed from: v, reason: collision with root package name and from kotlin metadata */
+    private final v44.b googlePayManagerConnector;
+
+    /* JADX INFO: renamed from: w, reason: collision with root package name and from kotlin metadata */
+    private final oz.s restartApplicationConnector;
+
+    public a(oz.d dVar, y00.a0 a0Var, w00.a aVar, b00.p pVar, b00.u uVar, zz.c cVar, b00.h hVar, b00.m mVar, mz.m mVar2, pz.c cVar2, qw.b bVar, mz.h hVar2, kz.b bVar2, s00.c cVar3, nz.a aVar2, i70.f fVar, y00.t tVar, rw.a aVar3, v44.b bVar3, oz.s sVar) {
+        this.activityViewLifecycleConnector = dVar;
+        this.secureWindowConnector = a0Var;
+        this.permissionManagerConnector = aVar;
+        this.photoTakerManagerConnector = pVar;
+        this.takePictureOrPickMediaManagerConnector = uVar;
+        this.filePickerManagerActivityLifecycleConnector = cVar;
+        this.mediaPickerManagerConnector = hVar;
+        this.multipleMediaPickerManagerConnector = mVar;
+        this.intentManagerConnector = mVar2;
+        this.loaderManagerConnector = cVar2;
+        this.biometricManagerConnector = bVar;
+        this.intentActionManagerConnector = hVar2;
+        this.inAppReviewPromptManagerConnector = bVar2;
+        this.nfcManagerLifecycleConnector = cVar3;
+        this.keyboardManagerConnector = aVar2;
+        this.globalSnackBarManagerConnector = fVar;
+        this.keyguardManagerActivityLifecycleConnector = tVar;
+        this.bluetoothManagerConnector = aVar3;
+        this.googlePayManagerConnector = bVar3;
+        this.restartApplicationConnector = sVar;
+    }
+
+    @Override // oz.c
+    public void e(CON.p activity) {
+        Iterator it = pq.v.q(this.activityViewLifecycleConnector, this.secureWindowConnector, this.permissionManagerConnector, this.photoTakerManagerConnector, this.takePictureOrPickMediaManagerConnector, this.filePickerManagerActivityLifecycleConnector, this.mediaPickerManagerConnector, this.multipleMediaPickerManagerConnector, this.intentManagerConnector, this.loaderManagerConnector, this.biometricManagerConnector, this.intentActionManagerConnector, this.inAppReviewPromptManagerConnector, this.nfcManagerLifecycleConnector, this.keyboardManagerConnector, this.globalSnackBarManagerConnector, this.keyguardManagerActivityLifecycleConnector, this.bluetoothManagerConnector, this.googlePayManagerConnector, this.restartApplicationConnector).iterator();
+        while (it.hasNext()) {
+            ((oz.c) it.next()).e(activity);
+        }
+    }
+}

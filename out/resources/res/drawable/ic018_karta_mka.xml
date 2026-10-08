@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group>
+        <clip-path android:pathData="M0,0h24v24h-24z"/>
+        <path
+            android:fillColor="@drawable/_ic018_karta_mka__0_res_0x7f080385"
+            android:pathData="M21,8.993C21,12.636 16.159,19.69 13.578,23.193C12.785,24.269 11.215,24.269 10.422,23.193C7.841,19.69 3,12.636 3,8.993C3,4.026 7.029,0 12,0C16.971,0 21,4.026 21,8.993ZM12,12C13.657,12 15,10.657 15,9C15,7.343 13.657,6 12,6C10.343,6 9,7.343 9,9C9,10.657 10.343,12 12,12Z"
+            android:fillType="evenOdd"/>
+    </group>
+</vector>

@@ -1,0 +1,10 @@
+package d8;
+
+import android.media.MediaDrm;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class e0 {
+    public static /* bridge */ /* synthetic */ MediaDrm.PlaybackComponent a(Object obj) {
+        return (MediaDrm.PlaybackComponent) obj;
+    }
+}

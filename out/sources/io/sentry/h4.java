@@ -1,0 +1,6 @@
+package io.sentry;
+
+/* JADX INFO: loaded from: classes4.dex */
+public interface h4 {
+    void a(a1 a1Var);
+}

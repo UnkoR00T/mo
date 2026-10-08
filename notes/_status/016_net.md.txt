@@ -1,0 +1,1 @@
+016_net.md | SKIPPED (biblioteka: androidx.camera - CameraX)

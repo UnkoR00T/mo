@@ -1,0 +1,159 @@
+package sd4;
+
+import android.os.Bundle;
+import p044er3.Function1;
+import p071kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\b\n\u0002\b\u000b\b\u0007\u0018\u0000 $2\u00020\u0001:\u0001%B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0019\u0010\u0007\u001a\u00020\u00062\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u000f\u0010\t\u001a\u00020\u0006H\u0017¢\u0006\u0004\b\t\u0010\nR\"\u0010\u0012\u001a\u00020\u000b8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\f\u0010\r\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\"\u0010\u001a\u001a\u00020\u00138\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017\"\u0004\b\u0018\u0010\u0019R+\u0010#\u001a\u00020\u001b2\u0006\u0010\u001c\u001a\u00020\u001b8B@BX\u0082\u008e\u0002¢\u0006\u0012\n\u0004\b\u001d\u0010\u001e\u001a\u0004\b\u001f\u0010 \"\u0004\b!\u0010\"¨\u0006&"}, d2 = {"Lsd4/yo;", "Lj00/b;", "<init>", "()V", "Landroid/os/Bundle;", "savedInstanceState", "Loq/i0;", "x0", "(Landroid/os/Bundle;)V", "S1", "(Lm2/r;I)V", "Lgx/d;", "L0", "Lgx/d;", "g2", "()Lgx/d;", "setGlobalEventManager", "(Lgx/d;)V", "globalEventManager", "Lrh2/a;", "M0", "Lrh2/a;", "getFragmentNavigator", "()Lrh2/a;", "setFragmentNavigator", "(Lrh2/a;)V", "fragmentNavigator", "", "<set-?>", "N0", "Lir/e;", "h2", "()I", "i2", "(I)V", "licenceCode", "O0", "a", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class yo extends hb {
+
+    /* JADX INFO: renamed from: L0, reason: from kotlin metadata */
+    public gx.d globalEventManager;
+
+    /* JADX INFO: renamed from: M0, reason: from kotlin metadata */
+    public rh2.a fragmentNavigator;
+
+    /* JADX INFO: renamed from: N0, reason: from kotlin metadata */
+    private final ir.e licenceCode = ir.a.f96711a.a();
+    static final /* synthetic */ mr.l<Object>[] P0 = {fr.q0.f(new fr.b0(yo.class, "licenceCode", "getLicenceCode()I", 0))};
+
+    /* JADX INFO: renamed from: O0, reason: from kotlin metadata */
+    public static final Companion INSTANCE = new Companion(null);
+    public static final int Q0 = 8;
+
+    /* JADX INFO: renamed from: sd4.yo$a, reason: from kotlin metadata */
+    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0015\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0007\u0010\bR\u0014\u0010\n\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\b\n\u0010\u000bR\u0014\u0010\f\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\b\f\u0010\u000b¨\u0006\r"}, d2 = {"Lsd4/yo$a;", "", "<init>", "()V", "", "licenceCode", "Lsd4/yo;", "a", "(I)Lsd4/yo;", "", "TAG_FEATURE_WRU", "Ljava/lang/String;", "KEY_LICENCE_CODE", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class Companion {
+        public /* synthetic */ Companion(fr.k kVar) {
+            this();
+        }
+
+        public final yo a(int licenceCode) {
+            Bundle bundle = new Bundle();
+            bundle.putInt("key_licence_code", licenceCode);
+            yo yoVar = new yo();
+            yoVar.F1(bundle);
+            return yoVar;
+        }
+
+        private Companion() {
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 c2(final yo yoVar, p076m2.r rVar, int i15) {
+        if (rVar.r((i15 & 3) != 2, i15 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(336648692, i15, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.WruFeatureFragment.GetContent.<anonymous> (WruFeatureFragment.kt:32)");
+            }
+            boolean zG = rVar.G(yoVar);
+            Object objE = rVar.E();
+            if (zG || objE == p076m2.r.INSTANCE.a()) {
+                objE = new er.l() { // from class: sd4.wo
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return yo.d2(this.f180928a, (gx.b) obj);
+                    }
+                };
+                rVar.v(objE);
+            }
+            er.l lVar = (er.l) objE;
+            boolean zG2 = rVar.G(yoVar);
+            Object objE2 = rVar.E();
+            if (zG2 || objE2 == p076m2.r.INSTANCE.a()) {
+                objE2 = new er.a() { // from class: sd4.xo
+                    @Override // er.a
+                    public final Object a() {
+                        return yo.e2(this.f180945a);
+                    }
+                };
+                rVar.v(objE2);
+            }
+            Function1.o(lVar, (er.a) objE2, yoVar.h2(), rVar, 0);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVar.O();
+        }
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 d2(yo yoVar, gx.b bVar) {
+        yoVar.g2().c(bVar);
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 e2(yo yoVar) {
+        yoVar.g2().c(new tg1.a.ToDashboard(false, 1, null));
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 f2(yo yoVar, int i15, p076m2.r rVar, int i16) {
+        yoVar.S1(rVar, p076m2.g4.a(i15 | 1));
+        return oq.i0.f148189a;
+    }
+
+    private final int h2() {
+        return ((Number) this.licenceCode.a(this, P0[0])).intValue();
+    }
+
+    private final void i2(int i15) {
+        this.licenceCode.b(this, P0[0], Integer.valueOf(i15));
+    }
+
+    @Override // j00.b
+    public void S1(p076m2.r rVar, final int i15) {
+        int i16;
+        p076m2.r rVarH = rVar.h(628409248);
+        if ((i15 & 6) == 0) {
+            i16 = (rVarH.G(this) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(628409248, i16, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.WruFeatureFragment.GetContent (WruFeatureFragment.kt:31)");
+            }
+            mc4.d.d(false, y2.m.d(336648692, true, new er.p() { // from class: sd4.uo
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return yo.c2(this.f180896a, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            }, rVarH, 54), rVarH, 48, 1);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        p076m2.d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: sd4.vo
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return yo.f2(this.f180911a, i15, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    public final gx.d g2() {
+        gx.d dVar = this.globalEventManager;
+        if (dVar != null) {
+            return dVar;
+        }
+        return null;
+    }
+
+    @Override // androidx.fragment.app.o
+    public void x0(Bundle savedInstanceState) {
+        super.x0(savedInstanceState);
+        Bundle bundleV = v();
+        i2(bundleV != null ? bundleV.getInt("key_licence_code") : -1);
+    }
+}

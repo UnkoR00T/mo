@@ -1,0 +1,61 @@
+package iq0;
+
+import p071kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b6\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003j\u0002\b\u0004j\u0002\b\u0005j\u0002\b\u0006j\u0002\b\u0007j\u0002\b\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\fj\u0002\b\rj\u0002\b\u000ej\u0002\b\u000fj\u0002\b\u0010j\u0002\b\u0011j\u0002\b\u0012j\u0002\b\u0013j\u0002\b\u0014j\u0002\b\u0015j\u0002\b\u0016j\u0002\b\u0017j\u0002\b\u0018j\u0002\b\u0019j\u0002\b\u001aj\u0002\b\u001bj\u0002\b\u001cj\u0002\b\u001dj\u0002\b\u001ej\u0002\b\u001fj\u0002\b j\u0002\b!j\u0002\b\"j\u0002\b#j\u0002\b$j\u0002\b%j\u0002\b&j\u0002\b'j\u0002\b(j\u0002\b)j\u0002\b*j\u0002\b+j\u0002\b,j\u0002\b-j\u0002\b.j\u0002\b/j\u0002\b0j\u0002\b1j\u0002\b2j\u0002\b3j\u0002\b4j\u0002\b5j\u0002\b6¨\u00067"}, d2 = {"Liq0/y;", "", "<init>", "(Ljava/lang/String;I)V", "a", "b", "c", "d", "e", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z", "A", "B", "C", ip.a.f96138c, "E", "F", "G", com.tom_roush.pdfbox.pdmodel.documentinterchange.taggedpdf.i.f37087n, "I", "K", com.tom_roush.pdfbox.pdmodel.documentinterchange.taggedpdf.i.f37094u, "O", com.tom_roush.pdfbox.pdmodel.documentinterchange.taggedpdf.i.f37086m, "R", "T", "X", "Y", "Z", "h0", "q0", "r0", "s0", "t0", "u0", "v0", "w0", "x0", "y0", "contract"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public enum y {
+    NEW_DASHBOARD,
+    PAYMENTS,
+    DASHBOARD_PAYMENTS,
+    RATE_CONFIGURATION,
+    CHATBOT,
+    CONTACT_DETAILS_REGISTRY,
+    SEND_IDEA,
+    ELECTRONIC_DELIVERY,
+    WHATS_NEW_ANNOUNCEMENTS,
+    NIPIP_CARD,
+    NIL_CARD,
+    KIRP_CARD,
+    PASSPORT_DATA,
+    TEMPORARY_SERVICE_INTERRUPTIONS,
+    VOTE_IDEA,
+    DISABLED_PERSON_IDENTIFICATION_CARD,
+    TEACHER,
+    BAILIFF_CARD,
+    NEW_COMPANY_APPLICATION,
+    SECURITY_KNOWLEDGE_BASE,
+    CIVIL_ENGINEER,
+    ASYNC_GENERATE_DOCUMENTS,
+    DIIA_PL_PESEL_ZOOM,
+    COMPANY_SUSPENSION,
+    NEW_ONLINE_SERVICES,
+    TAX_ADVISOR,
+    STAMP_DUTY_PAYMENTS,
+    VEHICLE_CARD_UPDATE,
+    DOCUMENTS_PHOTO,
+    REGISTERED_ADDRESS,
+    APP_UPDATE_INFO,
+    PHYSICAL_ID_INVALIDATION_IDENTITY_THEFT,
+    NEW_LAYOUT_STUDENT_CARD,
+    V2_CHILD_ID_CARD_SUSPENSION,
+    QUALIFIED_SIGNATURE_QR_CODE_SCANNER,
+    PASSPORT_INVALIDATION_WITHOUT_EPUAP,
+    CHECK_VEHICLE_INSURANCE,
+    GOOGLE_PAY,
+    WIDGET_AIR_QUALITY,
+    WIDGET_EPL,
+    CHATBOT_DISCLAIMER_VISIBILITY,
+    PHYSICAL_ID_EDOR_COMMUNICATION,
+    PASSPORT_CHILD_APPLICATION_ONLINE_PAYMENTS,
+    NATIVE_LOGIN_EDOR_MODULE_ANDROID,
+    NATIVE_LOGIN_APP_SERVICES_MODULE_ANDROID,
+    COMPANY_REPRESENTATIVES,
+    TRAVEL_REGISTRATION_CONFIRMATION,
+    VEHICLE_INSURANCE_VERIFICATION_CONFIRMATION,
+    VEHICLE_REGISTRATION,
+    COMPANY_EMAIL_COLLECTING,
+    UNKNOWN;
+
+    private static final /* synthetic */ wq.a A0 = wq.b.a(b());
+}

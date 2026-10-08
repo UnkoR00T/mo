@@ -1,0 +1,10 @@
+package vy3;
+
+import p071kotlin.Metadata;
+import wy3.SetPasswordSetupData;
+import zx.c;
+
+/* JADX INFO: loaded from: classes10.dex */
+@Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bf\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001¨\u0006\u0003À\u0006\u0003"}, d2 = {"Lvy3/a;", "Lzx/c;", "Lwy3/c;", "contract"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public interface a extends c<SetPasswordSetupData> {
+}

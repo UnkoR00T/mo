@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="305dp"
+    android:width="155dp"
+    android:viewportWidth="155"
+    android:viewportHeight="305">
+    <path
+        android:fillColor="#787878"
+        android:pathData="M105.93,296.9H45.56L46.82,300.18C47.79,302.71 50.1,304.37 52.67,304.37H98.82C101.38,304.37 103.69,302.72 104.67,300.18L105.93,296.9Z"/>
+    <path
+        android:fillColor="#787878"
+        android:pathData="M132.27,15.2V290.66C132.27,295.01 128.7,298.53 124.29,298.53H30.19C25.79,298.53 22.22,295.01 22.22,290.66V15.2C22.22,13.98 22.52,12.8 23.08,11.74C23.63,10.69 24.44,9.77 25.45,9.07L25.92,8.74C31.85,4.62 38.81,2.16 46.05,1.61C52.23,1.14 58.43,0.89 64.64,0.89H89.84C96.05,0.89 102.25,1.13 108.43,1.61H108.44C115.67,2.17 122.62,4.63 128.55,8.74L129.03,9.07C131.06,10.47 132.26,12.76 132.26,15.2H132.27Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__0_res_0x7f0800df"
+        android:pathData="M131.03,16V289.1C131.03,293.41 127.54,296.9 123.23,296.9H31.26C26.96,296.9 23.47,293.41 23.47,289.1V16C23.47,14.79 23.76,13.62 24.31,12.57C24.85,11.53 25.64,10.62 26.63,9.92L27.09,9.59C32.89,5.51 39.69,3.07 46.76,2.52C52.8,2.05 58.86,1.81 64.93,1.81H89.56C95.63,1.81 101.69,2.05 107.73,2.52H107.74C114.81,3.07 121.6,5.51 127.4,9.59L127.87,9.92C129.85,11.31 131.03,13.58 131.03,16Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__1_res_0x7f0800e0"
+        android:pathData="M125.64,16V289.1C125.64,293.41 122.5,296.9 118.62,296.9H35.85C31.98,296.9 28.84,293.41 28.84,289.1V16C28.84,14.79 29.1,13.62 29.6,12.57C30.09,11.53 30.8,10.62 31.69,9.92L32.1,9.59C37.32,5.51 43.44,3.07 49.8,2.52C55.24,2.05 60.69,1.81 66.15,1.81H88.32C93.78,1.81 99.24,2.05 104.67,2.52C111.03,3.07 117.14,5.51 122.36,9.59L122.78,9.92C124.56,11.31 125.62,13.58 125.62,16H125.64Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__2_res_0x7f0800eb"
+        android:pathData="M131.03,175.3H128.37C127.51,175.3 126.81,174.6 126.81,173.74V149.41C126.81,148.55 127.51,147.85 128.37,147.85H131.03V175.3Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__3_res_0x7f0800f6"
+        android:pathData="M131.03,142.27H128.37C127.51,142.27 126.81,141.57 126.81,140.71V116.38C126.81,115.52 127.51,114.82 128.37,114.82H131.03V142.27Z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M117.97,58.17V286.13"
+        android:strokeColor="#d1d1d1"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__4_res_0x7f080101"
+        android:pathData="M49.8,2.3V3.12C49.8,4.6 48.86,5.93 47.45,6.37C42.87,7.8 35.5,8.25 31.83,7.83L30.15,7.64C35.22,4.72 40.9,2.97 46.76,2.51C47.77,2.43 48.79,2.36 49.8,2.29V2.3Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__5_res_0x7f080106"
+        android:pathData="M104.88,2.3V3.12C104.88,4.6 105.82,5.93 107.23,6.37C111.81,7.8 119.18,8.25 122.85,7.83L124.53,7.64C119.46,4.72 113.78,2.97 107.92,2.51C106.91,2.43 105.89,2.36 104.88,2.29V2.3Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__6_res_0x7f080107"
+        android:pathData="M123.15,15.96V20.37H31.34V15.96C31.34,14.86 31.59,13.8 32.05,12.85C32.51,11.91 33.19,11.08 34.03,10.45L34.43,10.15C39.37,6.45 45.18,4.23 51.22,3.73C56.37,3.3 61.55,3.09 66.73,3.09H87.75C92.94,3.09 98.11,3.31 103.27,3.73C106.29,3.98 109.25,4.66 112.07,5.74C114.9,6.82 117.58,8.3 120.06,10.15L120.46,10.45C122.15,11.71 123.15,13.77 123.15,15.97V15.96Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__7_res_0x7f080108"
+        android:pathData="M23.46,246.98H26.12C26.98,246.98 27.68,247.68 27.68,248.54V272.87C27.68,273.73 26.98,274.43 26.12,274.43H23.46V246.98Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__8_res_0x7f080109"
+        android:pathData="M23.46,213.94H26.12C26.98,213.94 27.68,214.64 27.68,215.5V239.83C27.68,240.69 26.98,241.39 26.12,241.39H23.46V213.94Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__9_res_0x7f08010a"
+        android:pathData="M23.46,180.9H26.12C26.98,180.9 27.68,181.6 27.68,182.46V206.79C27.68,207.65 26.98,208.35 26.12,208.35H23.46V180.9Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__10_res_0x7f0800e1"
+        android:pathData="M23.46,147.86H26.12C26.98,147.86 27.68,148.56 27.68,149.42V173.75C27.68,174.61 26.98,175.31 26.12,175.31H23.46V147.86Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__11_res_0x7f0800e2"
+        android:pathData="M23.46,114.81H26.12C26.98,114.81 27.68,115.51 27.68,116.37V140.7C27.68,141.56 26.98,142.26 26.12,142.26H23.46V114.81Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__12_res_0x7f0800e3"
+        android:pathData="M23.46,81.77H26.12C26.98,81.77 27.68,82.47 27.68,83.33V107.66C27.68,108.52 26.98,109.22 26.12,109.22H23.46V81.77Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__13_res_0x7f0800e4"
+        android:pathData="M26.03,34L23.47,27.96V71.28H26.13C26.99,71.28 27.69,70.58 27.69,69.72V42.14C27.69,39.34 27.13,36.57 26.03,34Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__14_res_0x7f0800e5"
+        android:pathData="M131.03,274.43H128.37C127.51,274.43 126.81,273.73 126.81,272.87V248.54C126.81,247.68 127.51,246.98 128.37,246.98H131.03V274.43Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__15_res_0x7f0800e6"
+        android:pathData="M131.03,241.38H128.37C127.51,241.38 126.81,240.68 126.81,239.82V215.49C126.81,214.63 127.51,213.93 128.37,213.93H131.03V241.38Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__16_res_0x7f0800e7"
+        android:pathData="M131.03,208.34H128.37C127.51,208.34 126.81,207.64 126.81,206.78V182.45C126.81,181.59 127.51,180.89 128.37,180.89H131.03V208.34Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__17_res_0x7f0800e8"
+        android:pathData="M131.03,109.22H128.37C127.51,109.22 126.81,108.52 126.81,107.66V83.33C126.81,82.47 127.51,81.77 128.37,81.77H131.03V109.22Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__18_res_0x7f0800e9"
+        android:pathData="M128.46,34L131.02,27.96V71.28H128.36C127.5,71.28 126.8,70.58 126.8,69.72V42.14C126.8,39.34 127.36,36.57 128.46,34Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__19_res_0x7f0800ea"
+        android:pathData="M125.09,21.11L125.07,21.28L120.84,48.61C120.84,50.79 101.33,52.55 77.25,52.55C53.17,52.55 33.66,50.79 33.66,48.61L29.43,21.28L29.41,21.11C29.41,18.32 50.83,16.06 77.25,16.06C103.67,16.06 125.09,18.32 125.09,21.11Z"/>
+    <path
+        android:fillColor="#151a1c"
+        android:pathData="M125.09,21.11L125.07,21.28L124.96,21.97C123.18,19.35 102.5,17.29 77.25,17.29C52,17.29 31.33,19.35 29.54,21.97L29.43,21.28L29.41,21.11C29.41,18.32 50.83,16.06 77.25,16.06C103.67,16.06 125.09,18.32 125.09,21.11Z"
+        android:strokeAlpha="0.6"
+        android:fillAlpha="0.6"/>
+    <path
+        android:fillColor="#151a1c"
+        android:pathData="M121.54,44.07L120.84,48.61C120.84,50.79 101.33,52.55 77.25,52.55C53.17,52.55 33.66,50.79 33.66,48.61L32.96,44.07C36.48,45.94 54.97,47.36 77.25,47.36C99.53,47.36 118.02,45.94 121.54,44.07Z"
+        android:strokeAlpha="0.6"
+        android:fillAlpha="0.6"/>
+    <path
+        android:fillColor="#151a1c"
+        android:pathData="M26.96,30.08C26.12,30.08 25.44,29.4 25.44,28.56V21.77C25.44,21.05 26.34,20.71 26.81,21.26C27.89,22.52 28.48,24.12 28.48,25.78V28.56C28.48,29.4 27.8,30.08 26.96,30.08Z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M26.33,26.04L14.82,14.15"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__20_res_0x7f0800ec"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#151a1c"
+        android:pathData="M18.24,13.7L18.57,15.48L0.16,18.94C-0.03,17.92 0.21,16.92 0.75,16.12C1.3,15.32 2.15,14.74 3.16,14.55L15.96,12.14C17.02,11.94 18.04,12.63 18.24,13.7Z"/>
+    <path
+        android:fillColor="#4a4a4a"
+        android:pathData="M18.57,15.48C18.71,16.25 18.2,16.99 17.44,17.14L1.83,20.08C1.05,20.23 0.31,19.72 0.16,18.95L18.57,15.49V15.48Z"/>
+    <path
+        android:fillColor="#151a1c"
+        android:pathData="M127.53,30.08C128.37,30.08 129.05,29.4 129.05,28.56V21.77C129.05,21.05 128.15,20.71 127.68,21.26C126.6,22.52 126.01,24.12 126.01,25.78V28.56C126.01,29.4 126.69,30.08 127.53,30.08Z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M128.17,26.04L139.67,14.15"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__21_res_0x7f0800ed"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#151a1c"
+        android:pathData="M136.26,13.7L135.93,15.48L154.34,18.94C154.53,17.92 154.29,16.92 153.75,16.12C153.2,15.32 152.35,14.74 151.34,14.55L138.54,12.14C137.48,11.94 136.46,12.63 136.26,13.7Z"/>
+    <path
+        android:fillColor="#4a4a4a"
+        android:pathData="M135.92,15.48C135.78,16.25 136.29,16.99 137.05,17.14L152.66,20.08C153.44,20.23 154.18,19.72 154.33,18.95L135.92,15.49V15.48Z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M36.52,58.17V286.13"
+        android:strokeColor="#d1d1d1"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M50.42,60.01V99.96"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__22_res_0x7f0800ee"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M63.83,60.01V99.96"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__23_res_0x7f0800ef"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M77.25,60.01V99.96"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__24_res_0x7f0800f0"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M90.66,60.01V99.96"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__25_res_0x7f0800f1"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M104.07,60.01V99.96"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__26_res_0x7f0800f2"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M50.42,152.67V192.62"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__27_res_0x7f0800f3"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M63.83,152.67V192.62"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__28_res_0x7f0800f4"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M77.25,152.67V192.62"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__29_res_0x7f0800f5"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M90.66,152.67V192.62"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__30_res_0x7f0800f7"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M104.07,152.67V192.62"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__31_res_0x7f0800f8"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M50.42,245.33V285.28"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__32_res_0x7f0800f9"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M63.83,245.33V285.28"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__33_res_0x7f0800fa"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M77.25,245.33V285.28"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__34_res_0x7f0800fb"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M90.66,245.33V285.28"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__35_res_0x7f0800fc"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M104.07,245.33V285.28"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__36_res_0x7f0800fd"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__37_res_0x7f0800fe"
+        android:pathData="M104.94,296.9H46.54L47.76,299.87C48.7,302.16 50.94,303.66 53.41,303.66H98.05C100.53,303.66 102.76,302.16 103.7,299.87L104.92,296.9H104.94Z"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__38_res_0x7f0800ff"
+        android:pathData="M105.01,203.06H53.13C52.04,203.06 51.15,203.95 51.15,205.04V236.91C51.15,238 52.04,238.89 53.13,238.89H105.01C106.1,238.89 106.99,238 106.99,236.91V205.04C106.99,203.95 106.1,203.06 105.01,203.06Z"
+        android:strokeAlpha="0.4"
+        android:fillAlpha="0.4"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__39_res_0x7f080100"
+        android:pathData="M105.01,110.4H53.13C52.04,110.4 51.15,111.29 51.15,112.38V144.25C51.15,145.34 52.04,146.23 53.13,146.23H105.01C106.1,146.23 106.99,145.34 106.99,144.25V112.38C106.99,111.29 106.1,110.4 105.01,110.4Z"
+        android:strokeAlpha="0.4"
+        android:fillAlpha="0.4"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__40_res_0x7f080102"
+        android:pathData="M103.19,201.06H51.31C50.22,201.06 49.33,201.95 49.33,203.04V234.91C49.33,236 50.22,236.89 51.31,236.89H103.19C104.28,236.89 105.17,236 105.17,234.91V203.04C105.17,201.95 104.28,201.06 103.19,201.06Z"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__41_res_0x7f080103"
+        android:strokeWidth="1"/>
+    <path
+        android:fillColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__42_res_0x7f080104"
+        android:pathData="M103.19,108.4H51.31C50.22,108.4 49.33,109.29 49.33,110.38V142.25C49.33,143.34 50.22,144.23 51.31,144.23H103.19C104.28,144.23 105.17,143.34 105.17,142.25V110.38C105.17,109.29 104.28,108.4 103.19,108.4Z"
+        android:strokeColor="@drawable/_coi_mobywatel_feature_vehiclescollision_damage_bus__43_res_0x7f080105"
+        android:strokeWidth="1"/>
+</vector>

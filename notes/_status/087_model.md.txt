@@ -1,0 +1,1 @@
+087_model.md | SKIPPED (biblioteka: androidx.activity.ComponentActivity cz.2/4 - lifecycle/onBackPressed/ActivityResult)

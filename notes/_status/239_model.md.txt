@@ -1,0 +1,1 @@
+239_model.md | SKIPPED (biblioteka: Google Play services - Status/IBinder/LocationRequest/Parcel helper)

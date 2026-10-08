@@ -1,0 +1,1 @@
+093_model.md | SKIPPED (biblioteka: gson - ReflectiveTypeAdapterFactory cz.2)

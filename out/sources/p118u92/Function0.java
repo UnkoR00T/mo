@@ -1,0 +1,194 @@
+package p118u92;
+
+import androidx.p016lifecycle.h;
+import androidx.p016lifecycle.y0;
+import er.a;
+import er.l;
+import er.p;
+import er.q;
+import f00.d0;
+import f00.f0;
+import f00.g0;
+import f00.s;
+import fr.q0;
+import oq.i0;
+import p071kotlin.Metadata;
+import p076m2.d5;
+import p076m2.g4;
+import p076m2.r;
+import p076m2.t;
+import p114t0.f;
+import p136y9.d1;
+import p136y9.w;
+import p7.CreationExtras;
+import q7.b;
+import q7.d;
+import v92.i;
+import v92.x;
+import y2.m;
+
+/* JADX INFO: renamed from: u92.i, reason: from Kotlin metadata */
+/* JADX INFO: loaded from: classes8.dex */
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u001a\u001d\u0010\u0003\u001a\u00020\u00012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000H\u0007¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005"}, d2 = {"Lkotlin/Function0;", "Loq/i0;", "navResult", "h", "(Ler/a;Lm2/r;I)V", "heatingsupplement_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class Function0 {
+    public static final void h(final a<i0> aVar, r rVar, final int i15) {
+        int i16;
+        r rVarH = rVar.h(44218880);
+        if ((i15 & 6) == 0) {
+            i16 = (rVarH.G(aVar) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (t.k()) {
+                t.o(44218880, i16, -1, "pl.gov.coi.mobywatel.feature.heatingsupplement.presentation.HeatingSupplementNavContent (HeatingSupplementNavContent.kt:16)");
+            }
+            final s sVarJ = f00.r.J(null, rVarH, 0, 1);
+            a.b bVar = a.b.f196625a;
+            boolean zG = rVarH.G(sVarJ) | ((i16 & 14) == 4);
+            Object objE = rVarH.E();
+            if (zG || objE == r.INSTANCE.a()) {
+                objE = new l() { // from class: u92.b
+                    @Override // er.l
+                    public final Object b(Object obj) {
+                        return Function0.i(aVar, sVarJ, (d1) obj);
+                    }
+                };
+                rVarH.v(objE);
+            }
+            d0.j(sVarJ, bVar, (l) objE, rVarH, s.f54562e | 48);
+            if (t.k()) {
+                t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new p() { // from class: u92.c
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return Function0.o(aVar, i15, (r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX WARN: Multi-variable type inference failed */
+    public static final i0 i(final a aVar, final s sVar, d1 d1Var) {
+        f00.r.u(d1Var, a.b.f196625a, null, m.b(-706855935, true, new er.r() { // from class: u92.d
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return Function0.j(aVar, sVar, (f) obj, (w) obj2, (r) obj3, ((Integer) obj4).intValue());
+            }
+        }), 2, null);
+        f00.r.t(d1Var, a.C5114a.f196623a, new g0.Dialog(null, 1, 0 == true ? 1 : 0), m.b(-1805518934, true, new er.r() { // from class: u92.e
+            @Override // er.r
+            public final Object g(Object obj, Object obj2, Object obj3, Object obj4) {
+                return Function0.l(sVar, (f) obj, (w) obj2, (r) obj3, ((Integer) obj4).intValue());
+            }
+        }));
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 j(final a aVar, final s sVar, f fVar, w wVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(-706855935, i15, -1, "pl.gov.coi.mobywatel.feature.heatingsupplement.presentation.HeatingSupplementNavContent.<anonymous>.<anonymous>.<anonymous> (HeatingSupplementNavContent.kt:24)");
+        }
+        y0 y0VarC = b.f165175a.c(rVar, b.f165177c);
+        if (y0VarC == null) {
+            throw new IllegalStateException("No ViewModelStoreOwner was provided via LocalViewModelStoreOwner");
+        }
+        i iVar = (i) d.c(q0.c(i.class), y0VarC, null, j7.a.a(y0VarC, rVar, 0), y0VarC instanceof h ? ((h) y0VarC).x() : CreationExtras.b.f153222c, rVar, 0, 0);
+        xw.b<v92.a.d> bVarY1 = iVar.Y1();
+        boolean zW = rVar.W(aVar) | rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zW || objE == r.INSTANCE.a()) {
+            objE = new l() { // from class: u92.f
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.k(aVar, sVar, (v92.a.d) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (l) objE, rVar, xw.b.f221619c);
+        x.i(iVar, rVar, 0);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 k(a aVar, s sVar, v92.a.d dVar) {
+        if (fr.t.c(dVar, v92.a.d.C5359a.f205485a)) {
+            aVar.a();
+        } else {
+            if (!(dVar instanceof v92.a.d.ShowDialog)) {
+                throw new oq.p();
+            }
+            s.l(sVar, a.C5114a.f196623a, ((v92.a.d.ShowDialog) dVar).getDialogData(), null, 4, null);
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 l(final s sVar, f fVar, w wVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(-1805518934, i15, -1, "pl.gov.coi.mobywatel.feature.heatingsupplement.presentation.HeatingSupplementNavContent.<anonymous>.<anonymous>.<anonymous> (HeatingSupplementNavContent.kt:43)");
+        }
+        a.C5114a c5114a = a.C5114a.f196623a;
+        f00.r.r(wVar, c5114a, sVar.g(c5114a), m.d(265788607, true, new q() { // from class: u92.g
+            @Override // er.q
+            public final Object w(Object obj, Object obj2, Object obj3) {
+                return Function0.m(sVar, (cb4.f) obj, (r) obj2, ((Integer) obj3).intValue());
+            }
+        }, rVar, 54), rVar, ((i15 >> 3) & 14) | 3120);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 m(final s sVar, cb4.f fVar, r rVar, int i15) {
+        if (t.k()) {
+            t.o(265788607, i15, -1, "pl.gov.coi.mobywatel.feature.heatingsupplement.presentation.HeatingSupplementNavContent.<anonymous>.<anonymous>.<anonymous>.<anonymous> (HeatingSupplementNavContent.kt:47)");
+        }
+        xw.b<cb4.f.a> bVarY1 = fVar.Y1();
+        boolean zG = rVar.G(sVar);
+        Object objE = rVar.E();
+        if (zG || objE == r.INSTANCE.a()) {
+            objE = new l() { // from class: u92.h
+                @Override // er.l
+                public final Object b(Object obj) {
+                    return Function0.n(sVar, (cb4.f.a) obj);
+                }
+            };
+            rVar.v(objE);
+        }
+        f0.b(bVarY1, (l) objE, rVar, xw.b.f221619c);
+        if (t.k()) {
+            t.n();
+        }
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 n(s sVar, cb4.f.a aVar) {
+        if (!fr.t.c(aVar, cb4.f.a.C0669a.f24980a)) {
+            throw new oq.p();
+        }
+        sVar.c();
+        return i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final i0 o(a aVar, int i15, r rVar, int i16) {
+        h(aVar, rVar, g4.a(i15 | 1));
+        return i0.f148189a;
+    }
+}

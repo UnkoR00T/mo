@@ -1,0 +1,87 @@
+package eh;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class f5 implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
+        int iC = kg.b.C(parcel);
+        int iV = 0;
+        int iV2 = 0;
+        float fR = 0.0f;
+        float fR2 = 0.0f;
+        float fR3 = 0.0f;
+        float fR4 = 0.0f;
+        float fR5 = 0.0f;
+        float fR6 = 0.0f;
+        float fR7 = 0.0f;
+        float fR8 = Float.MAX_VALUE;
+        float fR9 = Float.MAX_VALUE;
+        float fR10 = Float.MAX_VALUE;
+        mc[] mcVarArr = null;
+        c2[] c2VarArr = null;
+        float fR11 = -1.0f;
+        while (parcel.dataPosition() < iC) {
+            int iT = kg.b.t(parcel);
+            switch (kg.b.n(iT)) {
+                case 1:
+                    iV = kg.b.v(parcel, iT);
+                    break;
+                case 2:
+                    iV2 = kg.b.v(parcel, iT);
+                    break;
+                case 3:
+                    fR = kg.b.r(parcel, iT);
+                    break;
+                case 4:
+                    fR2 = kg.b.r(parcel, iT);
+                    break;
+                case 5:
+                    fR3 = kg.b.r(parcel, iT);
+                    break;
+                case 6:
+                    fR4 = kg.b.r(parcel, iT);
+                    break;
+                case 7:
+                    fR8 = kg.b.r(parcel, iT);
+                    break;
+                case 8:
+                    fR9 = kg.b.r(parcel, iT);
+                    break;
+                case 9:
+                    mcVarArr = (mc[]) kg.b.k(parcel, iT, mc.CREATOR);
+                    break;
+                case 10:
+                    fR5 = kg.b.r(parcel, iT);
+                    break;
+                case 11:
+                    fR6 = kg.b.r(parcel, iT);
+                    break;
+                case 12:
+                    fR7 = kg.b.r(parcel, iT);
+                    break;
+                case 13:
+                    c2VarArr = (c2[]) kg.b.k(parcel, iT, c2.CREATOR);
+                    break;
+                case 14:
+                    fR10 = kg.b.r(parcel, iT);
+                    break;
+                case 15:
+                    fR11 = kg.b.r(parcel, iT);
+                    break;
+                default:
+                    kg.b.B(parcel, iT);
+                    break;
+            }
+        }
+        kg.b.m(parcel, iC);
+        return new e4(iV, iV2, fR, fR2, fR3, fR4, fR8, fR9, fR10, mcVarArr, fR5, fR6, fR7, c2VarArr, fR11);
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final /* synthetic */ Object[] newArray(int i15) {
+        return new e4[i15];
+    }
+}

@@ -1,0 +1,26 @@
+package eo0;
+
+import p071kotlin.Metadata;
+
+/* JADX INFO: loaded from: classes6.dex */
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\b\u0087@\u0018\u00002\u00020\u0001B\u0011\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0010\u0010\u0007\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b\u0007\u0010\bJ\u0010\u0010\n\u001a\u00020\tHÖ\u0001¢\u0006\u0004\b\n\u0010\u000b\u0088\u0001\u0003\u0092\u0001\u0004\u0018\u00010\u0002¨\u0006\f"}, d2 = {"Leo0/x;", "", "Liy/b0;", "address", "a", "(Liy/b0;)Liy/b0;", "", "d", "(Liy/b0;)Ljava/lang/String;", "", "c", "(Liy/b0;)I", "contract"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class x {
+    public static iy.b0 a(iy.b0 b0Var) {
+        return b0Var;
+    }
+
+    public static final boolean b(iy.b0 b0Var, iy.b0 b0Var2) {
+        return fr.t.c(b0Var, b0Var2);
+    }
+
+    public static int c(iy.b0 b0Var) {
+        if (b0Var == null) {
+            return 0;
+        }
+        return b0Var.hashCode();
+    }
+
+    public static String d(iy.b0 b0Var) {
+        return "EdorAddress(address=" + b0Var + ")";
+    }
+}

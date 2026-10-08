@@ -1,0 +1,8 @@
+package g43;
+
+/* JADX INFO: loaded from: classes9.dex */
+public final class i0 {
+    public static boolean a() {
+        return true;
+    }
+}

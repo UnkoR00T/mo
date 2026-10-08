@@ -1,0 +1,1 @@
+128_model.md | SKIPPED (biblioteka: FIDO2/CTAP2)

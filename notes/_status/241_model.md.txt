@@ -1,0 +1,1 @@
+241_model.md | SKIPPED (biblioteka: parcelable boilerplate - Creator dla zh.a)

@@ -1,0 +1,1 @@
+096_model.md | SKIPPED (biblioteka: parcelable boilerplate - Parcelable.Creator dla SafeParcelable ch.*)

@@ -1,0 +1,5 @@
+package rt;
+
+/* JADX INFO: loaded from: classes4.dex */
+public interface j<T> extends er.a<T> {
+}

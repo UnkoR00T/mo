@@ -1,0 +1,1 @@
+088_model.md | SKIPPED (biblioteka: androidx.activity.ComponentActivity cz.3/4 - callbacki Activity i ActivityResult)

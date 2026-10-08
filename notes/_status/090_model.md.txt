@@ -1,0 +1,1 @@
+090_model.md | SKIPPED (biblioteka: androidx.core ParcelableCreatorCompat + androidx.activity TakePicture + SafeParcelable plumbing; brak modeli domenowych aplikacji)

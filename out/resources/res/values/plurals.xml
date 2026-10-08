@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="coi_common_ui_accessibility_search_results_plurals">
+        <item quantity="zero">@string/common_accessibility_search_results_plural_zero</item>
+        <item quantity="one">@string/common_accessibility_search_results_plural_one</item>
+        <item quantity="two">@string/common_accessibility_search_results_plural_two</item>
+        <item quantity="few">@string/common_accessibility_search_results_plural_few</item>
+        <item quantity="many">@string/common_accessibility_search_results_plural_many</item>
+        <item quantity="other">@string/common_accessibility_search_results_plural_other</item>
+    </plurals>
+    <plurals name="coi_common_ui_amount_of_character_plurals">
+        <item quantity="zero">@string/common_amount_of_character_plural_zero_and</item>
+        <item quantity="one">@string/common_amount_of_character_plural_one_and</item>
+        <item quantity="two">@string/common_amount_of_character_plural_two_and</item>
+        <item quantity="few">@string/common_amount_of_character_plural_few_and</item>
+        <item quantity="many">@string/common_amount_of_character_plural_many_and</item>
+        <item quantity="other">@string/common_amount_of_character_plural_other_and</item>
+    </plurals>
+    <plurals name="coi_common_ui_day_genitive_plurals">
+        <item quantity="zero">@string/common_day_genitive_plural_zero_and</item>
+        <item quantity="one">@string/common_day_genitive_plural_one_and</item>
+        <item quantity="two">@string/common_day_genitive_plural_two_and</item>
+        <item quantity="few">@string/common_day_genitive_plural_few_and</item>
+        <item quantity="many">@string/common_day_genitive_plural_many_and</item>
+        <item quantity="other">@string/common_day_genitive_plural_other_and</item>
+    </plurals>
+    <plurals name="coi_common_ui_day_plurals">
+        <item quantity="zero">@string/common_day_plural_zero_and</item>
+        <item quantity="one">@string/common_day_plural_one_and</item>
+        <item quantity="two">@string/common_day_plural_two_and</item>
+        <item quantity="few">@string/common_day_plural_few_and</item>
+        <item quantity="many">@string/common_day_plural_many_and</item>
+        <item quantity="other">@string/common_day_plural_other_and</item>
+    </plurals>
+    <plurals name="coi_common_ui_day_plurals_with_today">
+        <item quantity="zero">@string/common_until_today</item>
+        <item quantity="one">@string/common_day_plural_one_and</item>
+        <item quantity="two">@string/common_day_plural_two_and</item>
+        <item quantity="few">@string/common_day_plural_few_and</item>
+        <item quantity="many">@string/common_day_plural_many_and</item>
+        <item quantity="other">@string/common_day_plural_other_and</item>
+    </plurals>
+    <plurals name="coi_common_ui_minutes_plurals">
+        <item quantity="zero">@string/common_minutes_plural_zero</item>
+        <item quantity="one">@string/common_minutes_plural_one</item>
+        <item quantity="two">@string/common_minutes_plural_two</item>
+        <item quantity="few">@string/common_minutes_plural_few</item>
+        <item quantity="many">@string/common_minutes_plural_many</item>
+        <item quantity="other">@string/common_minutes_plural_other</item>
+    </plurals>
+    <plurals name="coi_common_ui_seconds_plurals">
+        <item quantity="zero">@string/common_seconds_plural_zero</item>
+        <item quantity="one">@string/common_seconds_plural_one</item>
+        <item quantity="two">@string/common_seconds_plural_two</item>
+        <item quantity="few">@string/common_seconds_plural_few</item>
+        <item quantity="many">@string/common_seconds_plural_many</item>
+        <item quantity="other">@string/common_seconds_plural_other</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Fast forward %d second</item>
+        <item quantity="other">Fast forward %d seconds</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Rewind %d second</item>
+        <item quantity="other">Rewind %d seconds</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="place_details_photo_count">
+        <item quantity="one">%1$d photo</item>
+        <item quantity="other">%1$d photos</item>
+    </plurals>
+    <plurals name="place_details_ratings_content_description">
+        <item quantity="one">%1$s star</item>
+        <item quantity="other">%1$s stars</item>
+    </plurals>
+    <plurals name="place_details_review_count_a11y_label">
+        <item quantity="one">%1$d review</item>
+        <item quantity="other">%1$d reviews</item>
+    </plurals>
+</resources>

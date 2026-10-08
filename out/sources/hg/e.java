@@ -1,0 +1,262 @@
+package hg;
+
+import android.accounts.Account;
+import android.app.Activity;
+import android.content.Context;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.common.api.GoogleApiActivity;
+import com.google.android.gms.common.api.Scope;
+import hg.a.d;
+import ig.e0;
+import ig.k0;
+import ig.o;
+import ig.q;
+import ig.u;
+import ig.w;
+import ig.z0;
+import java.util.Collections;
+import java.util.Set;
+import jg.s;
+
+/* JADX INFO: loaded from: classes3.dex */
+public abstract class e<O extends hg.a.d> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private final Context f84301a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private final String f84302b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private final qg.a f84303c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    private final hg.a f84304d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    private final hg.a.d f84305e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    private final ig.b f84306f;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    private final Looper f84307g;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    private final int f84308h;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    private final f f84309i;
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    private final q f84310j;
+
+    /* JADX INFO: renamed from: k, reason: collision with root package name */
+    protected final ig.e f84311k;
+
+    public static class a {
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        public static final a f84312c = new C1950a().a();
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final q f84313a;
+
+        /* JADX INFO: renamed from: b, reason: collision with root package name */
+        public final Looper f84314b;
+
+        /* JADX INFO: renamed from: hg.e$a$a, reason: collision with other inner class name */
+        public static class C1950a {
+
+            /* JADX INFO: renamed from: a, reason: collision with root package name */
+            private q f84315a;
+
+            /* JADX INFO: renamed from: b, reason: collision with root package name */
+            private Looper f84316b;
+
+            /* JADX WARN: Multi-variable type inference failed */
+            public a a() {
+                if (this.f84315a == null) {
+                    this.f84315a = new ig.a();
+                }
+                if (this.f84316b == null) {
+                    this.f84316b = Looper.getMainLooper();
+                }
+                return new a(this.f84315a, null, this.f84316b, 0 == true ? 1 : 0);
+            }
+
+            public C1950a b(q qVar) {
+                s.m(qVar, "StatusExceptionMapper must not be null.");
+                this.f84315a = qVar;
+                return this;
+            }
+        }
+
+        private a(q qVar, Account account, Looper looper) {
+            this.f84313a = qVar;
+            this.f84314b = looper;
+        }
+
+        /* synthetic */ a(q qVar, Account account, Looper looper, byte[] bArr) {
+            this(qVar, null, looper);
+        }
+    }
+
+    private e(Context context, Activity activity, hg.a aVar, hg.a.d dVar, a aVar2) {
+        s.m(context, "Null context is not permitted.");
+        s.m(aVar, "Api must not be null.");
+        s.m(aVar2, "Settings must not be null; use Settings.DEFAULT_SETTINGS instead.");
+        Context context2 = (Context) s.m(context.getApplicationContext(), "The provided context did not have an application context.");
+        this.f84301a = context2;
+        int i15 = Build.VERSION.SDK_INT;
+        String strC = i15 >= 30 ? u5.a.c(context) : t(context);
+        this.f84302b = strC;
+        this.f84303c = i15 >= 31 ? new qg.a(context.getAttributionSource()) : null;
+        this.f84304d = aVar;
+        this.f84305e = dVar;
+        this.f84307g = aVar2.f84314b;
+        ig.b bVarA = ig.b.a(aVar, dVar, strC);
+        this.f84306f = bVarA;
+        this.f84309i = new k0(this);
+        ig.e eVarM = ig.e.m(context2);
+        this.f84311k = eVarM;
+        this.f84308h = eVarM.n();
+        this.f84310j = aVar2.f84313a;
+        if (activity != null && !(activity instanceof GoogleApiActivity) && Looper.myLooper() == Looper.getMainLooper()) {
+            w.t(activity, eVarM, bVarA);
+        }
+        eVarM.o(this);
+    }
+
+    private final com.google.android.gms.common.api.internal.a B(int i15, com.google.android.gms.common.api.internal.a aVar) {
+        aVar.h();
+        this.f84311k.t(this, i15, aVar);
+        return aVar;
+    }
+
+    private final vh.l C(int i15, ig.s sVar) {
+        vh.m mVar = new vh.m();
+        this.f84311k.u(this, i15, sVar, mVar, this.f84310j);
+        return mVar.a();
+    }
+
+    public final z0 A(Context context, Handler handler) {
+        return new z0(context, handler, m().a());
+    }
+
+    public f l() {
+        return this.f84309i;
+    }
+
+    protected jg.e.a m() {
+        Account accountB;
+        GoogleSignInAccount googleSignInAccountA;
+        GoogleSignInAccount googleSignInAccountA2;
+        jg.e.a aVar = new jg.e.a();
+        hg.a.d dVar = this.f84305e;
+        boolean z15 = dVar instanceof hg.a.d.b;
+        if (!z15 || (googleSignInAccountA2 = ((hg.a.d.b) dVar).a()) == null) {
+            accountB = dVar instanceof hg.a.d.InterfaceC1949a ? ((hg.a.d.InterfaceC1949a) dVar).b() : null;
+        } else {
+            accountB = googleSignInAccountA2.h();
+        }
+        aVar.c(accountB);
+        Set<Scope> setH = (!z15 || (googleSignInAccountA = ((hg.a.d.b) dVar).a()) == null) ? Collections.EMPTY_SET : googleSignInAccountA.H();
+        aVar.d(setH);
+        Context context = this.f84301a;
+        aVar.e(context.getClass().getName());
+        aVar.b(context.getPackageName());
+        return aVar;
+    }
+
+    public <A extends hg.a.b, T extends com.google.android.gms.common.api.internal.a<? extends l, A>> T n(T t15) {
+        B(2, t15);
+        return t15;
+    }
+
+    public <TResult, A extends hg.a.b> vh.l<TResult> o(ig.s<A, TResult> sVar) {
+        return C(2, sVar);
+    }
+
+    public <TResult, A extends hg.a.b> vh.l<TResult> p(ig.s<A, TResult> sVar) {
+        return C(0, sVar);
+    }
+
+    public <A extends hg.a.b> vh.l<Void> q(o<A, ?> oVar) {
+        s.l(oVar);
+        s.m(oVar.f92239a.b(), "Listener has already been released.");
+        u uVar = oVar.f92240b;
+        s.m(uVar.a(), "Listener has already been released.");
+        return this.f84311k.w(this, oVar.f92239a, uVar, oVar.f92241c);
+    }
+
+    public vh.l<Boolean> r(ig.j.a<?> aVar, int i15) {
+        s.m(aVar, "Listener key cannot be null.");
+        return this.f84311k.x(this, aVar, i15);
+    }
+
+    public <TResult, A extends hg.a.b> vh.l<TResult> s(ig.s<A, TResult> sVar) {
+        return C(1, sVar);
+    }
+
+    protected String t(Context context) {
+        return null;
+    }
+
+    public final ig.b<O> u() {
+        return this.f84306f;
+    }
+
+    protected String v() {
+        return this.f84302b;
+    }
+
+    public Looper w() {
+        return this.f84307g;
+    }
+
+    public <L> ig.j<L> x(L l15, String str) {
+        return ig.k.a(l15, this.f84307g, str);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public final hg.a.f y(Looper looper, e0 e0Var) {
+        jg.e eVarA = m().a();
+        hg.a.f fVarA = ((hg.a.AbstractC1948a) s.l(this.f84304d.a())).a(this.f84301a, looper, eVarA, this.f84305e, e0Var, e0Var);
+        qg.a aVar = this.f84303c;
+        if (aVar != null && (fVarA instanceof jg.c)) {
+            ((jg.c) fVarA).M(aVar);
+            return fVarA;
+        }
+        if (aVar != null && (fVarA instanceof ig.l)) {
+            ((ig.l) fVarA).p(aVar);
+            return fVarA;
+        }
+        String strV = v();
+        if (strV != null && (fVarA instanceof jg.c)) {
+            ((jg.c) fVarA).N(strV);
+        }
+        if (strV != null && (fVarA instanceof ig.l)) {
+            ((ig.l) fVarA).o(strV);
+        }
+        return fVarA;
+    }
+
+    public final int z() {
+        return this.f84308h;
+    }
+
+    public e(Context context, hg.a<O> aVar, O o15, a aVar2) {
+        this(context, null, aVar, o15, aVar2);
+    }
+
+    @Deprecated
+    public e(Context context, hg.a<O> aVar, O o15, q qVar) {
+        a.C1950a c1950a = new a.C1950a();
+        c1950a.b(qVar);
+        this(context, aVar, o15, c1950a.a());
+    }
+}

@@ -1,0 +1,265 @@
+package p010PrN;
+
+import android.R;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.res.TypedArray;
+import android.graphics.drawable.AnimatedVectorDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.text.TextUtils;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.fragment.app.n;
+import androidx.fragment.app.p;
+import androidx.p016lifecycle.c0;
+import androidx.p016lifecycle.w0;
+import io.sentry.android.core.c2;
+
+/* JADX INFO: loaded from: classes.dex */
+public class s1 extends n {
+    final Handler V0 = new Handler(Looper.getMainLooper());
+    final Runnable W0 = new a();
+    n1 X0;
+    private int Y0;
+    private int Z0;
+
+    /* JADX INFO: renamed from: a1, reason: collision with root package name */
+    private ImageView f954a1;
+
+    /* JADX INFO: renamed from: b1, reason: collision with root package name */
+    TextView f955b1;
+
+    class a implements Runnable {
+        a() {
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            s1.this.l2();
+        }
+    }
+
+    class b implements DialogInterface.OnClickListener {
+        b() {
+        }
+
+        @Override // android.content.DialogInterface.OnClickListener
+        public void onClick(DialogInterface dialogInterface, int i15) {
+            s1.this.X0.T9(true);
+        }
+    }
+
+    class c implements c0<Integer> {
+        c() {
+        }
+
+        @Override // androidx.p016lifecycle.c0
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(Integer num) {
+            s1 s1Var = s1.this;
+            s1Var.V0.removeCallbacks(s1Var.W0);
+            s1.this.n2(num.intValue());
+            s1.this.o2(num.intValue());
+            s1 s1Var2 = s1.this;
+            s1Var2.V0.postDelayed(s1Var2.W0, 2000L);
+        }
+    }
+
+    class d implements c0<CharSequence> {
+        d() {
+        }
+
+        @Override // androidx.p016lifecycle.c0
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(CharSequence charSequence) {
+            s1 s1Var = s1.this;
+            s1Var.V0.removeCallbacks(s1Var.W0);
+            s1.this.p2(charSequence);
+            s1 s1Var2 = s1.this;
+            s1Var2.V0.postDelayed(s1Var2.W0, 2000L);
+        }
+    }
+
+    private static class e {
+        static void a(Drawable drawable) {
+            if (drawable instanceof AnimatedVectorDrawable) {
+                ((AnimatedVectorDrawable) drawable).start();
+            }
+        }
+    }
+
+    private static class f {
+        static int a() {
+            return w1.f965a;
+        }
+    }
+
+    private void h2() {
+        p pVarR = r();
+        if (pVarR == null) {
+            return;
+        }
+        n1 n1Var = (n1) new w0(pVarR).a(n1.class);
+        this.X0 = n1Var;
+        n1Var.m9().i(this, new c());
+        this.X0.k9().i(this, new d());
+    }
+
+    private Drawable i2(int i15, int i16) {
+        int i17;
+        Context contextZ = z();
+        if (contextZ == null) {
+            c2.g("FingerprintFragment", "Unable to get asset. Context is null.");
+            return null;
+        }
+        if (i15 == 0 && i16 == 1) {
+            i17 = x1.f967b;
+        } else if (i15 == 1 && i16 == 2) {
+            i17 = x1.f966a;
+        } else if (i15 == 2 && i16 == 1) {
+            i17 = x1.f967b;
+        } else {
+            if (i15 != 1 || i16 != 3) {
+                return null;
+            }
+            i17 = x1.f967b;
+        }
+        return u5.a.f(contextZ, i17);
+    }
+
+    private int j2(int i15) {
+        Context contextZ = z();
+        p pVarR = r();
+        if (contextZ == null || pVarR == null) {
+            c2.g("FingerprintFragment", "Unable to get themed color. Context or activity is null.");
+            return 0;
+        }
+        TypedValue typedValue = new TypedValue();
+        contextZ.getTheme().resolveAttribute(i15, typedValue, true);
+        TypedArray typedArrayObtainStyledAttributes = pVarR.obtainStyledAttributes(typedValue.data, new int[]{i15});
+        int color = typedArrayObtainStyledAttributes.getColor(0, 0);
+        typedArrayObtainStyledAttributes.recycle();
+        return color;
+    }
+
+    static s1 k2() {
+        return new s1();
+    }
+
+    private boolean m2(int i15, int i16) {
+        if (i15 == 0 && i16 == 1) {
+            return false;
+        }
+        if (i15 == 1 && i16 == 2) {
+            return true;
+        }
+        return i15 == 2 && i16 == 1;
+    }
+
+    @Override // androidx.fragment.app.o
+    public void N0() {
+        super.N0();
+        this.V0.removeCallbacksAndMessages(null);
+    }
+
+    @Override // androidx.fragment.app.o
+    public void S0() {
+        super.S0();
+        this.X0.Q9(0);
+        this.X0.R9(1);
+        this.X0.P9(Z(a2.f862c));
+    }
+
+    @Override // androidx.fragment.app.n
+    public Dialog Z1(Bundle bundle) {
+        androidx.appcompat.app.b.a aVar = new androidx.appcompat.app.b.a(z1());
+        aVar.setTitle(this.X0.r9());
+        View viewInflate = LayoutInflater.from(aVar.getContext()).inflate(z1.f972a, (ViewGroup) null);
+        TextView textView = (TextView) viewInflate.findViewById(y1.f971d);
+        if (textView != null) {
+            CharSequence charSequenceQ9 = this.X0.q9();
+            if (TextUtils.isEmpty(charSequenceQ9)) {
+                textView.setVisibility(8);
+            } else {
+                textView.setVisibility(0);
+                textView.setText(charSequenceQ9);
+            }
+        }
+        TextView textView2 = (TextView) viewInflate.findViewById(y1.f968a);
+        if (textView2 != null) {
+            CharSequence charSequenceJ9 = this.X0.j9();
+            if (TextUtils.isEmpty(charSequenceJ9)) {
+                textView2.setVisibility(8);
+            } else {
+                textView2.setVisibility(0);
+                textView2.setText(charSequenceJ9);
+            }
+        }
+        this.f954a1 = (ImageView) viewInflate.findViewById(y1.f970c);
+        this.f955b1 = (TextView) viewInflate.findViewById(y1.f969b);
+        aVar.d(i1.c(this.X0.Z8()) ? Z(a2.f860a) : this.X0.p9(), new b());
+        aVar.setView(viewInflate);
+        androidx.appcompat.app.b bVarCreate = aVar.create();
+        bVarCreate.setCanceledOnTouchOutside(false);
+        return bVarCreate;
+    }
+
+    void l2() {
+        Context contextZ = z();
+        if (contextZ == null) {
+            c2.g("FingerprintFragment", "Not resetting the dialog. Context is null.");
+        } else {
+            this.X0.R9(1);
+            this.X0.P9(contextZ.getString(a2.f862c));
+        }
+    }
+
+    void n2(int i15) {
+        int iL9;
+        Drawable drawableI2;
+        if (this.f954a1 == null || (drawableI2 = i2((iL9 = this.X0.l9()), i15)) == null) {
+            return;
+        }
+        this.f954a1.setImageDrawable(drawableI2);
+        if (m2(iL9, i15)) {
+            e.a(drawableI2);
+        }
+        this.X0.Q9(i15);
+    }
+
+    void o2(int i15) {
+        TextView textView = this.f955b1;
+        if (textView != null) {
+            textView.setTextColor(i15 == 2 ? this.Y0 : this.Z0);
+        }
+    }
+
+    @Override // androidx.fragment.app.n, android.content.DialogInterface.OnCancelListener
+    public void onCancel(DialogInterface dialogInterface) {
+        super.onCancel(dialogInterface);
+        this.X0.N9(true);
+    }
+
+    void p2(CharSequence charSequence) {
+        TextView textView = this.f955b1;
+        if (textView != null) {
+            textView.setText(charSequence);
+        }
+    }
+
+    @Override // androidx.fragment.app.n, androidx.fragment.app.o
+    public void x0(Bundle bundle) {
+        super.x0(bundle);
+        h2();
+        this.Y0 = j2(f.a());
+        this.Z0 = j2(R.attr.textColorSecondary);
+    }
+}

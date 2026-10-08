@@ -1,0 +1,689 @@
+package ge4;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/* JADX INFO: loaded from: classes2.dex */
+final class w {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    private final Class<?> f72436a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    private final Method f72437b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private final fv.v f72438c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    final String f72439d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    private final String f72440e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    private final fv.u f72441f;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    private final fv.x f72442g;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    private final boolean f72443h;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    private final boolean f72444i;
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    private final boolean f72445j;
+
+    /* JADX INFO: renamed from: k, reason: collision with root package name */
+    private final s<?>[] f72446k;
+
+    /* JADX INFO: renamed from: l, reason: collision with root package name */
+    final boolean f72447l;
+
+    static final class a {
+
+        /* JADX INFO: renamed from: y, reason: collision with root package name */
+        private static final Pattern f72448y = Pattern.compile("\\{([a-zA-Z][a-zA-Z0-9_-]*)\\}");
+
+        /* JADX INFO: renamed from: z, reason: collision with root package name */
+        private static final Pattern f72449z = Pattern.compile("[a-zA-Z][a-zA-Z0-9_-]*");
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        final y f72450a;
+
+        /* JADX INFO: renamed from: b, reason: collision with root package name */
+        final Class<?> f72451b;
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        final Method f72452c;
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        final Annotation[] f72453d;
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        final Annotation[][] f72454e;
+
+        /* JADX INFO: renamed from: f, reason: collision with root package name */
+        final Type[] f72455f;
+
+        /* JADX INFO: renamed from: g, reason: collision with root package name */
+        boolean f72456g;
+
+        /* JADX INFO: renamed from: h, reason: collision with root package name */
+        boolean f72457h;
+
+        /* JADX INFO: renamed from: i, reason: collision with root package name */
+        boolean f72458i;
+
+        /* JADX INFO: renamed from: j, reason: collision with root package name */
+        boolean f72459j;
+
+        /* JADX INFO: renamed from: k, reason: collision with root package name */
+        boolean f72460k;
+
+        /* JADX INFO: renamed from: l, reason: collision with root package name */
+        boolean f72461l;
+
+        /* JADX INFO: renamed from: m, reason: collision with root package name */
+        boolean f72462m;
+
+        /* JADX INFO: renamed from: n, reason: collision with root package name */
+        boolean f72463n;
+
+        /* JADX INFO: renamed from: o, reason: collision with root package name */
+        String f72464o;
+
+        /* JADX INFO: renamed from: p, reason: collision with root package name */
+        boolean f72465p;
+
+        /* JADX INFO: renamed from: q, reason: collision with root package name */
+        boolean f72466q;
+
+        /* JADX INFO: renamed from: r, reason: collision with root package name */
+        boolean f72467r;
+
+        /* JADX INFO: renamed from: s, reason: collision with root package name */
+        String f72468s;
+
+        /* JADX INFO: renamed from: t, reason: collision with root package name */
+        fv.u f72469t;
+
+        /* JADX INFO: renamed from: u, reason: collision with root package name */
+        fv.x f72470u;
+
+        /* JADX INFO: renamed from: v, reason: collision with root package name */
+        Set<String> f72471v;
+
+        /* JADX INFO: renamed from: w, reason: collision with root package name */
+        s<?>[] f72472w;
+
+        /* JADX INFO: renamed from: x, reason: collision with root package name */
+        boolean f72473x;
+
+        a(y yVar, Class<?> cls, Method method) {
+            this.f72450a = yVar;
+            this.f72451b = cls;
+            this.f72452c = method;
+            this.f72453d = method.getAnnotations();
+            this.f72455f = method.getGenericParameterTypes();
+            this.f72454e = method.getParameterAnnotations();
+        }
+
+        private static Class<?> a(Class<?> cls) {
+            if (Boolean.TYPE == cls) {
+                return Boolean.class;
+            }
+            if (Byte.TYPE == cls) {
+                return Byte.class;
+            }
+            if (Character.TYPE == cls) {
+                return Character.class;
+            }
+            if (Double.TYPE == cls) {
+                return Double.class;
+            }
+            if (Float.TYPE == cls) {
+                return Float.class;
+            }
+            if (Integer.TYPE == cls) {
+                return Integer.class;
+            }
+            if (Long.TYPE == cls) {
+                return Long.class;
+            }
+            return Short.TYPE == cls ? Short.class : cls;
+        }
+
+        private fv.u c(String[] strArr, boolean z15) {
+            fv.u.a aVar = new fv.u.a();
+            for (String str : strArr) {
+                int iIndexOf = str.indexOf(58);
+                if (iIndexOf == -1 || iIndexOf == 0 || iIndexOf == str.length() - 1) {
+                    throw c0.n(this.f72452c, "@Headers value must be in the form \"Name: Value\". Found: \"%s\"", str);
+                }
+                String strSubstring = str.substring(0, iIndexOf);
+                String strTrim = str.substring(iIndexOf + 1).trim();
+                if ("Content-Type".equalsIgnoreCase(strSubstring)) {
+                    try {
+                        this.f72470u = fv.x.e(strTrim);
+                    } catch (IllegalArgumentException e15) {
+                        throw c0.o(this.f72452c, e15, "Malformed content type: %s", strTrim);
+                    }
+                } else if (z15) {
+                    aVar.e(strSubstring, strTrim);
+                } else {
+                    aVar.a(strSubstring, strTrim);
+                }
+            }
+            return aVar.f();
+        }
+
+        private void d(String str, String str2, boolean z15) {
+            String str3 = this.f72464o;
+            if (str3 != null) {
+                throw c0.n(this.f72452c, "Only one HTTP method is allowed. Found: %s and %s.", str3, str);
+            }
+            this.f72464o = str;
+            this.f72465p = z15;
+            if (str2.isEmpty()) {
+                return;
+            }
+            int iIndexOf = str2.indexOf(63);
+            if (iIndexOf != -1 && iIndexOf < str2.length() - 1) {
+                String strSubstring = str2.substring(iIndexOf + 1);
+                if (f72448y.matcher(strSubstring).find()) {
+                    throw c0.n(this.f72452c, "URL query string \"%s\" must not have replace block. For dynamic query parameters use @Query.", strSubstring);
+                }
+            }
+            this.f72468s = str2;
+            this.f72471v = h(str2);
+        }
+
+        private void e(Annotation annotation) {
+            if (annotation instanceof ie4.b) {
+                d("DELETE", ((ie4.b) annotation).value(), false);
+                return;
+            }
+            if (annotation instanceof ie4.f) {
+                d("GET", ((ie4.f) annotation).value(), false);
+                return;
+            }
+            if (annotation instanceof ie4.g) {
+                d("HEAD", ((ie4.g) annotation).value(), false);
+                return;
+            }
+            if (annotation instanceof ie4.n) {
+                d("PATCH", ((ie4.n) annotation).value(), true);
+                return;
+            }
+            if (annotation instanceof ie4.o) {
+                d("POST", ((ie4.o) annotation).value(), true);
+                return;
+            }
+            if (annotation instanceof ie4.p) {
+                d("PUT", ((ie4.p) annotation).value(), true);
+                return;
+            }
+            if (annotation instanceof ie4.m) {
+                d("OPTIONS", ((ie4.m) annotation).value(), false);
+                return;
+            }
+            if (annotation instanceof ie4.h) {
+                ie4.h hVar = (ie4.h) annotation;
+                d(hVar.method(), hVar.path(), hVar.hasBody());
+                return;
+            }
+            if (annotation instanceof ie4.k) {
+                ie4.k kVar = (ie4.k) annotation;
+                String[] strArrValue = kVar.value();
+                if (strArrValue.length == 0) {
+                    throw c0.n(this.f72452c, "@Headers annotation is empty.", new Object[0]);
+                }
+                this.f72469t = c(strArrValue, kVar.allowUnsafeNonAsciiValues());
+                return;
+            }
+            if (annotation instanceof ie4.l) {
+                if (this.f72466q) {
+                    throw c0.n(this.f72452c, "Only one encoding annotation is allowed.", new Object[0]);
+                }
+                this.f72467r = true;
+            } else if (annotation instanceof ie4.e) {
+                if (this.f72467r) {
+                    throw c0.n(this.f72452c, "Only one encoding annotation is allowed.", new Object[0]);
+                }
+                this.f72466q = true;
+            }
+        }
+
+        private s<?> f(int i15, Type type, Annotation[] annotationArr, boolean z15) {
+            s<?> sVar;
+            if (annotationArr != null) {
+                sVar = null;
+                for (Annotation annotation : annotationArr) {
+                    s<?> sVarG = g(i15, type, annotationArr, annotation);
+                    if (sVarG != null) {
+                        if (sVar != null) {
+                            throw c0.p(this.f72452c, i15, "Multiple Retrofit annotations found, only one allowed.", new Object[0]);
+                        }
+                        sVar = sVarG;
+                    }
+                }
+            } else {
+                sVar = null;
+            }
+            if (sVar != null) {
+                return sVar;
+            }
+            if (z15) {
+                try {
+                    if (c0.h(type) == tq.e.class) {
+                        this.f72473x = true;
+                        return null;
+                    }
+                } catch (NoClassDefFoundError unused) {
+                }
+            }
+            throw c0.p(this.f72452c, i15, "No Retrofit annotation found.", new Object[0]);
+        }
+
+        private s<?> g(int i15, Type type, Annotation[] annotationArr, Annotation annotation) {
+            if (annotation instanceof ie4.y) {
+                j(i15, type);
+                if (this.f72463n) {
+                    throw c0.p(this.f72452c, i15, "Multiple @Url method annotations found.", new Object[0]);
+                }
+                if (this.f72459j) {
+                    throw c0.p(this.f72452c, i15, "@Path parameters may not be used with @Url.", new Object[0]);
+                }
+                if (this.f72460k) {
+                    throw c0.p(this.f72452c, i15, "A @Url parameter must not come after a @Query.", new Object[0]);
+                }
+                if (this.f72461l) {
+                    throw c0.p(this.f72452c, i15, "A @Url parameter must not come after a @QueryName.", new Object[0]);
+                }
+                if (this.f72462m) {
+                    throw c0.p(this.f72452c, i15, "A @Url parameter must not come after a @QueryMap.", new Object[0]);
+                }
+                if (this.f72468s != null) {
+                    throw c0.p(this.f72452c, i15, "@Url cannot be used with @%s URL", this.f72464o);
+                }
+                this.f72463n = true;
+                if (type == fv.v.class || type == String.class || type == URI.class || ((type instanceof Class) && "android.net.Uri".equals(((Class) type).getName()))) {
+                    return new s.p(this.f72452c, i15);
+                }
+                throw c0.p(this.f72452c, i15, "@Url must be okhttp3.HttpUrl, String, java.net.URI, or android.net.Uri type.", new Object[0]);
+            }
+            if (annotation instanceof ie4.s) {
+                j(i15, type);
+                if (this.f72460k) {
+                    throw c0.p(this.f72452c, i15, "A @Path parameter must not come after a @Query.", new Object[0]);
+                }
+                if (this.f72461l) {
+                    throw c0.p(this.f72452c, i15, "A @Path parameter must not come after a @QueryName.", new Object[0]);
+                }
+                if (this.f72462m) {
+                    throw c0.p(this.f72452c, i15, "A @Path parameter must not come after a @QueryMap.", new Object[0]);
+                }
+                if (this.f72463n) {
+                    throw c0.p(this.f72452c, i15, "@Path parameters may not be used with @Url.", new Object[0]);
+                }
+                if (this.f72468s == null) {
+                    throw c0.p(this.f72452c, i15, "@Path can only be used with relative url on @%s", this.f72464o);
+                }
+                this.f72459j = true;
+                ie4.s sVar = (ie4.s) annotation;
+                String strValue = sVar.value();
+                i(i15, strValue);
+                return new s.k(this.f72452c, i15, strValue, this.f72450a.i(type, annotationArr), sVar.encoded());
+            }
+            if (annotation instanceof ie4.t) {
+                j(i15, type);
+                ie4.t tVar = (ie4.t) annotation;
+                String strValue2 = tVar.value();
+                boolean zEncoded = tVar.encoded();
+                Class<?> clsH = c0.h(type);
+                this.f72460k = true;
+                if (!Iterable.class.isAssignableFrom(clsH)) {
+                    if (!clsH.isArray()) {
+                        return new s.l(strValue2, this.f72450a.i(type, annotationArr), zEncoded);
+                    }
+                    return new s.l(strValue2, this.f72450a.i(a(clsH.getComponentType()), annotationArr), zEncoded).b();
+                }
+                if (type instanceof ParameterizedType) {
+                    return new s.l(strValue2, this.f72450a.i(c0.g(0, (ParameterizedType) type), annotationArr), zEncoded).c();
+                }
+                throw c0.p(this.f72452c, i15, clsH.getSimpleName() + " must include generic type (e.g., " + clsH.getSimpleName() + "<String>)", new Object[0]);
+            }
+            if (annotation instanceof ie4.v) {
+                j(i15, type);
+                boolean zEncoded2 = ((ie4.v) annotation).encoded();
+                Class<?> clsH2 = c0.h(type);
+                this.f72461l = true;
+                if (!Iterable.class.isAssignableFrom(clsH2)) {
+                    if (!clsH2.isArray()) {
+                        return new s.n(this.f72450a.i(type, annotationArr), zEncoded2);
+                    }
+                    return new s.n(this.f72450a.i(a(clsH2.getComponentType()), annotationArr), zEncoded2).b();
+                }
+                if (type instanceof ParameterizedType) {
+                    return new s.n(this.f72450a.i(c0.g(0, (ParameterizedType) type), annotationArr), zEncoded2).c();
+                }
+                throw c0.p(this.f72452c, i15, clsH2.getSimpleName() + " must include generic type (e.g., " + clsH2.getSimpleName() + "<String>)", new Object[0]);
+            }
+            if (annotation instanceof ie4.u) {
+                j(i15, type);
+                Class<?> clsH3 = c0.h(type);
+                this.f72462m = true;
+                if (!Map.class.isAssignableFrom(clsH3)) {
+                    throw c0.p(this.f72452c, i15, "@QueryMap parameter type must be Map.", new Object[0]);
+                }
+                Type typeI = c0.i(type, clsH3, Map.class);
+                if (!(typeI instanceof ParameterizedType)) {
+                    throw c0.p(this.f72452c, i15, "Map must include generic types (e.g., Map<String, String>)", new Object[0]);
+                }
+                ParameterizedType parameterizedType = (ParameterizedType) typeI;
+                Type typeG = c0.g(0, parameterizedType);
+                if (String.class == typeG) {
+                    return new s.m(this.f72452c, i15, this.f72450a.i(c0.g(1, parameterizedType), annotationArr), ((ie4.u) annotation).encoded());
+                }
+                throw c0.p(this.f72452c, i15, "@QueryMap keys must be of type String: " + typeG, new Object[0]);
+            }
+            if (annotation instanceof ie4.i) {
+                j(i15, type);
+                ie4.i iVar = (ie4.i) annotation;
+                String strValue3 = iVar.value();
+                Class<?> clsH4 = c0.h(type);
+                if (!Iterable.class.isAssignableFrom(clsH4)) {
+                    if (!clsH4.isArray()) {
+                        return new s.f(strValue3, this.f72450a.i(type, annotationArr), iVar.allowUnsafeNonAsciiValues());
+                    }
+                    return new s.f(strValue3, this.f72450a.i(a(clsH4.getComponentType()), annotationArr), iVar.allowUnsafeNonAsciiValues()).b();
+                }
+                if (type instanceof ParameterizedType) {
+                    return new s.f(strValue3, this.f72450a.i(c0.g(0, (ParameterizedType) type), annotationArr), iVar.allowUnsafeNonAsciiValues()).c();
+                }
+                throw c0.p(this.f72452c, i15, clsH4.getSimpleName() + " must include generic type (e.g., " + clsH4.getSimpleName() + "<String>)", new Object[0]);
+            }
+            if (annotation instanceof ie4.j) {
+                if (type == fv.u.class) {
+                    return new s.h(this.f72452c, i15);
+                }
+                j(i15, type);
+                Class<?> clsH5 = c0.h(type);
+                if (!Map.class.isAssignableFrom(clsH5)) {
+                    throw c0.p(this.f72452c, i15, "@HeaderMap parameter type must be Map or Headers.", new Object[0]);
+                }
+                Type typeI2 = c0.i(type, clsH5, Map.class);
+                if (!(typeI2 instanceof ParameterizedType)) {
+                    throw c0.p(this.f72452c, i15, "Map must include generic types (e.g., Map<String, String>)", new Object[0]);
+                }
+                ParameterizedType parameterizedType2 = (ParameterizedType) typeI2;
+                Type typeG2 = c0.g(0, parameterizedType2);
+                if (String.class == typeG2) {
+                    return new s.g(this.f72452c, i15, this.f72450a.i(c0.g(1, parameterizedType2), annotationArr), ((ie4.j) annotation).allowUnsafeNonAsciiValues());
+                }
+                throw c0.p(this.f72452c, i15, "@HeaderMap keys must be of type String: " + typeG2, new Object[0]);
+            }
+            if (annotation instanceof ie4.c) {
+                j(i15, type);
+                if (!this.f72466q) {
+                    throw c0.p(this.f72452c, i15, "@Field parameters can only be used with form encoding.", new Object[0]);
+                }
+                ie4.c cVar = (ie4.c) annotation;
+                String strValue4 = cVar.value();
+                boolean zEncoded3 = cVar.encoded();
+                this.f72456g = true;
+                Class<?> clsH6 = c0.h(type);
+                if (!Iterable.class.isAssignableFrom(clsH6)) {
+                    if (!clsH6.isArray()) {
+                        return new s.d(strValue4, this.f72450a.i(type, annotationArr), zEncoded3);
+                    }
+                    return new s.d(strValue4, this.f72450a.i(a(clsH6.getComponentType()), annotationArr), zEncoded3).b();
+                }
+                if (type instanceof ParameterizedType) {
+                    return new s.d(strValue4, this.f72450a.i(c0.g(0, (ParameterizedType) type), annotationArr), zEncoded3).c();
+                }
+                throw c0.p(this.f72452c, i15, clsH6.getSimpleName() + " must include generic type (e.g., " + clsH6.getSimpleName() + "<String>)", new Object[0]);
+            }
+            if (annotation instanceof ie4.d) {
+                j(i15, type);
+                if (!this.f72466q) {
+                    throw c0.p(this.f72452c, i15, "@FieldMap parameters can only be used with form encoding.", new Object[0]);
+                }
+                Class<?> clsH7 = c0.h(type);
+                if (!Map.class.isAssignableFrom(clsH7)) {
+                    throw c0.p(this.f72452c, i15, "@FieldMap parameter type must be Map.", new Object[0]);
+                }
+                Type typeI3 = c0.i(type, clsH7, Map.class);
+                if (!(typeI3 instanceof ParameterizedType)) {
+                    throw c0.p(this.f72452c, i15, "Map must include generic types (e.g., Map<String, String>)", new Object[0]);
+                }
+                ParameterizedType parameterizedType3 = (ParameterizedType) typeI3;
+                Type typeG3 = c0.g(0, parameterizedType3);
+                if (String.class == typeG3) {
+                    h hVarI = this.f72450a.i(c0.g(1, parameterizedType3), annotationArr);
+                    this.f72456g = true;
+                    return new s.e(this.f72452c, i15, hVarI, ((ie4.d) annotation).encoded());
+                }
+                throw c0.p(this.f72452c, i15, "@FieldMap keys must be of type String: " + typeG3, new Object[0]);
+            }
+            if (!(annotation instanceof ie4.q)) {
+                if (annotation instanceof ie4.r) {
+                    j(i15, type);
+                    if (!this.f72467r) {
+                        throw c0.p(this.f72452c, i15, "@PartMap parameters can only be used with multipart encoding.", new Object[0]);
+                    }
+                    this.f72457h = true;
+                    Class<?> clsH8 = c0.h(type);
+                    if (!Map.class.isAssignableFrom(clsH8)) {
+                        throw c0.p(this.f72452c, i15, "@PartMap parameter type must be Map.", new Object[0]);
+                    }
+                    Type typeI4 = c0.i(type, clsH8, Map.class);
+                    if (!(typeI4 instanceof ParameterizedType)) {
+                        throw c0.p(this.f72452c, i15, "Map must include generic types (e.g., Map<String, String>)", new Object[0]);
+                    }
+                    ParameterizedType parameterizedType4 = (ParameterizedType) typeI4;
+                    Type typeG4 = c0.g(0, parameterizedType4);
+                    if (String.class == typeG4) {
+                        Type typeG5 = c0.g(1, parameterizedType4);
+                        if (fv.y.c.class.isAssignableFrom(c0.h(typeG5))) {
+                            throw c0.p(this.f72452c, i15, "@PartMap values cannot be MultipartBody.Part. Use @Part List<Part> or a different value type instead.", new Object[0]);
+                        }
+                        return new s.j(this.f72452c, i15, this.f72450a.g(typeG5, annotationArr, this.f72453d), ((ie4.r) annotation).encoding());
+                    }
+                    throw c0.p(this.f72452c, i15, "@PartMap keys must be of type String: " + typeG4, new Object[0]);
+                }
+                if (annotation instanceof ie4.a) {
+                    j(i15, type);
+                    if (this.f72466q || this.f72467r) {
+                        throw c0.p(this.f72452c, i15, "@Body parameters cannot be used with form or multi-part encoding.", new Object[0]);
+                    }
+                    if (this.f72458i) {
+                        throw c0.p(this.f72452c, i15, "Multiple @Body method annotations found.", new Object[0]);
+                    }
+                    try {
+                        h hVarG = this.f72450a.g(type, annotationArr, this.f72453d);
+                        this.f72458i = true;
+                        return new s.c(this.f72452c, i15, hVarG);
+                    } catch (RuntimeException e15) {
+                        throw c0.q(this.f72452c, e15, i15, "Unable to create @Body converter for %s", type);
+                    }
+                }
+                if (!(annotation instanceof ie4.x)) {
+                    return null;
+                }
+                j(i15, type);
+                Class<?> clsA = a(c0.h(type));
+                for (int i16 = i15 - 1; i16 >= 0; i16--) {
+                    s<?> sVar2 = this.f72472w[i16];
+                    if ((sVar2 instanceof s.q) && ((s.q) sVar2).f72417a.equals(clsA)) {
+                        throw c0.p(this.f72452c, i15, "@Tag type " + clsA.getName() + " is duplicate of " + t.f72419b.a(this.f72452c, i16) + " and would always overwrite its value.", new Object[0]);
+                    }
+                }
+                return new s.q(clsA);
+            }
+            j(i15, type);
+            if (!this.f72467r) {
+                throw c0.p(this.f72452c, i15, "@Part parameters can only be used with multipart encoding.", new Object[0]);
+            }
+            ie4.q qVar = (ie4.q) annotation;
+            this.f72457h = true;
+            String strValue5 = qVar.value();
+            Class<?> clsH9 = c0.h(type);
+            if (strValue5.isEmpty()) {
+                if (!Iterable.class.isAssignableFrom(clsH9)) {
+                    if (clsH9.isArray()) {
+                        if (fv.y.c.class.isAssignableFrom(clsH9.getComponentType())) {
+                            return s.o.f72414a.b();
+                        }
+                        throw c0.p(this.f72452c, i15, "@Part annotation must supply a name or use MultipartBody.Part parameter type.", new Object[0]);
+                    }
+                    if (fv.y.c.class.isAssignableFrom(clsH9)) {
+                        return s.o.f72414a;
+                    }
+                    throw c0.p(this.f72452c, i15, "@Part annotation must supply a name or use MultipartBody.Part parameter type.", new Object[0]);
+                }
+                if (type instanceof ParameterizedType) {
+                    if (fv.y.c.class.isAssignableFrom(c0.h(c0.g(0, (ParameterizedType) type)))) {
+                        return s.o.f72414a.c();
+                    }
+                    throw c0.p(this.f72452c, i15, "@Part annotation must supply a name or use MultipartBody.Part parameter type.", new Object[0]);
+                }
+                throw c0.p(this.f72452c, i15, clsH9.getSimpleName() + " must include generic type (e.g., " + clsH9.getSimpleName() + "<String>)", new Object[0]);
+            }
+            fv.u uVarH = fv.u.h("Content-Disposition", "form-data; name=\"" + strValue5 + "\"", "Content-Transfer-Encoding", qVar.encoding());
+            if (!Iterable.class.isAssignableFrom(clsH9)) {
+                if (!clsH9.isArray()) {
+                    if (fv.y.c.class.isAssignableFrom(clsH9)) {
+                        throw c0.p(this.f72452c, i15, "@Part parameters using the MultipartBody.Part must not include a part name in the annotation.", new Object[0]);
+                    }
+                    return new s.i(this.f72452c, i15, uVarH, this.f72450a.g(type, annotationArr, this.f72453d));
+                }
+                Class<?> clsA2 = a(clsH9.getComponentType());
+                if (fv.y.c.class.isAssignableFrom(clsA2)) {
+                    throw c0.p(this.f72452c, i15, "@Part parameters using the MultipartBody.Part must not include a part name in the annotation.", new Object[0]);
+                }
+                return new s.i(this.f72452c, i15, uVarH, this.f72450a.g(clsA2, annotationArr, this.f72453d)).b();
+            }
+            if (type instanceof ParameterizedType) {
+                Type typeG6 = c0.g(0, (ParameterizedType) type);
+                if (fv.y.c.class.isAssignableFrom(c0.h(typeG6))) {
+                    throw c0.p(this.f72452c, i15, "@Part parameters using the MultipartBody.Part must not include a part name in the annotation.", new Object[0]);
+                }
+                return new s.i(this.f72452c, i15, uVarH, this.f72450a.g(typeG6, annotationArr, this.f72453d)).c();
+            }
+            throw c0.p(this.f72452c, i15, clsH9.getSimpleName() + " must include generic type (e.g., " + clsH9.getSimpleName() + "<String>)", new Object[0]);
+        }
+
+        static Set<String> h(String str) {
+            Matcher matcher = f72448y.matcher(str);
+            LinkedHashSet linkedHashSet = new LinkedHashSet();
+            while (matcher.find()) {
+                linkedHashSet.add(matcher.group(1));
+            }
+            return linkedHashSet;
+        }
+
+        private void i(int i15, String str) {
+            if (!f72449z.matcher(str).matches()) {
+                throw c0.p(this.f72452c, i15, "@Path parameter name must match %s. Found: %s", f72448y.pattern(), str);
+            }
+            if (!this.f72471v.contains(str)) {
+                throw c0.p(this.f72452c, i15, "URL \"%s\" does not contain \"{%s}\".", this.f72468s, str);
+            }
+        }
+
+        private void j(int i15, Type type) {
+            if (c0.j(type)) {
+                throw c0.p(this.f72452c, i15, "Parameter type must not include a type variable or wildcard: %s", type);
+            }
+        }
+
+        w b() {
+            for (Annotation annotation : this.f72453d) {
+                e(annotation);
+            }
+            if (this.f72464o == null) {
+                throw c0.n(this.f72452c, "HTTP method annotation is required (e.g., @GET, @POST, etc.).", new Object[0]);
+            }
+            if (!this.f72465p) {
+                if (this.f72467r) {
+                    throw c0.n(this.f72452c, "Multipart can only be specified on HTTP methods with request body (e.g., @POST).", new Object[0]);
+                }
+                if (this.f72466q) {
+                    throw c0.n(this.f72452c, "FormUrlEncoded can only be specified on HTTP methods with request body (e.g., @POST).", new Object[0]);
+                }
+            }
+            int length = this.f72454e.length;
+            this.f72472w = new s[length];
+            int i15 = length - 1;
+            int i16 = 0;
+            while (i16 < length) {
+                this.f72472w[i16] = f(i16, this.f72455f[i16], this.f72454e[i16], i16 == i15);
+                i16++;
+            }
+            if (this.f72468s == null && !this.f72463n) {
+                throw c0.n(this.f72452c, "Missing either @%s URL or @Url parameter.", this.f72464o);
+            }
+            boolean z15 = this.f72466q;
+            if (!z15 && !this.f72467r && !this.f72465p && this.f72458i) {
+                throw c0.n(this.f72452c, "Non-body HTTP method cannot contain @Body.", new Object[0]);
+            }
+            if (z15 && !this.f72456g) {
+                throw c0.n(this.f72452c, "Form-encoded method must contain at least one @Field.", new Object[0]);
+            }
+            if (!this.f72467r || this.f72457h) {
+                return new w(this);
+            }
+            throw c0.n(this.f72452c, "Multipart method must contain at least one @Part.", new Object[0]);
+        }
+    }
+
+    w(a aVar) {
+        this.f72436a = aVar.f72451b;
+        this.f72437b = aVar.f72452c;
+        this.f72438c = aVar.f72450a.f72479c;
+        this.f72439d = aVar.f72464o;
+        this.f72440e = aVar.f72468s;
+        this.f72441f = aVar.f72469t;
+        this.f72442g = aVar.f72470u;
+        this.f72443h = aVar.f72465p;
+        this.f72444i = aVar.f72466q;
+        this.f72445j = aVar.f72467r;
+        this.f72446k = aVar.f72472w;
+        this.f72447l = aVar.f72473x;
+    }
+
+    static w b(y yVar, Class<?> cls, Method method) {
+        return new a(yVar, cls, method).b();
+    }
+
+    fv.b0 a(Object obj, Object[] objArr) {
+        s<?>[] sVarArr = this.f72446k;
+        int length = objArr.length;
+        if (length != sVarArr.length) {
+            throw new IllegalArgumentException("Argument count (" + length + ") doesn't match expected count (" + sVarArr.length + ")");
+        }
+        v vVar = new v(this.f72439d, this.f72438c, this.f72440e, this.f72441f, this.f72442g, this.f72443h, this.f72444i, this.f72445j);
+        if (this.f72447l) {
+            length--;
+        }
+        ArrayList arrayList = new ArrayList(length);
+        for (int i15 = 0; i15 < length; i15++) {
+            arrayList.add(objArr[i15]);
+            sVarArr[i15].a(vVar, objArr[i15]);
+        }
+        return vVar.k().i(o.class, new o(this.f72436a, obj, this.f72437b, arrayList)).b();
+    }
+}

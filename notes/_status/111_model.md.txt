@@ -1,0 +1,1 @@
+111_model.md | SKIPPED (biblioteka: GMS parcelable)

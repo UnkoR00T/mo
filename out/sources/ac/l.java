@@ -1,0 +1,63 @@
+package ac;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import p071kotlin.Metadata;
+import ub.w;
+
+/* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0017\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005¢\u0006\u0004\b\u0007\u0010\bJ\u000f\u0010\t\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\u000e\u001a\u00020\r2\u0006\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\u000e\u0010\u000fR\u0014\u0010\u0013\u001a\u00020\u00108VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0012¨\u0006\u0014"}, d2 = {"Lac/l;", "Lac/e;", "", "Landroid/content/Context;", "context", "Lec/b;", "taskExecutor", "<init>", "(Landroid/content/Context;Lec/b;)V", "m", "()Ljava/lang/Boolean;", "Landroid/content/Intent;", "intent", "Loq/i0;", "l", "(Landroid/content/Intent;)V", "Landroid/content/IntentFilter;", "k", "()Landroid/content/IntentFilter;", "intentFilter", "work-runtime_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class l extends e<Boolean> {
+    public l(Context context, ec.b bVar) {
+        super(context, bVar);
+    }
+
+    @Override // ac.e
+    public IntentFilter k() {
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("android.intent.action.DEVICE_STORAGE_OK");
+        intentFilter.addAction("android.intent.action.DEVICE_STORAGE_LOW");
+        return intentFilter;
+    }
+
+    @Override // ac.e
+    public void l(Intent intent) {
+        if (intent.getAction() == null) {
+            return;
+        }
+        w.e().a(m.f5339a, "Received " + intent.getAction());
+        String action = intent.getAction();
+        if (action != null) {
+            int iHashCode = action.hashCode();
+            if (iHashCode == -1181163412) {
+                if (action.equals("android.intent.action.DEVICE_STORAGE_LOW")) {
+                    h(Boolean.FALSE);
+                }
+            } else if (iHashCode == -730838620 && action.equals("android.intent.action.DEVICE_STORAGE_OK")) {
+                h(Boolean.TRUE);
+            }
+        }
+    }
+
+    @Override // ac.h
+    /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+    public Boolean f() {
+        Intent intentRegisterReceiver = getAppContext().registerReceiver(null, k());
+        boolean z15 = true;
+        if (intentRegisterReceiver != null && intentRegisterReceiver.getAction() != null) {
+            String action = intentRegisterReceiver.getAction();
+            if (action == null) {
+                z15 = false;
+            } else {
+                int iHashCode = action.hashCode();
+                if (iHashCode == -1181163412) {
+                    action.equals("android.intent.action.DEVICE_STORAGE_LOW");
+                } else if (iHashCode != -730838620 || !action.equals("android.intent.action.DEVICE_STORAGE_OK")) {
+                }
+                z15 = false;
+            }
+        }
+        return Boolean.valueOf(z15);
+    }
+}

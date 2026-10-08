@@ -1,0 +1,1 @@
+023_net.md | SKIPPED (biblioteka: androidx.camera-camera2-pipe)

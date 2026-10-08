@@ -1,0 +1,65 @@
+package x20;
+
+import android.app.ActivityManager;
+import android.content.Context;
+import android.view.TextureView;
+
+/* JADX INFO: loaded from: classes5.dex */
+public abstract class d extends TextureView {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    protected a f216517a;
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    protected b f216518b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    protected f f216519c;
+
+    public d(Context context, b bVar, a aVar) {
+        super(context);
+        a(bVar, aVar);
+    }
+
+    private void a(b bVar, a aVar) {
+        this.f216518b = bVar;
+        this.f216517a = aVar;
+        if (c()) {
+            f();
+        }
+    }
+
+    private boolean b(ActivityManager activityManager) {
+        return activityManager.getDeviceConfigurationInfo().reqGlEsVersion >= 131072;
+    }
+
+    private boolean c() {
+        ActivityManager activityManager = (ActivityManager) getContext().getSystemService("activity");
+        return activityManager != null && b(activityManager);
+    }
+
+    private void f() {
+        f fVar = new f(new e(this.f216518b, this.f216517a));
+        this.f216519c = fVar;
+        setSurfaceTextureListener(fVar);
+        setOpaque(false);
+    }
+
+    public void d() {
+        a aVar = this.f216517a;
+        if (aVar != null) {
+            aVar.c();
+        }
+    }
+
+    public void e() {
+        a aVar = this.f216517a;
+        if (aVar != null) {
+            aVar.b();
+        }
+    }
+
+    public f getSurface() {
+        return this.f216519c;
+    }
+}

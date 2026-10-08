@@ -1,0 +1,9 @@
+package v;
+
+/* JADX INFO: loaded from: classes.dex */
+public enum x {
+    UNKNOWN,
+    OFF,
+    ON_MANUAL_AUTO,
+    ON_CONTINUOUS_AUTO
+}

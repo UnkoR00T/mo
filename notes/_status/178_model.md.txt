@@ -1,0 +1,1 @@
+178_model.md | SKIPPED (biblioteka: androidx.compose.runtime - Parcelable Mutable*State)

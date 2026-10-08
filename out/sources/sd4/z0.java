@@ -1,0 +1,201 @@
+package sd4;
+
+import android.os.Build;
+import android.os.Bundle;
+import p071kotlin.Metadata;
+import p077m74.Function0;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\b\b\u0007\u0018\u0000 \u001d2\u00020\u0001:\u0001\u001eB\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0017¢\u0006\u0004\b\u0005\u0010\u0006R\"\u0010\u000e\u001a\u00020\u00078\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\b\u0010\t\u001a\u0004\b\n\u0010\u000b\"\u0004\b\f\u0010\rR\"\u0010\u0016\u001a\u00020\u000f8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\u0010\u0010\u0011\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015R\u001b\u0010\u001c\u001a\u00020\u00178BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u001a\u0010\u001b¨\u0006\u001f"}, d2 = {"Lsd4/z0;", "Lj00/b;", "<init>", "()V", "Loq/i0;", "S1", "(Lm2/r;I)V", "Lgx/d;", "L0", "Lgx/d;", "i2", "()Lgx/d;", "setGlobalEventManager", "(Lgx/d;)V", "globalEventManager", "Lrh2/a;", "M0", "Lrh2/a;", "h2", "()Lrh2/a;", "setFragmentNavigator", "(Lrh2/a;)V", "fragmentNavigator", "Ll74/b;", "N0", "Loq/k;", "j2", "()Ll74/b;", "lockEntryPoint", "O0", "a", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class z0 extends c8 {
+
+    /* JADX INFO: renamed from: O0, reason: from kotlin metadata */
+    public static final Companion INSTANCE = new Companion(null);
+    public static final int P0 = 8;
+
+    /* JADX INFO: renamed from: L0, reason: from kotlin metadata */
+    public gx.d globalEventManager;
+
+    /* JADX INFO: renamed from: M0, reason: from kotlin metadata */
+    public rh2.a fragmentNavigator;
+
+    /* JADX INFO: renamed from: N0, reason: from kotlin metadata */
+    private final oq.k lockEntryPoint = oq.l.a(new er.a() { // from class: sd4.u0
+        @Override // er.a
+        public final Object a() {
+            return z0.k2(this.f180879a);
+        }
+    });
+
+    /* JADX INFO: renamed from: sd4.z0$a, reason: from kotlin metadata */
+    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0015\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0007\u0010\bR\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\b\n\u0010\u000bR\u0014\u0010\f\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\b\f\u0010\u000b¨\u0006\r"}, d2 = {"Lsd4/z0$a;", "", "<init>", "()V", "Ll74/b;", "lockEntryPoint", "Lsd4/z0;", "a", "(Ll74/b;)Lsd4/z0;", "", "APPLICATION_LOCK_ENTRY_POINT", "Ljava/lang/String;", "TAG_APPLICATION_LOCK", "mObywatel_prodRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class Companion {
+        public /* synthetic */ Companion(fr.k kVar) {
+            this();
+        }
+
+        public final z0 a(l74.b lockEntryPoint) {
+            z0 z0Var = new z0();
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("applicationLockEntryPoint", lockEntryPoint);
+            z0Var.F1(bundle);
+            return z0Var;
+        }
+
+        private Companion() {
+        }
+    }
+
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    public static final /* synthetic */ class b {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f180964a;
+
+        static {
+            int[] iArr = new int[l74.b.values().length];
+            try {
+                iArr[l74.b.LOGIN.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                iArr[l74.b.INSTITUTION_PIN.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            f180964a = iArr;
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 d2(final z0 z0Var, p076m2.r rVar, int i15) {
+        if (rVar.r((i15 & 3) != 2, i15 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(-1775450924, i15, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.ApplicationLockFeatureFragment.GetContent.<anonymous> (ApplicationLockFeatureFragment.kt:38)");
+            }
+            boolean zG = rVar.G(z0Var);
+            Object objE = rVar.E();
+            if (zG || objE == p076m2.r.INSTANCE.a()) {
+                objE = new er.a() { // from class: sd4.x0
+                    @Override // er.a
+                    public final Object a() {
+                        return z0.e2(this.f180931a);
+                    }
+                };
+                rVar.v(objE);
+            }
+            er.a aVar = (er.a) objE;
+            boolean zG2 = rVar.G(z0Var);
+            Object objE2 = rVar.E();
+            if (zG2 || objE2 == p076m2.r.INSTANCE.a()) {
+                objE2 = new er.a() { // from class: sd4.y0
+                    @Override // er.a
+                    public final Object a() {
+                        return z0.f2(this.f180947a);
+                    }
+                };
+                rVar.v(objE2);
+            }
+            Function0.j(aVar, (er.a) objE2, z0Var.j2(), rVar, 0);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVar.O();
+        }
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 e2(z0 z0Var) {
+        int i15 = b.f180964a[z0Var.j2().ordinal()];
+        if (i15 == 1) {
+            z0Var.i2().c(new tj2.b.ToLogin(new tj2.b.ToLogin.AbstractC4973a.Default(false, 1, null)));
+        } else {
+            if (i15 != 2) {
+                throw new oq.p();
+            }
+            z0Var.h2().c("ApplicationLockFragment");
+        }
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 f2(z0 z0Var) {
+        z0Var.i2().c(new po2.a.ToOnboarding(true, false, false, 6, null));
+        return oq.i0.f148189a;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final oq.i0 g2(z0 z0Var, int i15, p076m2.r rVar, int i16) {
+        z0Var.S1(rVar, p076m2.g4.a(i15 | 1));
+        return oq.i0.f148189a;
+    }
+
+    private final l74.b j2() {
+        return (l74.b) this.lockEntryPoint.getValue();
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final l74.b k2(z0 z0Var) {
+        Bundle bundleV = z0Var.v();
+        if (bundleV != null) {
+            l74.b bVar = Build.VERSION.SDK_INT >= 33 ? (l74.b) bundleV.getSerializable("applicationLockEntryPoint", l74.b.class) : (l74.b) bundleV.getSerializable("applicationLockEntryPoint");
+            if (bVar != null) {
+                return bVar;
+            }
+        }
+        return l74.b.LOGIN;
+    }
+
+    @Override // j00.b
+    public void S1(p076m2.r rVar, final int i15) {
+        int i16;
+        p076m2.r rVarH = rVar.h(890858112);
+        if ((i15 & 6) == 0) {
+            i16 = (rVarH.G(this) ? 4 : 2) | i15;
+        } else {
+            i16 = i15;
+        }
+        if (rVarH.r((i16 & 3) != 2, i16 & 1)) {
+            if (p076m2.t.k()) {
+                p076m2.t.o(890858112, i16, -1, "pl.gov.mc.fringers.mobywatel.view.fragment.feature.ApplicationLockFeatureFragment.GetContent (ApplicationLockFeatureFragment.kt:36)");
+            }
+            mc4.d.d(false, y2.m.d(-1775450924, true, new er.p() { // from class: sd4.v0
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return z0.d2(this.f180897a, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            }, rVarH, 54), rVarH, 48, 1);
+            if (p076m2.t.k()) {
+                p076m2.t.n();
+            }
+        } else {
+            rVarH.O();
+        }
+        p076m2.d5 d5VarM = rVarH.m();
+        if (d5VarM != null) {
+            d5VarM.a(new er.p() { // from class: sd4.w0
+                @Override // er.p
+                public final Object B(Object obj, Object obj2) {
+                    return z0.g2(this.f180914a, i15, (p076m2.r) obj, ((Integer) obj2).intValue());
+                }
+            });
+        }
+    }
+
+    public final rh2.a h2() {
+        rh2.a aVar = this.fragmentNavigator;
+        if (aVar != null) {
+            return aVar;
+        }
+        return null;
+    }
+
+    public final gx.d i2() {
+        gx.d dVar = this.globalEventManager;
+        if (dVar != null) {
+            return dVar;
+        }
+        return null;
+    }
+}

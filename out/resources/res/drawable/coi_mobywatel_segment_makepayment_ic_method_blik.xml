@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="204dp"
+    android:width="204dp"
+    android:viewportWidth="204"
+    android:viewportHeight="204">
+    <group>
+        <clip-path android:pathData="M0,0h203.68v203.68h-203.68z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M178.56,0H25.12C11.26,0 0,11.26 0,25.1V178.6C0,192.44 11.26,203.68 25.12,203.68H178.56C192.4,203.68 203.68,192.42 203.68,178.6V25.1C203.68,11.26 192.42,0 178.56,0Z"/>
+        <path
+            android:fillColor="@drawable/_coi_mobywatel_segment_makepayment_ic_method_blik__0_res_0x7f0802ad"
+            android:pathData="M25.1,2.62H178.6C191,2.62 201.06,12.68 201.06,25.08V178.58C201.06,190.98 191,201.04 178.6,201.04H25.08C12.68,201.04 2.62,190.98 2.62,178.58V25.1C2.62,12.7 12.7,2.62 25.1,2.62Z"/>
+        <path
+            android:fillColor="@drawable/_coi_mobywatel_segment_makepayment_ic_method_blik__1_res_0x7f0802ae"
+            android:pathData="M149.54,49.05C149.63,36.62 139.62,26.48 127.2,26.39C114.77,26.31 104.63,36.31 104.54,48.74C104.46,61.17 114.46,71.31 126.89,71.39C139.32,71.48 149.46,61.47 149.54,49.05Z"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M101.84,81.9C93.68,81.9 86,83.96 79.28,87.56V33.62H54.14V129.6C54.14,155.94 75.5,177.3 101.84,177.3C128.18,177.3 149.54,155.94 149.54,129.6C149.54,103.26 128.18,81.92 101.84,81.92V81.9ZM101.84,152.54C89.16,152.54 78.88,142.28 78.88,129.58C78.88,116.88 89.16,106.62 101.84,106.62C114.52,106.62 124.8,116.9 124.8,129.58C124.8,142.26 114.52,152.54 101.84,152.54Z"/>
+    </group>
+</vector>

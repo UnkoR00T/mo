@@ -1,0 +1,202 @@
+package p087nuL;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
+import android.os.Build;
+import android.os.ext.SdkExtensions;
+import oq.p;
+import p006NUl.k;
+import p071kotlin.Metadata;
+import pq.v;
+
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\n\b\u0016\u0018\u0000 \u00142\u0010\u0012\u0004\u0012\u00020\u0002\u0012\u0006\u0012\u0004\u0018\u00010\u00030\u0001:\b\u0014\u0015\n\u0016\u0017\u0012\r\u0018B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J\u001f\u0010\n\u001a\u00020\t2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u0002H\u0017¢\u0006\u0004\b\n\u0010\u000bJ'\u0010\r\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0003\u0018\u00010\f2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u0002¢\u0006\u0004\b\r\u0010\u000eJ!\u0010\u0012\u001a\u0004\u0018\u00010\u00032\u0006\u0010\u0010\u001a\u00020\u000f2\b\u0010\u0011\u001a\u0004\u0018\u00010\t¢\u0006\u0004\b\u0012\u0010\u0013¨\u0006\u0019"}, d2 = {"LnuL/f0;", "LnuL/b0;", "LNUl/k;", "Landroid/net/Uri;", "<init>", "()V", "Landroid/content/Context;", "context", "input", "Landroid/content/Intent;", "d", "(Landroid/content/Context;LNUl/k;)Landroid/content/Intent;", "LnuL/b0$a;", "e", "(Landroid/content/Context;LNUl/k;)LnuL/b0$a;", "", "resultCode", "intent", "f", "(ILandroid/content/Intent;)Landroid/net/Uri;", "a", "h", "g", "c", "b", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+public class f0 extends b0<k, Uri> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    public static final Companion INSTANCE = new Companion(null);
+
+    /* JADX INFO: renamed from: nuL.f0$a, reason: from kotlin metadata */
+    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0006\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0001¢\u0006\u0004\b\u0005\u0010\u0006J\u0017\u0010\t\u001a\u00020\u00042\u0006\u0010\b\u001a\u00020\u0007H\u0001¢\u0006\u0004\b\t\u0010\nJ\u0019\u0010\f\u001a\u0004\u0018\u00010\u000b2\u0006\u0010\b\u001a\u00020\u0007H\u0001¢\u0006\u0004\b\f\u0010\rJ\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u00102\u0006\u0010\u000f\u001a\u00020\u000eH\u0000¢\u0006\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0013\u001a\u00020\u00108\u0000X\u0080T¢\u0006\u0006\n\u0004\b\u0013\u0010\u0014R\u0014\u0010\u0015\u001a\u00020\u00108\u0000X\u0080T¢\u0006\u0006\n\u0004\b\u0015\u0010\u0014¨\u0006\u0016"}, d2 = {"LnuL/f0$a;", "", "<init>", "()V", "", "d", "()Z", "Landroid/content/Context;", "context", "c", "(Landroid/content/Context;)Z", "Landroid/content/pm/ResolveInfo;", "a", "(Landroid/content/Context;)Landroid/content/pm/ResolveInfo;", "LnuL/f0$h;", "input", "", "b", "(LnuL/f0$h;)Ljava/lang/String;", "GMS_ACTION_PICK_IMAGES", "Ljava/lang/String;", "GMS_EXTRA_PICK_IMAGES_MAX", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public static final class Companion {
+        public /* synthetic */ Companion(fr.k kVar) {
+            this();
+        }
+
+        public final ResolveInfo a(Context context) {
+            return context.getPackageManager().resolveActivity(new Intent("androidx.activity.result.contract.action.PICK_IMAGES"), 1114112);
+        }
+
+        public final String b(h input) {
+            if (input instanceof d) {
+                return "image/*";
+            }
+            if (input instanceof g) {
+                return "video/*";
+            }
+            if (input instanceof f) {
+                return ((f) input).a();
+            }
+            if (input instanceof c) {
+                return null;
+            }
+            throw new p();
+        }
+
+        public final boolean c(Context context) {
+            return a(context) != null;
+        }
+
+        @SuppressLint({"NewApi"})
+        public final boolean d() {
+            int i15 = Build.VERSION.SDK_INT;
+            if (i15 >= 33) {
+                return true;
+            }
+            return i15 >= 30 && SdkExtensions.getExtensionVersion(30) >= 2;
+        }
+
+        private Companion() {
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\b&\u0018\u00002\u00020\u0001:\u0001\u0005B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u0014\u0010\u0007\u001a\u00020\u00048&X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0005\u0010\u0006¨\u0006\b"}, d2 = {"LnuL/f0$b;", "", "<init>", "()V", "", "a", "()I", "value", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public static abstract class b {
+
+        @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0006\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u001a\u0010\t\u001a\u00020\u00048\u0016X\u0096D¢\u0006\f\n\u0004\b\u0005\u0010\u0006\u001a\u0004\b\u0007\u0010\b¨\u0006\n"}, d2 = {"LnuL/f0$b$a;", "LnuL/f0$b;", "<init>", "()V", "", "b", "I", "a", "()I", "value", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+        public static final class a extends b {
+
+            /* JADX INFO: renamed from: a, reason: collision with root package name */
+            public static final a f138825a = new a();
+
+            /* JADX INFO: renamed from: b, reason: collision with root package name and from kotlin metadata */
+            private static final int value = 1;
+
+            private a() {
+                super(null);
+            }
+
+            @Override // nuL.f0.b
+            public int a() {
+                return value;
+            }
+        }
+
+        public /* synthetic */ b(fr.k kVar) {
+            this();
+        }
+
+        public abstract int a();
+
+        private b() {
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"LnuL/f0$c;", "LnuL/f0$h;", "<init>", "()V", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public static final class c implements h {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final c f138827a = new c();
+
+        private c() {
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"LnuL/f0$d;", "LnuL/f0$h;", "<init>", "()V", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public static final class d implements h {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final d f138828a = new d();
+
+        private d() {
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"LnuL/f0$e;", "", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public static final class e {
+    }
+
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\u0018\u00002\u00020\u0001R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"LnuL/f0$f;", "LnuL/f0$h;", "", "mimeType", "Ljava/lang/String;", "a", "()Ljava/lang/String;", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public static final class f implements h {
+        public final String a() {
+            throw null;
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"LnuL/f0$g;", "LnuL/f0$h;", "<init>", "()V", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public static final class g implements h {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final g f138829a = new g();
+
+        private g() {
+        }
+    }
+
+    @Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001\u0082\u0001\u0004\u0002\u0003\u0004\u0005ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u0006À\u0006\u0001"}, d2 = {"LnuL/f0$h;", "", "LnuL/f0$c;", "LnuL/f0$d;", "LnuL/f0$f;", "LnuL/f0$g;", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public interface h {
+    }
+
+    @Override // p087nuL.b0
+    /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
+    public Intent a(Context context, k input) {
+        Companion companion = INSTANCE;
+        if (companion.d()) {
+            Intent intent = new Intent("android.provider.action.PICK_IMAGES");
+            intent.setType(companion.b(input.getMediaType()));
+            intent.putExtra("android.provider.extra.PICK_IMAGES_LAUNCH_TAB", input.getDefaultTab().a());
+            if (input.getIsCustomAccentColorApplied()) {
+                intent.putExtra("android.provider.extra.PICK_IMAGES_ACCENT_COLOR", input.getAccentColor());
+            }
+            if (Build.VERSION.SDK_INT >= 33) {
+                input.d();
+            }
+            return intent;
+        }
+        if (!companion.c(context)) {
+            Intent intent2 = new Intent("android.intent.action.OPEN_DOCUMENT");
+            intent2.setType(companion.b(input.getMediaType()));
+            if (intent2.getType() == null) {
+                intent2.setType("*/*");
+                intent2.putExtra("android.intent.extra.MIME_TYPES", new String[]{"image/*", "video/*"});
+            }
+            return intent2;
+        }
+        ResolveInfo resolveInfoA = companion.a(context);
+        if (resolveInfoA == null) {
+            throw new IllegalStateException("Required value was null.");
+        }
+        ActivityInfo activityInfo = resolveInfoA.activityInfo;
+        Intent intent3 = new Intent("androidx.activity.result.contract.action.PICK_IMAGES");
+        intent3.setClassName(activityInfo.applicationInfo.packageName, activityInfo.name);
+        intent3.setType(companion.b(input.getMediaType()));
+        intent3.putExtra("androidx.activity.result.contract.extra.PICK_IMAGES_LAUNCH_TAB", input.getDefaultTab().a());
+        if (input.getIsCustomAccentColorApplied()) {
+            intent3.putExtra("androidx.activity.result.contract.extra.PICK_IMAGES_ACCENT_COLOR", input.getAccentColor());
+        }
+        return intent3;
+    }
+
+    @Override // p087nuL.b0
+    /* JADX INFO: renamed from: e, reason: merged with bridge method [inline-methods] */
+    public final b0.a<Uri> b(Context context, k input) {
+        return null;
+    }
+
+    @Override // p087nuL.b0
+    /* JADX INFO: renamed from: f, reason: merged with bridge method [inline-methods] */
+    public final Uri c(int resultCode, Intent intent) {
+        if (resultCode != -1) {
+            intent = null;
+        }
+        if (intent == null) {
+            return null;
+        }
+        Uri data = intent.getData();
+        return data == null ? (Uri) v.n0(c0.INSTANCE.a(intent)) : data;
+    }
+}
